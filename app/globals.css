@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+body { @apply bg-white text-ink antialiased; }
+
+h1, h2, h3 { @apply tracking-tight; }
+
+.container-page { @apply mx-auto w-full max-w-5xl px-4 sm:px-6; }
+
+.btn-primary { @apply inline-flex items-center justify-center rounded-xl bg-petrol-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-petrol-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol-600 focus-visible:ring-offset-2 disabled:opacity-50; }
+.btn-secondary { @apply inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-mist focus:outline-none focus-visible:ring-2 focus-visible:ring-petrol-600 focus-visible:ring-offset-2; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
