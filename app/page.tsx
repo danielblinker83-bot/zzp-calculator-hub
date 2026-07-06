@@ -7,9 +7,9 @@ import AdPlaceholderTop from "@/components/AdPlaceholderTop";
 import DisclaimerBox from "@/components/DisclaimerBox";
 
 export const metadata: Metadata = {
-  title: "Gratis zzp calculators voor btw, uurtarief en netto inkomen",
+  title: "Gratis zzp calculators 2026 | Btw, uurtarief en netto inkomen",
   description:
-    "Gratis rekentools voor zzp'ers: bereken snel btw, uurtarief, netto inkomen, belastingreserve, kilometervergoeding en offertes. Simpel, snel en zonder account.",
+    "Gratis rekentools voor zzp'ers met de echte tarieven van 2026: btw, uurtarief, bruto-netto, belastingreserve, kilometervergoeding en offertes. Zonder account.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Gratis zzp calculators | ZZP Calculator Hub",
@@ -25,7 +25,11 @@ const faq = [
   },
   {
     vraag: "Zijn de uitkomsten exact?",
-    antwoord: "Nee, de uitkomsten zijn een indicatie. Je persoonlijke situatie, aftrekposten en tarieven kunnen de werkelijke cijfers beïnvloeden. Controleer altijd je eigen situatie of vraag advies aan een boekhouder.",
+    antwoord: "De btw-, marge- en offerteberekeningen zijn rekenkundig exact. De belasting-tools rekenen met de echte schijven, aftrekposten en heffingskortingen van 2026, maar gaan uit van een standaardsituatie; de uitkomst is daarmee een onderbouwde indicatie. Wijkt je situatie af, bijvoorbeeld door een fiscale partner of extra aftrekposten, vraag dan advies aan een boekhouder.",
+  },
+  {
+    vraag: "Zijn de calculators actueel voor 2026?",
+    antwoord: "Ja. De belastingcalculators gebruiken de tarieven van 2026: de box 1-schijven, de zelfstandigenaftrek van €1.200, de mkb-winstvrijstelling van 12,7%, de heffingskortingen en de Zvw-bijdrage van 4,85%. Ook de kilometervergoeding staat op het 2026-tarief van €0,25.",
   },
   {
     vraag: "Voor wie zijn deze tools bedoeld?",
@@ -50,7 +54,7 @@ export default function HomePage() {
             Gratis zzp calculators voor btw, uurtarief en netto inkomen
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-slate-600">
-            Snel een praktisch cijfer nodig? Bereken btw, je uurtarief, je netto inkomen of hoeveel belasting je apart zet. Simpele tools, duidelijke uitkomsten, altijd een indicatie.
+            Snel een praktisch cijfer nodig? Bereken btw, je uurtarief, je netto inkomen of hoeveel belasting je apart zet. De belasting-tools rekenen met de echte tarieven en heffingskortingen van 2026, niet met een vuistregel.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/btw-berekenen" className="btn-primary">Btw berekenen</Link>
@@ -108,9 +112,9 @@ export default function HomePage() {
           <h2 className="text-2xl font-bold">Waarom deze calculators gebruiken?</h2>
           <ul className="mt-3 space-y-2 text-slate-600">
             <li>• Gratis en zonder account</li>
+            <li>• Rekent met de echte belastingtarieven van 2026</li>
             <li>• Werkt direct in je browser, ook op je telefoon</li>
-            <li>• Duidelijke uitkomsten met korte uitleg</li>
-            <li>• Voorzichtige aannames: elke uitkomst is een indicatie</li>
+            <li>• Duidelijke uitkomsten met uitleg en bronvermelding</li>
             <li>• Geen opslag van je invoer</li>
           </ul>
         </div>
