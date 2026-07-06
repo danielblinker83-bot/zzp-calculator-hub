@@ -62,12 +62,13 @@ check("uurtarief buffer", !("fout" in u1) && !("fout" in u3) && approx(u3.uurtar
 const u4 = berekenUurtarief({ gewenstNettoPerMaand: 3500, kostenPerMaand: 500, declarabeleUrenPerMaand: 100, urencriterium: true, startersaftrek: true });
 check("uurtarief startersaftrek", !("fout" in u1) && !("fout" in u4) && u4.uurtariefExcl < u1.uurtariefExcl);
 
-// netto: omzet 6000, kosten 800 -> winst 5200; 35% -> 1820; netto 3380
-const n1 = berekenNetto({ omzetPerMaandExcl: 6000, kostenPerMaand: 800, belastingReservePct: 35 });
-check("netto basis", approx(n1.winstVoorBelasting, 5200) && approx(n1.belastingReserve, 1820) && approx(n1.nettoIndicatie, 3380));
-// negatieve winst: geen negatieve belastingreserve
-const n2 = berekenNetto({ omzetPerMaandExcl: 1000, kostenPerMaand: 1500, belastingReservePct: 35 });
-check("netto verlies", n2.belastingReserve === 0 && approx(n2.winstVoorBelasting, -500) && approx(n2.nettoIndicatie, -500));
+// netto: omzet 6000, kosten 800 -> winst 5200 p/m (62.400 p/j), urencriterium.
+// Handmatig (zie lib/calc/netto.ts): heffing 15.180,75 p/j = 1.265,06 p/m; netto 3.934,94.
+const n1 = berekenNetto({ omzetPerMaandExcl: 6000, kostenPerMaand: 800, urencriterium: true });
+check("netto basis", approx(n1.winstVoorBelasting, 5200) && Math.abs(n1.heffingPerMaand - 1265.06) < 0.5 && Math.abs(n1.nettoIndicatie - 3934.94) < 0.5, n1);
+// negatieve winst: geen heffing
+const n2 = berekenNetto({ omzetPerMaandExcl: 1000, kostenPerMaand: 1500, urencriterium: true });
+check("netto verlies", n2.heffingPerMaand === 0 && approx(n2.winstVoorBelasting, -500) && approx(n2.nettoIndicatie, -500));
 
 // belasting: winst 4500, 35% -> 1575 p/m, 4725 kw, 18900 jr; btw 2100 -> kwartaal totaal 6825
 const be1 = berekenBelastingReserve({ winstPerMaand: 4500, reservePct: 35, btwDitKwartaal: 2100 });
