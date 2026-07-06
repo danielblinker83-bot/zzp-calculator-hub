@@ -1,4 +1,5 @@
 import { berekenBtw } from "../lib/calc/btw";
+import { berekenHeffing2026 } from "../lib/calc/belasting2026";
 import { berekenUurtarief } from "../lib/calc/uurtarief";
 import { berekenNetto } from "../lib/calc/netto";
 import { berekenBelastingReserve } from "../lib/calc/belasting";
@@ -32,16 +33,34 @@ check("btw incl->excl", approx(b2.exclusief, 100) && approx(b2.btwBedrag, 21));
 const b3 = berekenBtw(100, 0, "excl-naar-incl");
 check("btw 0%", approx(b3.inclusief, 100) && approx(b3.btwBedrag, 0));
 
-// uurtarief: netto 3500, kosten 500, 30% belasting, 100 uur, 0 vrije weken, 0 buffer
-// winst nodig = 3500/0.7 = 5000; omzet = 5500; tarief = 55
-const u1 = berekenUurtarief({ gewenstNettoPerMaand: 3500, kostenPerMaand: 500, belastingReservePct: 30, declarabeleUrenPerMaand: 100 });
-check("uurtarief basis", !("fout" in u1) && approx(u1.uurtariefExcl, 55), u1);
-// met 26 vrije weken halveren effectieve uren -> tarief verdubbelt
-const u2 = berekenUurtarief({ gewenstNettoPerMaand: 3500, kostenPerMaand: 500, belastingReservePct: 30, declarabeleUrenPerMaand: 100, vrijeWekenPerJaar: 26 });
-check("uurtarief vrije weken", !("fout" in u2) && approx(u2.uurtariefExcl, 110), u2);
-// buffer 10%
-const u3 = berekenUurtarief({ gewenstNettoPerMaand: 3500, kostenPerMaand: 500, belastingReservePct: 30, declarabeleUrenPerMaand: 100, bufferPct: 10 });
-check("uurtarief buffer", !("fout" in u3) && approx(u3.uurtariefExcl, 60.5), u3);
+// heffing 2026: handmatig nagerekend met de tabellen van de Belastingdienst
+// (zie commentaar in lib/calc/belasting2026.ts)
+const approxEuro = (a: number, b: number) => Math.abs(a - b) < 0.5;
+const h1 = berekenHeffing2026(60000, { urencriterium: true });
+check("heffing2026 winst 60k", approxEuro(h1.belastbareWinst, 51332.4) && approxEuro(h1.ibVoorKortingen, 18576.67) && approxEuro(h1.algemeneHeffingskorting, 1733.26) && approxEuro(h1.arbeidskorting, 5311.3) && approxEuro(h1.zvwBijdrage, 2489.62) && approxEuro(h1.totaleHeffing, 14021.73), h1);
+const h2 = berekenHeffing2026(30000, { urencriterium: true });
+check("heffing2026 winst 30k", approxEuro(h2.belastbareWinst, 25142.4) && approxEuro(h2.algemeneHeffingskorting, 3115) && approxEuro(h2.arbeidskorting, 5082.18) && approxEuro(h2.totaleHeffing, 2010.63), h2);
+const h3 = berekenHeffing2026(0, { urencriterium: true });
+check("heffing2026 winst 0", h3.totaleHeffing === 0 && h3.nettoPerJaar === 0);
+// zonder urencriterium geen zelfstandigenaftrek -> hogere heffing
+const h4 = berekenHeffing2026(60000, { urencriterium: false });
+check("heffing2026 zonder urencriterium", h4.zelfstandigenaftrek === 0 && h4.totaleHeffing > h1.totaleHeffing);
+
+// uurtarief: netto 3500 p/m, kosten 500, 100 uur, urencriterium.
+// Consistentie: de gevonden winst moet via de heffing precies netto 42.000 p/j opleveren.
+const u1 = berekenUurtarief({ gewenstNettoPerMaand: 3500, kostenPerMaand: 500, declarabeleUrenPerMaand: 100, urencriterium: true });
+const u1winst = !("fout" in u1) ? u1.omzetDoelPerJaar - 500 * 12 : 0;
+const u1netto = u1winst - berekenHeffing2026(u1winst, { urencriterium: true }).totaleHeffing;
+check("uurtarief consistent met heffing", !("fout" in u1) && Math.abs(u1netto - 42000) < 1, { u1winst, u1netto });
+// met 26 vrije weken halveren effectieve uren -> tarief verdubbelt, omzetdoel gelijk
+const u2 = berekenUurtarief({ gewenstNettoPerMaand: 3500, kostenPerMaand: 500, declarabeleUrenPerMaand: 100, urencriterium: true, vrijeWekenPerJaar: 26 });
+check("uurtarief vrije weken", !("fout" in u1) && !("fout" in u2) && approx(u2.uurtariefExcl, u1.uurtariefExcl * 2) && approx(u2.omzetDoelPerJaar, u1.omzetDoelPerJaar), u2);
+// buffer 10% -> omzetdoel en tarief 10% hoger
+const u3 = berekenUurtarief({ gewenstNettoPerMaand: 3500, kostenPerMaand: 500, declarabeleUrenPerMaand: 100, urencriterium: true, bufferPct: 10 });
+check("uurtarief buffer", !("fout" in u1) && !("fout" in u3) && approx(u3.uurtariefExcl, u1.uurtariefExcl * 1.1), u3);
+// startersaftrek verlaagt de heffing -> lager tarief nodig
+const u4 = berekenUurtarief({ gewenstNettoPerMaand: 3500, kostenPerMaand: 500, declarabeleUrenPerMaand: 100, urencriterium: true, startersaftrek: true });
+check("uurtarief startersaftrek", !("fout" in u1) && !("fout" in u4) && u4.uurtariefExcl < u1.uurtariefExcl);
 
 // netto: omzet 6000, kosten 800 -> winst 5200; 35% -> 1820; netto 3380
 const n1 = berekenNetto({ omzetPerMaandExcl: 6000, kostenPerMaand: 800, belastingReservePct: 35 });
