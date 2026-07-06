@@ -78,11 +78,11 @@ check("belastingreserve", Math.abs(be1.perMaand - 927.01) < 0.5 && Math.abs(be1.
 const be2 = berekenBelastingReserve({ winstPerMaand: 4500, urencriterium: true, margePct: 10 });
 check("belastingreserve marge", Math.abs(be2.perJaar - be1.perJaar * 1.1) < 0.01);
 
-// kilometer: 45 km * 0.23 = 10.35; 8 ritten -> 82.80 p/m; 993.60 p/j
-const k1 = berekenKilometervergoeding({ kilometersPerRit: 45, vergoedingPerKm: 0.23, rittenPerMaand: 8 });
-check("kilometer", approx(k1.perRit, 10.35) && k1.perMaand !== null && approx(k1.perMaand, 82.8) && approx(k1.perJaar!, 993.6));
-const k2 = berekenKilometervergoeding({ kilometersPerRit: 45, vergoedingPerKm: 0.23 });
-check("kilometer zonder ritten", approx(k2.perRit, 10.35) && k2.perMaand === null);
+// kilometer: 45 km * 0.25 (tarief 2026) = 11.25; 8 ritten -> 90 p/m; 1080 p/j
+const k1 = berekenKilometervergoeding({ kilometersPerRit: 45, vergoedingPerKm: 0.25, rittenPerMaand: 8 });
+check("kilometer", approx(k1.perRit, 11.25) && k1.perMaand !== null && approx(k1.perMaand, 90) && approx(k1.perJaar!, 1080));
+const k2 = berekenKilometervergoeding({ kilometersPerRit: 45, vergoedingPerKm: 0.25 });
+check("kilometer zonder ritten", approx(k2.perRit, 11.25) && k2.perMaand === null);
 
 // marge: inkoop 60, verkoop 100 -> winst 40, marge 40%, opslag 66.67%
 const m1 = berekenMarge({ inkoop: 60, verkoop: 100 });

@@ -9,7 +9,7 @@ import { berekenKilometervergoeding, KilometerResultaat } from "@/lib/calc/kilom
 
 export default function KilometerCalculator() {
   const [km, setKm] = useState("");
-  const [vergoeding, setVergoeding] = useState("0,23");
+  const [vergoeding, setVergoeding] = useState("0,25");
   const [ritten, setRitten] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [resultaat, setResultaat] = useState<KilometerResultaat | null>(null);
@@ -31,7 +31,7 @@ export default function KilometerCalculator() {
   }
 
   function reset() {
-    setKm(""); setVergoeding("0,23"); setRitten(""); setErrors({}); setResultaat(null);
+    setKm(""); setVergoeding("0,25"); setRitten(""); setErrors({}); setResultaat(null);
   }
 
   const copyText = resultaat
@@ -43,7 +43,7 @@ export default function KilometerCalculator() {
     <div>
       <div className="grid gap-4 sm:grid-cols-3">
         <InputField id="km" label="Aantal kilometers (per rit)" value={km} onChange={setKm} placeholder="Bijv. 45" suffix="km" error={errors.km} />
-        <InputField id="vergoeding" label="Vergoeding per kilometer" value={vergoeding} onChange={setVergoeding} placeholder="Bijv. 0,23" suffix="€/km" error={errors.vergoeding} />
+        <InputField id="vergoeding" label="Vergoeding per kilometer" value={vergoeding} onChange={setVergoeding} placeholder="Bijv. 0,25" suffix="€/km" error={errors.vergoeding} />
         <InputField id="ritten" label="Aantal ritten per maand" value={ritten} onChange={setRitten} placeholder="Bijv. 8" optional error={errors.ritten} />
       </div>
 
