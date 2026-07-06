@@ -1,9 +1,9 @@
 export const SITE = {
   name: "ZZP Calculator Hub",
-  url: "https://www.voorbeeld-domein.nl", // TODO: vervang door je eigen domein
+  url: "https://www.berekenzzp.nl",
   description:
     "Gratis rekentools voor zzp'ers: btw, uurtarief, netto inkomen, belasting en offertes snel berekenen.",
-  email: "info@example.nl",
+  email: "info@berekenzzp.nl",
 };
 
 export type Tool = {
