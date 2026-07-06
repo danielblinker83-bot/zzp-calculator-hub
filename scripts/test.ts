@@ -70,9 +70,13 @@ check("netto basis", approx(n1.winstVoorBelasting, 5200) && Math.abs(n1.heffingP
 const n2 = berekenNetto({ omzetPerMaandExcl: 1000, kostenPerMaand: 1500, urencriterium: true });
 check("netto verlies", n2.heffingPerMaand === 0 && approx(n2.winstVoorBelasting, -500) && approx(n2.nettoIndicatie, -500));
 
-// belasting: winst 4500, 35% -> 1575 p/m, 4725 kw, 18900 jr; btw 2100 -> kwartaal totaal 6825
-const be1 = berekenBelastingReserve({ winstPerMaand: 4500, reservePct: 35, btwDitKwartaal: 2100 });
-check("belastingreserve", approx(be1.perMaand, 1575) && approx(be1.perKwartaal, 4725) && approx(be1.perJaar, 18900) && approx(be1.totaalDitKwartaal, 6825));
+// belasting: winst 4500 p/m (54.000 p/j), urencriterium. Handmatig: heffing 11.124,17 p/j
+// = 927,01 p/m; kwartaal 2.781,04; met btw 2.100 -> totaal dit kwartaal 4.881,04.
+const be1 = berekenBelastingReserve({ winstPerMaand: 4500, urencriterium: true, btwDitKwartaal: 2100 });
+check("belastingreserve", Math.abs(be1.perMaand - 927.01) < 0.5 && Math.abs(be1.perKwartaal - 2781.04) < 1 && Math.abs(be1.perJaar - 11124.17) < 1 && Math.abs(be1.totaalDitKwartaal - 4881.04) < 1, be1);
+// 10% marge -> per jaar 10% hoger
+const be2 = berekenBelastingReserve({ winstPerMaand: 4500, urencriterium: true, margePct: 10 });
+check("belastingreserve marge", Math.abs(be2.perJaar - be1.perJaar * 1.1) < 0.01);
 
 // kilometer: 45 km * 0.23 = 10.35; 8 ritten -> 82.80 p/m; 993.60 p/j
 const k1 = berekenKilometervergoeding({ kilometersPerRit: 45, vergoedingPerKm: 0.23, rittenPerMaand: 8 });
