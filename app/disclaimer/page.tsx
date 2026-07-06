@@ -15,7 +15,7 @@ export default function Page() {
       <div className="mt-6 space-y-5 text-slate-700">
         <section>
           <h2 className="text-xl font-bold text-ink">Indicaties, geen advies</h2>
-          <p className="mt-2">Alle calculators en generators op deze website geven een algemene indicatie. De uitkomsten zijn geen financieel, juridisch of fiscaal advies. Je persoonlijke situatie, actuele wet- en regelgeving, tarieven en aftrekposten kunnen tot andere uitkomsten leiden.</p>
+          <p className="mt-2">Alle calculators en generators op deze website geven een algemene indicatie. De uitkomsten zijn geen financieel, juridisch of fiscaal advies. De belastingberekeningen gebruiken de tarieven en heffingskortingen van belastingjaar 2026 en gaan uit van een standaardsituatie (winst uit onderneming als enig inkomen, geen fiscale partner, geen aanvullende aftrekposten). Je persoonlijke situatie kan tot andere uitkomsten leiden.</p>
         </section>
         <section>
           <h2 className="text-xl font-bold text-ink">Controleer je eigen situatie</h2>

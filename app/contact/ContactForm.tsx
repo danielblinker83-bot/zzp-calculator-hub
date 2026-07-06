@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import InputField from "@/components/InputField";
+import { SITE } from "@/lib/site";
 
 export default function ContactForm() {
   const [naam, setNaam] = useState("");
@@ -16,15 +17,21 @@ export default function ContactForm() {
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.trim())) e.email = "Vul een geldig e-mailadres in.";
     if (bericht.trim().length < 10) e.bericht = "Schrijf een bericht van minimaal 10 tekens.";
     setErrors(e);
-    if (Object.keys(e).length === 0) setVerzonden(true);
+    if (Object.keys(e).length > 0) return;
+
+    const onderwerp = encodeURIComponent(`Bericht via ${SITE.name} van ${naam.trim()}`);
+    const body = encodeURIComponent(`${bericht.trim()}\n\nNaam: ${naam.trim()}\nE-mail: ${email.trim()}`);
+    window.location.href = `mailto:${SITE.email}?subject=${onderwerp}&body=${body}`;
+    setVerzonden(true);
   }
 
   if (verzonden) {
     return (
       <div className="rounded-2xl border border-petrol-100 bg-petrol-50 p-6">
-        <p className="font-semibold text-petrol-700">Bedankt voor je bericht!</p>
+        <p className="font-semibold text-petrol-700">Je e-mailprogramma wordt geopend</p>
         <p className="mt-1 text-sm text-slate-600">
-          Let op: dit formulier is nog niet gekoppeld aan een verzendsysteem. Mail je vraag rechtstreeks naar info@example.nl, dan komt hij zeker aan.
+          Je bericht staat klaar in je eigen e-mailprogramma; verstuur hem daar om hem te verzenden.
+          Opent er niets? Mail dan rechtstreeks naar {SITE.email}.
         </p>
       </div>
     );
