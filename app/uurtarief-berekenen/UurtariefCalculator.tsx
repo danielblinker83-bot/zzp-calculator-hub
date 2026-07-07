@@ -4,14 +4,15 @@ import { useState } from "react";
 import InputField from "@/components/InputField";
 import ResultCard from "@/components/ResultCard";
 import CopyButton from "@/components/CopyButton";
-import { parseNumber, formatEUR } from "@/lib/format";
+import { parseNumber, formatEUR, formatPct } from "@/lib/format";
 import { berekenUurtarief } from "@/lib/calc/uurtarief";
 
 export default function UurtariefCalculator() {
   const [netto, setNetto] = useState("");
   const [kosten, setKosten] = useState("");
-  const [belasting, setBelasting] = useState("35");
   const [uren, setUren] = useState("");
+  const [urencriterium, setUrencriterium] = useState(true);
+  const [starter, setStarter] = useState(false);
   const [vrijeWeken, setVrijeWeken] = useState("");
   const [buffer, setBuffer] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -21,14 +22,12 @@ export default function UurtariefCalculator() {
     const e: Record<string, string> = {};
     const nettoN = parseNumber(netto);
     const kostenN = parseNumber(kosten) ?? 0;
-    const belastingN = parseNumber(belasting);
     const urenN = parseNumber(uren);
     const vrijeWekenN = vrijeWeken.trim() === "" ? 0 : parseNumber(vrijeWeken);
     const bufferN = buffer.trim() === "" ? 0 : parseNumber(buffer);
 
     if (nettoN === null || nettoN <= 0) e.netto = "Vul je gewenste netto maandinkomen in.";
     if (kosten !== "" && (parseNumber(kosten) === null || kostenN < 0)) e.kosten = "Vul een geldig bedrag in.";
-    if (belastingN === null || belastingN < 0 || belastingN > 99) e.belasting = "Vul een percentage in tussen 0 en 99.";
     if (urenN === null || urenN <= 0) e.uren = "Vul het aantal declarabele uren per maand in.";
     if (vrijeWekenN === null || vrijeWekenN < 0 || vrijeWekenN > 51) e.vrijeWeken = "Vul een aantal weken in tussen 0 en 51.";
     if (bufferN === null || bufferN < 0) e.buffer = "Vul een geldig percentage in.";
@@ -40,8 +39,9 @@ export default function UurtariefCalculator() {
       berekenUurtarief({
         gewenstNettoPerMaand: nettoN!,
         kostenPerMaand: kostenN,
-        belastingReservePct: belastingN!,
         declarabeleUrenPerMaand: urenN!,
+        urencriterium,
+        startersaftrek: starter,
         vrijeWekenPerJaar: vrijeWekenN!,
         bufferPct: bufferN!,
       })
@@ -49,13 +49,14 @@ export default function UurtariefCalculator() {
   }
 
   function reset() {
-    setNetto(""); setKosten(""); setBelasting("35"); setUren(""); setVrijeWeken(""); setBuffer("");
+    setNetto(""); setKosten(""); setUren(""); setVrijeWeken(""); setBuffer("");
+    setUrencriterium(true); setStarter(false);
     setErrors({}); setResultaat(null);
   }
 
   const ok = resultaat && !("fout" in resultaat) ? resultaat : null;
   const copyText = ok
-    ? `Uurtarief excl. btw: ${formatEUR(ok.uurtariefExcl)}\nUurtarief incl. 21% btw: ${formatEUR(ok.uurtariefIncl21)}\nOmzetdoel per maand: ${formatEUR(ok.omzetDoelPerMaand)}\nOmzetdoel per jaar: ${formatEUR(ok.omzetDoelPerJaar)}`
+    ? `Uurtarief excl. btw: ${formatEUR(ok.uurtariefExcl)}\nUurtarief incl. 21% btw: ${formatEUR(ok.uurtariefIncl21)}\nOmzetdoel per maand: ${formatEUR(ok.omzetDoelPerMaand)}\nOmzetdoel per jaar: ${formatEUR(ok.omzetDoelPerJaar)}\nGeschatte belasting en Zvw per jaar (2026): ${formatEUR(ok.geschatteHeffingPerJaar)}`
     : "";
 
   return (
@@ -63,10 +64,30 @@ export default function UurtariefCalculator() {
       <div className="grid gap-4 sm:grid-cols-2">
         <InputField id="netto" label="Gewenst netto inkomen per maand" value={netto} onChange={setNetto} placeholder="Bijv. 3500" suffix="€" error={errors.netto} />
         <InputField id="kosten" label="Zakelijke kosten per maand" value={kosten} onChange={setKosten} placeholder="Bijv. 500" suffix="€" error={errors.kosten} />
-        <InputField id="belasting" label="Belastingreserve" value={belasting} onChange={setBelasting} placeholder="Bijv. 35" suffix="%" error={errors.belasting} />
         <InputField id="uren" label="Declarabele uren per maand" value={uren} onChange={setUren} placeholder="Bijv. 100" suffix="uur" error={errors.uren} />
         <InputField id="vrijeweken" label="Vrije of lege weken per jaar" value={vrijeWeken} onChange={setVrijeWeken} placeholder="Bijv. 6" suffix="wk" optional error={errors.vrijeWeken} />
         <InputField id="buffer" label="Extra buffer" value={buffer} onChange={setBuffer} placeholder="Bijv. 10" suffix="%" optional error={errors.buffer} />
+        <fieldset className="flex flex-col justify-center gap-2">
+          <label className="flex items-center gap-2 text-sm font-medium text-slate-700">
+            <input
+              type="checkbox"
+              checked={urencriterium}
+              onChange={(e) => setUrencriterium(e.target.checked)}
+              className="h-4 w-4 rounded border-slate-300 text-petrol-700 focus:ring-petrol-600"
+            />
+            Ik voldoe aan het urencriterium (1.225 uur per jaar)
+          </label>
+          <label className="flex items-center gap-2 text-sm font-medium text-slate-700">
+            <input
+              type="checkbox"
+              checked={starter}
+              onChange={(e) => setStarter(e.target.checked)}
+              disabled={!urencriterium}
+              className="h-4 w-4 rounded border-slate-300 text-petrol-700 focus:ring-petrol-600 disabled:opacity-40"
+            />
+            Ik heb recht op startersaftrek
+          </label>
+        </fieldset>
       </div>
 
       <div className="mt-6 flex flex-wrap gap-3">
@@ -86,9 +107,12 @@ export default function UurtariefCalculator() {
             <ResultCard label="Per uur incl. 21% btw" value={formatEUR(ok.uurtariefIncl21)} />
             <ResultCard label="Omzetdoel per maand" value={formatEUR(ok.omzetDoelPerMaand)} />
             <ResultCard label="Omzetdoel per jaar" value={formatEUR(ok.omzetDoelPerJaar)} />
+            <ResultCard label="Geschatte belasting + Zvw per jaar" value={formatEUR(ok.geschatteHeffingPerJaar)} sub={`Effectieve druk ${formatPct(ok.effectieveDruk * 100)} van je winst (tarieven 2026)`} />
           </div>
           <p className="mt-3 text-sm text-slate-600">
-            Dit is een praktische schatting op basis van je invoer, geen financieel advies. Rond je tarief af naar een bedrag dat past bij je markt en ervaring.
+            De belasting is berekend met de tarieven en kortingen van 2026 en gaat ervan uit dat dit je enige
+            inkomen is. Het blijft een indicatie, geen financieel advies. Rond je tarief af naar een bedrag dat
+            past bij je markt en ervaring.
           </p>
         </div>
       )}
