@@ -28,9 +28,15 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# secrets (API-sleutels, serviceaccounts) — nooit committen
+/.secrets/
+*.json.key
+gsc-key.json
+
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+tools/gsc/node_modules/

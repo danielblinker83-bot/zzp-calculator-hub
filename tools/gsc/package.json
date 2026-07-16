@@ -1,0 +1,13 @@
+{
+  "name": "gsc-report",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Haalt wekelijkse Search Console-cijfers op voor berekenzzp.nl",
+  "type": "module",
+  "scripts": {
+    "report": "node report.mjs"
+  },
+  "dependencies": {
+    "google-auth-library": "^9.14.1"
+  }
+}
