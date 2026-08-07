@@ -30,6 +30,32 @@ export function toolBySlug(slug: string) {
   return TOOLS.find((t) => t.slug === slug);
 }
 
+// Thematische verwijzingen tussen tools. Bewust zo opgesteld dat de sterkste
+// pagina's (marge-berekenen, belasting-reserveren-zzp) vaker als bestemming
+// terugkomen, zodat interne linkkracht daarheen stroomt.
+const RELATED: Record<string, string[]> = {
+  "btw-berekenen": ["offerte-calculator", "factuurtekst-maken", "marge-berekenen", "zzp-netto-inkomen-berekenen"],
+  "uurtarief-berekenen": ["zzp-netto-inkomen-berekenen", "belasting-reserveren-zzp", "offerte-calculator", "marge-berekenen"],
+  "zzp-netto-inkomen-berekenen": ["uurtarief-berekenen", "belasting-reserveren-zzp", "btw-berekenen", "marge-berekenen"],
+  "belasting-reserveren-zzp": ["zzp-netto-inkomen-berekenen", "uurtarief-berekenen", "btw-berekenen", "marge-berekenen"],
+  "kilometervergoeding-berekenen": ["offerte-calculator", "zzp-netto-inkomen-berekenen", "belasting-reserveren-zzp", "factuurtekst-maken"],
+  "marge-berekenen": ["offerte-calculator", "btw-berekenen", "zzp-netto-inkomen-berekenen", "uurtarief-berekenen"],
+  "offerte-calculator": ["uurtarief-berekenen", "btw-berekenen", "marge-berekenen", "factuurtekst-maken"],
+  "betalingsherinnering-maken": ["factuurtekst-maken", "offerte-calculator", "btw-berekenen", "belasting-reserveren-zzp"],
+  "factuurtekst-maken": ["btw-berekenen", "offerte-calculator", "betalingsherinnering-maken", "marge-berekenen"],
+  "prijsverhoging-mail-maken": ["uurtarief-berekenen", "zzp-netto-inkomen-berekenen", "offerte-calculator", "marge-berekenen"],
+};
+
 export function relatedTools(slug: string, count = 4) {
-  return TOOLS.filter((t) => t.slug !== slug).slice(0, count);
+  const gekozen = (RELATED[slug] ?? [])
+    .map((s) => toolBySlug(s))
+    .filter((t): t is Tool => Boolean(t));
+  // Vul aan met overige tools als de kaart voor een slug ontbreekt of te kort is.
+  if (gekozen.length < count) {
+    for (const t of TOOLS) {
+      if (t.slug !== slug && !gekozen.some((g) => g.slug === t.slug)) gekozen.push(t);
+      if (gekozen.length >= count) break;
+    }
+  }
+  return gekozen.slice(0, count);
 }
