@@ -51,6 +51,21 @@ const faq = [
     antwoord:
       "Vul je inkoopprijs en de verlaagde verkoopprijs in de calculator in. Zie je de winst per verkoop, dan weet je meteen hoeveel extra stuks je moet verkopen om de korting terug te verdienen. Bij een marge van 40% kost 10% korting je een kwart van je winst per verkoop.",
   },
+  {
+    vraag: "Hoe bereken ik mijn winstpercentage?",
+    antwoord:
+      "Je winstpercentage hangt af van waartegen je afzet. Zet je de winst af tegen de verkoopprijs, dan spreek je van marge; zet je hem af tegen de kostprijs, dan is het opslag. Winst €40 op een verkoop van €100 is 40% marge, maar 66,7% opslag op €60 kosten. Spreek daarom altijd af welk van de twee je bedoelt, want hetzelfde bedrag levert twee heel verschillende percentages op.",
+  },
+  {
+    vraag: "Wat is het verschil tussen brutomarge en nettomarge?",
+    antwoord:
+      "Brutomarge is je verkoopprijs min de directe kosten van dat ene product of die opdracht (inkoop, materiaal, verzending). Nettomarge is wat er overblijft nadat ook je vaste lasten, je eigen uren en de belasting eraf zijn. Deze calculator rekent de brutomarge per verkoop; die moet hoog genoeg zijn om je nettomarge positief te houden.",
+  },
+  {
+    vraag: "Hoe bereken ik de marge op een project of opdracht?",
+    antwoord:
+      "Behandel een project als één verkoop: tel al je directe kosten op (materiaal, inhuur, reiskosten, materieel) en zet die tegenover de projectprijs exclusief btw. Vul beide in de calculator in en je ziet je winst en marge op de klus. Reken je eigen uren als kostenpost mee als je wilt weten wat het project bovenop je eigen loon oplevert; laat ze weg als je puur de dekking op materiaal en inhuur wilt zien.",
+  },
 ];
 
 export default function Page() {

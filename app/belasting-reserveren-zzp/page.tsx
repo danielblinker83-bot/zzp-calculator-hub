@@ -51,6 +51,16 @@ const faq = [
     antwoord:
       "Dan moet je de aanslag alsnog betalen, eventueel via een betalingsregeling met de Belastingdienst. Daar komt vaak belastingrente bovenop. Voorkom het door je reservering elk kwartaal opnieuw te berekenen, zeker als je winst stijgt: elke extra euro winst wordt tegen je hoogste schijftarief belast.",
   },
+  {
+    vraag: "Betaal ik als zzp'er loonbelasting?",
+    antwoord:
+      "Nee. Loonbelasting houdt een werkgever in op het salaris van werknemers. Als zzp'er heb je geen werkgever en dus geen loonbelasting; je betaalt inkomstenbelasting over je winst, plus de inkomensafhankelijke bijdrage Zvw. Die bereken en reserveer je zelf, want er wordt niets voor je ingehouden. Zoek je op 'loonbelasting zzp', dan is dit de berekening die je nodig hebt.",
+  },
+  {
+    vraag: "Klopt deze berekening als ik naast mijn onderneming ook in loondienst werk?",
+    antwoord:
+      "Dan is de uitkomst een ondergrens. Deze calculator gaat uit van je winst als enig inkomen. Heb je daarnaast een baan, dan stapelt dat inkomen bovenop je winst, waardoor je eerder in een hogere belastingschijf valt en je winst zwaarder wordt belast. Ook zijn de heffingskortingen vaak al (deels) verrekend via je loon. Reserveer in dat geval ruimer, of vraag een voorlopige aanslag aan waarin je beide inkomens opgeeft, zodat de Belastingdienst het totaal goed berekent.",
+  },
 ];
 
 export default function Page() {
