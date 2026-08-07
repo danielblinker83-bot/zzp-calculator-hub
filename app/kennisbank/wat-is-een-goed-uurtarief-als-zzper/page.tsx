@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ArtikelLayout from "@/components/ArtikelLayout";
-import { artikelBySlug } from "@/lib/kennisbank";
-import { SITE } from "@/lib/site";
+import ArtikelLayout, { TocItem } from "@/components/ArtikelLayout";
+import { artikelBySlug, artikelMetadata } from "@/lib/kennisbank";
 
 const artikel = artikelBySlug("wat-is-een-goed-uurtarief-als-zzper")!;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = artikelMetadata(artikel, {
   title: "Wat is een goed uurtarief als zzp'er? | Zo bereken je het (2026)",
-  description: artikel.description,
-  alternates: { canonical: `/kennisbank/${artikel.slug}` },
-  openGraph: {
-    title: "Wat is een goed uurtarief als zzp'er?",
-    description: artikel.description,
-    url: `/kennisbank/${artikel.slug}`,
-    type: "article",
-    images: artikel.afbeelding ? [{ url: `${SITE.url}${artikel.afbeelding}`, width: 1672, height: 941 }] : undefined,
-  },
-};
+});
+
+const toc: TocItem[] = [
+  { id: "geen-vast-tarief", label: "Er bestaat geen goed uurtarief, wel een berekening" },
+  { id: "terugrekenen", label: "Reken terug vanuit je gewenste inkomen" },
+  { id: "tabel", label: "Wat je nodig hebt per inkomenswens" },
+  { id: "declarabele-uren", label: "De valkuil van declarabele uren" },
+  { id: "onzichtbare-kosten", label: "Vergeet je onzichtbare kosten niet" },
+  { id: "markt", label: "De markt bepaalt de bovengrens" },
+  { id: "fouten", label: "Veelgemaakte fouten" },
+];
 
 const faq = [
   {
@@ -52,10 +52,11 @@ export default function Page() {
     <ArtikelLayout
       artikel={artikel}
       intro="Bijna elke beginnende zzp'er stelt deze vraag, en het eerlijke antwoord is: er bestaat geen vast goed tarief. Wel een goede manier om het te berekenen. Zo bepaal je een uurtarief dat je kosten, je belasting en je gewenste inkomen dekt, met voorbeelden voor 2026."
+      inhoudsopgave={toc}
       faq={faq}
       disclaimerTekst="De bedragen in dit artikel zijn berekend met de tarieven en heffingskortingen van 2026, uitgaande van winst als enig inkomen. Het zijn onderbouwde indicaties, geen financieel advies."
     >
-      <section>
+      <section id="geen-vast-tarief" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">Er bestaat geen goed uurtarief, wel een goede berekening</h2>
         <p className="mt-2">
           Een tarief dat voor de ene zzp'er ruim is, is voor de ander te laag. Dat komt doordat een
@@ -67,7 +68,7 @@ export default function Page() {
         </p>
       </section>
 
-      <section>
+      <section id="terugrekenen" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">Reken terug vanuit je gewenste inkomen</h2>
         <p className="mt-2">
           De betrouwbaarste methode werkt van achter naar voren. Stel dat je netto €3.000 per maand
@@ -79,7 +80,7 @@ export default function Page() {
         </p>
       </section>
 
-      <section>
+      <section id="tabel" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">Wat je nodig hebt per inkomenswens</h2>
         <p className="mt-2">
           De volgende tabel laat het minimale uurtarief zien voor een paar veelvoorkomende situaties,
@@ -105,7 +106,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section>
+      <section id="declarabele-uren" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">De grootste valkuil: te veel declarabele uren</h2>
         <p className="mt-2">
           Kijk naar de laatste twee rijen. Dezelfde inkomenswens van €3.000 netto vraagt €34 per uur
@@ -117,7 +118,7 @@ export default function Page() {
         </p>
       </section>
 
-      <section>
+      <section id="onzichtbare-kosten" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">Vergeet je onzichtbare kosten niet</h2>
         <p className="mt-2">
           Een werknemer krijgt pensioen, doorbetaalde vakantie en doorbetaling bij ziekte van de
@@ -128,7 +129,7 @@ export default function Page() {
         </p>
       </section>
 
-      <section>
+      <section id="markt" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">De markt bepaalt de bovengrens</h2>
         <p className="mt-2">
           Je berekende tarief is je ondergrens: eronder ga je erop achteruit. Hoeveel je daarboven kunt
@@ -139,7 +140,7 @@ export default function Page() {
         </p>
       </section>
 
-      <section>
+      <section id="fouten" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">Veelgemaakte fouten</h2>
         <ul className="mt-2 list-disc space-y-1 pl-5">
           <li>Je oude brutosalaris delen door 160 uur en dat je tarief noemen.</li>

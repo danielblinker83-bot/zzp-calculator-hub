@@ -5,34 +5,41 @@ import DisclaimerBox from "@/components/DisclaimerBox";
 import FAQ, { FaqItem } from "@/components/FAQ";
 import AdPlaceholderInline from "@/components/AdPlaceholderInline";
 import { SITE, toolBySlug } from "@/lib/site";
-import { Artikel } from "@/lib/kennisbank";
+import { Artikel, recenteArtikelen } from "@/lib/kennisbank";
 
 function datumNL(iso: string) {
   return new Date(iso).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
 }
 
+export type TocItem = { id: string; label: string };
+
 export default function ArtikelLayout({
   artikel,
   intro,
+  inhoudsopgave,
   children,
   faq,
   disclaimerTekst,
 }: {
   artikel: Artikel;
   intro: string;
+  inhoudsopgave?: TocItem[];
   children: React.ReactNode;
   faq?: FaqItem[];
   disclaimerTekst?: string;
 }) {
   const url = `${SITE.url}/kennisbank/${artikel.slug}`;
+  const dateModified = artikel.gecontroleerd ?? artikel.bijgewerkt ?? artikel.datum;
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: artikel.title,
     description: artikel.description,
     datePublished: artikel.datum,
-    dateModified: artikel.bijgewerkt ?? artikel.datum,
+    dateModified,
     inLanguage: "nl-NL",
+    isAccessibleForFree: true,
+    articleSection: "Kennisbank",
     mainEntityOfPage: url,
     ...(artikel.afbeelding ? { image: `${SITE.url}${artikel.afbeelding}` } : {}),
     author: { "@type": "Person", name: "Daniel Blinker", url: `${SITE.url}/over-ons` },
@@ -42,6 +49,7 @@ export default function ArtikelLayout({
   const tools = (artikel.gerelateerdeTools ?? [])
     .map((s) => toolBySlug(s))
     .filter((t): t is NonNullable<typeof t> => Boolean(t));
+  const meerArtikelen = recenteArtikelen(artikel.slug, 2);
 
   return (
     <div className="container-page py-6">
@@ -67,9 +75,21 @@ export default function ArtikelLayout({
         <h1 className="mt-6 text-3xl font-extrabold sm:text-4xl">{artikel.title}</h1>
         <p className="mt-3 text-sm text-slate-500">
           Door Daniel Blinker, zelf zzp'er · {datumNL(artikel.datum)} · {artikel.leestijd} min lezen
-          {artikel.bijgewerkt && artikel.bijgewerkt !== artikel.datum ? ` · bijgewerkt ${datumNL(artikel.bijgewerkt)}` : ""}
         </p>
         <p className="mt-4 text-lg text-slate-600">{intro}</p>
+
+        {inhoudsopgave && inhoudsopgave.length > 0 && (
+          <nav aria-label="Inhoudsopgave" className="mt-6 rounded-2xl border border-slate-200 bg-mist p-4">
+            <p className="text-sm font-semibold text-ink">In dit artikel</p>
+            <ol className="mt-2 space-y-1 text-sm">
+              {inhoudsopgave.map((t) => (
+                <li key={t.id}>
+                  <a href={`#${t.id}`} className="text-petrol-700 hover:underline">{t.label}</a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
 
         <div className="mt-8 space-y-6 text-slate-600">{children}</div>
 
@@ -130,7 +150,25 @@ export default function ArtikelLayout({
             </Link>
             .
           </p>
+          <p className="mt-3 text-xs text-slate-500">
+            Cijfers gecontroleerd op {datumNL(dateModified)} tegen de Belastingdienst en Rijksoverheid.
+          </p>
         </aside>
+
+        {meerArtikelen.length > 0 && (
+          <div className="mt-10">
+            <h2 className="text-base font-bold text-ink">Meer uit de kennisbank</h2>
+            <ul className="mt-2 space-y-1 text-sm">
+              {meerArtikelen.map((a) => (
+                <li key={a.slug}>
+                  <Link href={`/kennisbank/${a.slug}`} className="font-medium text-petrol-700 underline">
+                    {a.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <div className="mt-8">
           <Link href="/kennisbank" className="text-sm font-medium text-petrol-700 hover:underline">

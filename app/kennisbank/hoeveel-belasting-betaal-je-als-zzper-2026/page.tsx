@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ArtikelLayout from "@/components/ArtikelLayout";
-import { artikelBySlug } from "@/lib/kennisbank";
+import ArtikelLayout, { TocItem } from "@/components/ArtikelLayout";
+import { artikelBySlug, artikelMetadata } from "@/lib/kennisbank";
 
 const artikel = artikelBySlug("hoeveel-belasting-betaal-je-als-zzper-2026")!;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = artikelMetadata(artikel, {
   title: "Hoeveel belasting betaal je als zzp'er in 2026? | Uitleg met voorbeelden",
-  description: artikel.description,
-  alternates: { canonical: `/kennisbank/${artikel.slug}` },
-  openGraph: {
-    title: "Hoeveel belasting betaal je als zzp'er in 2026?",
-    description: artikel.description,
-    url: `/kennisbank/${artikel.slug}`,
-    type: "article",
-  },
-};
+});
+
+const toc: TocItem[] = [
+  { id: "route", label: "De route van winst naar belasting" },
+  { id: "cijfers", label: "De cijfers van 2026" },
+  { id: "effectief", label: "Wat je effectief betaalt per winstniveau" },
+  { id: "waarom-lager", label: "Waarom je effectieve druk lager is dan de schijf" },
+  { id: "veranderingen", label: "Wat er in 2026 is veranderd" },
+  { id: "reserveren", label: "Reserveer op tijd" },
+];
 
 const faq = [
   {
@@ -45,10 +46,11 @@ export default function Page() {
     <ArtikelLayout
       artikel={artikel}
       intro="Als zzp'er betaal je geen loonbelasting, maar inkomstenbelasting over je winst. Hoeveel dat precies is, valt bijna altijd mee dankzij drie voordelen die een werknemer niet heeft. Dit artikel legt uit hoe de berekening werkt in 2026, met rekenvoorbeelden per winstniveau."
+      inhoudsopgave={toc}
       faq={faq}
       disclaimerTekst="Dit artikel gebruikt de tarieven en heffingskortingen van 2026 en gaat uit van winst uit onderneming als enig inkomen, zonder fiscale partner of aanvullende aftrekposten. De genoemde bedragen zijn onderbouwde indicaties, geen belastingaangifte of financieel advies."
     >
-      <section>
+      <section id="route" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">De route van winst naar belasting</h2>
         <p className="mt-2">
           Je betaalt als zzp'er geen belasting over je omzet en ook niet over je brutosalaris, want
@@ -70,7 +72,7 @@ export default function Page() {
         </p>
       </section>
 
-      <section>
+      <section id="cijfers" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">De cijfers van 2026</h2>
         <div className="mt-3 overflow-x-auto">
           <table className="w-full min-w-[440px] border-collapse text-sm">
@@ -95,7 +97,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section>
+      <section id="effectief" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">Wat je effectief betaalt per winstniveau</h2>
         <p className="mt-2">
           Onderstaande tabel laat zien wat een zzp'er die aan het urencriterium voldoet in 2026
@@ -128,7 +130,7 @@ export default function Page() {
         </p>
       </section>
 
-      <section>
+      <section id="waarom-lager" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">Waarom je effectieve druk lager is dan de schijf</h2>
         <p className="mt-2">
           Neem een winst van €60.000. Na de zelfstandigenaftrek van €1.200 en de mkb-winstvrijstelling
@@ -140,7 +142,7 @@ export default function Page() {
         </p>
       </section>
 
-      <section>
+      <section id="veranderingen" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">Wat er in 2026 is veranderd</h2>
         <p className="mt-2">
           De grootste verandering is de zelfstandigenaftrek. Die daalde van €2.470 in 2025 naar
@@ -153,7 +155,7 @@ export default function Page() {
         </p>
       </section>
 
-      <section>
+      <section id="reserveren" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">Reserveer op tijd, want de aanslag komt laat</h2>
         <p className="mt-2">
           Je betaalt de inkomstenbelasting pas na je aangifte, vaak ruim een jaar nadat je het geld
