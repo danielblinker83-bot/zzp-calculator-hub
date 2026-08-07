@@ -15,6 +15,7 @@ export default function Header() {
           <Link href="/uurtarief-berekenen" className="hover:text-petrol-700">Uurtarief</Link>
           <Link href="/zzp-netto-inkomen-berekenen" className="hover:text-petrol-700">Netto inkomen</Link>
           <Link href="/#tools" className="hover:text-petrol-700">Alle tools</Link>
+          <Link href="/kennisbank" className="hover:text-petrol-700">Kennisbank</Link>
         </nav>
         <Link href="/#tools" className="btn-primary px-4 py-2 sm:hidden">Tools</Link>
       </div>

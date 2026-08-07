@@ -24,6 +24,7 @@ export default function Footer() {
         <div>
           <p className="text-sm font-semibold">Informatie</p>
           <ul className="mt-2 space-y-1 text-sm">
+            <li><Link href="/kennisbank" className="text-slate-600 hover:text-petrol-700">Kennisbank</Link></li>
             <li><Link href="/over-ons" className="text-slate-600 hover:text-petrol-700">Over ons</Link></li>
             <li><Link href="/contact" className="text-slate-600 hover:text-petrol-700">Contact</Link></li>
             <li><Link href="/privacybeleid" className="text-slate-600 hover:text-petrol-700">Privacybeleid</Link></li>
