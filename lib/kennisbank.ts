@@ -81,6 +81,8 @@ export const ARTIKELEN: Artikel[] = [
     datum: "2026-08-07",
     gecontroleerd: "2026-08-07",
     leestijd: 7,
+    afbeelding: "/kennisbank/hoeveel-belasting-betaal-je-als-zzper-2026.png",
+    afbeeldingAlt: "Daniel, maker van berekenzzp.nl, bij de vraag hoeveel belasting je betaalt als zzp'er in 2026",
     gerelateerdeTools: ["belasting-reserveren-zzp", "zzp-netto-inkomen-berekenen", "uurtarief-berekenen"],
     bronnen: [
       { label: "Belastingdienst — Box 1 tarieven 2026", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/inkomstenbelasting/heffingskortingen_boxen_tarieven/boxen_en_tarieven/box_1/box_1" },
