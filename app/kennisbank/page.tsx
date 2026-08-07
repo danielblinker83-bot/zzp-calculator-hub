@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { ARTIKELEN } from "@/lib/kennisbank";
 
@@ -34,17 +35,34 @@ export default function Page() {
         </p>
       </div>
 
-      <div className="mt-8 grid max-w-3xl gap-4">
+      <div className="mt-8 grid max-w-4xl gap-5 sm:grid-cols-2">
         {artikelen.map((a) => (
           <Link
             key={a.slug}
             href={`/kennisbank/${a.slug}`}
-            className="block rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-petrol-300 hover:shadow-card"
+            className="group block overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:border-petrol-300 hover:shadow-card"
           >
-            <p className="text-xs text-slate-500">{datumNL(a.datum)} · {a.leestijd} min lezen</p>
-            <h2 className="mt-1 text-lg font-bold text-ink">{a.title}</h2>
-            <p className="mt-1 text-sm text-slate-600">{a.description}</p>
-            <span className="mt-2 inline-block text-sm font-medium text-petrol-700">Lees verder →</span>
+            {a.afbeelding ? (
+              <div className="aspect-[16/9] overflow-hidden bg-petrol-50">
+                <Image
+                  src={a.afbeelding}
+                  alt={a.afbeeldingAlt ?? a.title}
+                  width={1672}
+                  height={941}
+                  className="h-full w-full object-cover transition group-hover:scale-[1.02]"
+                />
+              </div>
+            ) : (
+              <div className="flex aspect-[16/9] items-center justify-center bg-petrol-700 p-6 text-center">
+                <span className="text-lg font-bold leading-snug text-white">{a.title}</span>
+              </div>
+            )}
+            <div className="p-5">
+              <p className="text-xs text-slate-500">{datumNL(a.datum)} · {a.leestijd} min lezen</p>
+              <h2 className="mt-1 text-lg font-bold text-ink">{a.title}</h2>
+              <p className="mt-1 text-sm text-slate-600">{a.description}</p>
+              <span className="mt-2 inline-block text-sm font-medium text-petrol-700">Lees verder →</span>
+            </div>
           </Link>
         ))}
       </div>
