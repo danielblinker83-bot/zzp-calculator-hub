@@ -1,5 +1,6 @@
 import { berekenBtw } from "../lib/calc/btw";
-import { berekenHeffing2026 } from "../lib/calc/belasting2026";
+import { berekenHeffing2026, berekenNettoLoondienst } from "../lib/calc/belasting2026";
+import { berekenLoondienstZzp } from "../lib/calc/loondienstZzp";
 import { berekenUurtarief } from "../lib/calc/uurtarief";
 import { berekenNetto } from "../lib/calc/netto";
 import { berekenBelastingReserve } from "../lib/calc/belasting";
@@ -61,6 +62,17 @@ check("uurtarief buffer", !("fout" in u1) && !("fout" in u3) && approx(u3.uurtar
 // startersaftrek verlaagt de heffing -> lager tarief nodig
 const u4 = berekenUurtarief({ gewenstNettoPerMaand: 3500, kostenPerMaand: 500, declarabeleUrenPerMaand: 100, urencriterium: true, startersaftrek: true });
 check("uurtarief startersaftrek", !("fout" in u1) && !("fout" in u4) && u4.uurtariefExcl < u1.uurtariefExcl);
+
+// loondienst netto: bruto 50.000 -> netto 39.140,12 p/j (geverifieerd met scripts/check).
+const ld = berekenNettoLoondienst(50000);
+check("loondienst netto 50k", Math.abs(ld.nettoPerJaar - 39140.12) < 0.5, ld);
+// loondienst->zzp: winst nodig moet via de zzp-heffing weer datzelfde netto opleveren.
+const lz = berekenLoondienstZzp({ brutoJaarsalaris: 50000, declarabeleUrenPerJaar: 1400, urencriterium: true });
+const lzNetto = lz.winstNodigKaal - berekenHeffing2026(lz.winstNodigKaal, { urencriterium: true }).totaleHeffing;
+check("loondienst->zzp consistent", Math.abs(lzNetto - ld.nettoPerJaar) < 1 && approx(lz.uurtariefKaal, lz.winstNodigKaal / 1400), lz);
+// reserveringen verhogen het benodigde tarief; kosten verhogen de omzet maar niet de winst-kaal
+const lz2 = berekenLoondienstZzp({ brutoJaarsalaris: 50000, declarabeleUrenPerJaar: 1400, kostenPerJaar: 3000, reserveringenPerJaar: 8000, urencriterium: true });
+check("loondienst->zzp reserveringen", lz2.uurtariefEerlijk > lz2.uurtariefKaal && lz2.omzetNodigKaal > lz.winstNodigKaal, lz2);
 
 // netto: omzet 6000, kosten 800 -> winst 5200 p/m (62.400 p/j), urencriterium.
 // Handmatig (zie lib/calc/netto.ts): heffing 15.180,75 p/j = 1.265,06 p/m; netto 3.934,94.
