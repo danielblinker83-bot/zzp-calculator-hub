@@ -149,6 +149,38 @@ export function berekenHeffing2026(winstPerJaar: number, opties: Heffing2026Opti
   };
 }
 
+export interface Loondienst2026Resultaat {
+  brutoPerJaar: number;
+  inkomstenbelasting: number;
+  algemeneHeffingskorting: number;
+  arbeidskorting: number;
+  nettoPerJaar: number;
+  effectieveDruk: number;
+}
+
+/**
+ * Netto inkomen uit loondienst (indicatie, tarieven 2026). Vereenvoudigd model:
+ * het brutosalaris is het belastbaar inkomen (geen pensioenpremie, 30%-regeling
+ * of andere posten meegerekend). Een werknemer betaalt geen zelfstandigenaftrek
+ * of mkb-winstvrijstelling, en de Zvw-bijdrage is een werkgeversheffing die niet
+ * op het nettoloon wordt ingehouden. Zo is dit vergelijkbaar met de zzp-heffing.
+ */
+export function berekenNettoLoondienst(brutoPerJaar: number): Loondienst2026Resultaat {
+  const bruto = Math.max(0, brutoPerJaar);
+  const ibVoor = ibOverBelastbareWinst(bruto);
+  const ahk = bruto > 0 ? algemeneHeffingskorting(bruto) : 0;
+  const ak = arbeidskorting(bruto);
+  const ib = Math.max(0, ibVoor - ahk - ak);
+  return {
+    brutoPerJaar: bruto,
+    inkomstenbelasting: ib,
+    algemeneHeffingskorting: ahk,
+    arbeidskorting: ak,
+    nettoPerJaar: bruto - ib,
+    effectieveDruk: bruto > 0 ? ib / bruto : 0,
+  };
+}
+
 // Controle met testgetallen (handmatig nagerekend met de tabellen hierboven):
 //
 // 1) Winst 60.000, urencriterium, geen startersaftrek:

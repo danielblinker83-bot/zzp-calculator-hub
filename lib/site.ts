@@ -17,6 +17,7 @@ export const TOOLS: Tool[] = [
   { slug: "btw-berekenen", title: "Btw berekenen", short: "Reken snel 21%, 9% of 0% btw uit, van en naar inclusief.", category: "Berekenen" },
   { slug: "uurtarief-berekenen", title: "Uurtarief berekenen", short: "Bepaal je minimale uurtarief met de echte belastingtarieven van 2026.", category: "Berekenen" },
   { slug: "zzp-netto-inkomen-berekenen", title: "Netto inkomen berekenen", short: "Van bruto naar netto: zie wat je overhoudt met de tarieven van 2026.", category: "Berekenen" },
+  { slug: "loondienst-naar-zzp", title: "Loondienst naar zzp", short: "Welk uurtarief en welke winst evenaren je huidige salaris?", category: "Berekenen" },
   { slug: "belasting-reserveren-zzp", title: "Belasting reserveren", short: "Bereken je werkelijke heffing 2026 en wat je per maand apart zet.", category: "Berekenen" },
   { slug: "kilometervergoeding-berekenen", title: "Kilometervergoeding", short: "Bereken je vergoeding met het 2026-tarief van € 0,25 per kilometer.", category: "Berekenen" },
   { slug: "marge-berekenen", title: "Marge berekenen", short: "Bereken je winst, marge en opslag op inkoop en verkoop.", category: "Berekenen" },
@@ -35,8 +36,9 @@ export function toolBySlug(slug: string) {
 // terugkomen, zodat interne linkkracht daarheen stroomt.
 const RELATED: Record<string, string[]> = {
   "btw-berekenen": ["offerte-calculator", "factuurtekst-maken", "marge-berekenen", "zzp-netto-inkomen-berekenen"],
-  "uurtarief-berekenen": ["zzp-netto-inkomen-berekenen", "belasting-reserveren-zzp", "offerte-calculator", "marge-berekenen"],
-  "zzp-netto-inkomen-berekenen": ["uurtarief-berekenen", "belasting-reserveren-zzp", "btw-berekenen", "marge-berekenen"],
+  "uurtarief-berekenen": ["loondienst-naar-zzp", "zzp-netto-inkomen-berekenen", "belasting-reserveren-zzp", "marge-berekenen"],
+  "zzp-netto-inkomen-berekenen": ["uurtarief-berekenen", "loondienst-naar-zzp", "belasting-reserveren-zzp", "btw-berekenen"],
+  "loondienst-naar-zzp": ["uurtarief-berekenen", "zzp-netto-inkomen-berekenen", "belasting-reserveren-zzp", "marge-berekenen"],
   "belasting-reserveren-zzp": ["zzp-netto-inkomen-berekenen", "uurtarief-berekenen", "btw-berekenen", "marge-berekenen"],
   "kilometervergoeding-berekenen": ["offerte-calculator", "zzp-netto-inkomen-berekenen", "belasting-reserveren-zzp", "factuurtekst-maken"],
   "marge-berekenen": ["offerte-calculator", "btw-berekenen", "zzp-netto-inkomen-berekenen", "uurtarief-berekenen"],
