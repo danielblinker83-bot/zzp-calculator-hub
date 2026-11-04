@@ -4,7 +4,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacybeleid",
-  description: "Lees hoe ZZP Calculator Hub omgaat met privacy. Geen account, geen opslag van invoer. Mogelijk gebruik van cookies bij toekomstige analytics of advertenties.",
+  description: "Lees hoe BerekenZZP.nl omgaat met privacy. Geen account, geen opslag van invoer. Mogelijk gebruik van cookies bij toekomstige analytics of advertenties.",
   alternates: { canonical: "/privacybeleid" },
 };
 
@@ -18,7 +18,7 @@ export default function Page() {
 
         <section>
           <h2 className="text-xl font-bold text-ink">Kort samengevat</h2>
-          <p className="mt-2">ZZP Calculator Hub is een website met gratis rekentools. Je hebt geen account nodig en we vragen niet om persoonsgegevens om de tools te gebruiken.</p>
+          <p className="mt-2">BerekenZZP.nl is een website met gratis rekentools. Je hebt geen account nodig en we vragen niet om persoonsgegevens om de tools te gebruiken.</p>
         </section>
 
         <section>
