@@ -8,7 +8,7 @@ export default function Header() {
           <span aria-hidden className="grid h-8 w-8 place-items-center rounded-lg bg-petrol-700 text-sm font-extrabold text-white">
             Σ
           </span>
-          <span>ZZP Calculator Hub</span>
+          <span>BerekenZZP.nl</span>
         </Link>
         <nav aria-label="Hoofdmenu" className="hidden gap-6 text-sm font-medium sm:flex">
           <Link href="/btw-berekenen" className="hover:text-petrol-700">Btw</Link>
