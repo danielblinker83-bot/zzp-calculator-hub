@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Over ons",
-  description: "ZZP Calculator Hub helpt Nederlandse zzp'ers en kleine ondernemers snel praktische bedrijfsberekeningen te maken met simpele, gratis tools.",
+  description: "BerekenZZP.nl helpt Nederlandse zzp'ers en kleine ondernemers snel praktische bedrijfsberekeningen te maken met simpele, gratis tools.",
   alternates: { canonical: "/over-ons" },
 };
 
@@ -15,7 +15,7 @@ export default function Page() {
       <h1 className="mt-4 text-3xl font-extrabold">Over ons</h1>
       <div className="mt-6 space-y-4 text-slate-700">
         <p>
-          ZZP Calculator Hub is gemaakt voor zzp&apos;ers en kleine ondernemers in Nederland die snel een praktisch cijfer nodig hebben. Geen ingewikkelde software, geen account, geen gedoe: je vult je gegevens in en ziet direct het resultaat.
+          BerekenZZP.nl is gemaakt voor zzp&apos;ers en kleine ondernemers in Nederland die snel een praktisch cijfer nodig hebben. Geen ingewikkelde software, geen account, geen gedoe: je vult je gegevens in en ziet direct het resultaat.
         </p>
         <p>
           Van btw en uurtarief tot netto inkomen en betalingsherinneringen: elke tool is gebouwd om één vraag simpel te beantwoorden. De belastingcalculators rekenen met de actuele tarieven, aftrekposten en heffingskortingen van het lopende belastingjaar (2026), geverifieerd tegen de informatie van de Belastingdienst. De uitkomsten blijven een indicatie: voor persoonlijk belastingadvies of financieel advies verwijzen we je naar een boekhouder of belastingadviseur.
