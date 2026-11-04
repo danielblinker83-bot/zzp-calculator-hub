@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="mt-16 border-t border-slate-200 bg-mist">
       <div className="container-page grid gap-8 py-10 sm:grid-cols-3">
         <div>
-          <p className="font-bold text-petrol-700">ZZP Calculator Hub</p>
+          <p className="font-bold text-petrol-700">BerekenZZP.nl</p>
           <p className="mt-2 text-sm text-slate-600">
             Gratis rekentools voor zzp&apos;ers en kleine ondernemers in Nederland. Alle uitkomsten zijn een indicatie, geen advies.
           </p>
@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-slate-200 py-4 text-center text-xs text-slate-500">
-        © {new Date().getFullYear()} ZZP Calculator Hub · Indicatieve berekeningen, geen financieel of fiscaal advies.
+        © {new Date().getFullYear()} BerekenZZP.nl · Indicatieve berekeningen, geen financieel of fiscaal advies.
       </div>
     </footer>
   );
