@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Gratis rekentools voor zzp'ers met de echte tarieven van 2026: btw, uurtarief, bruto-netto, belastingreserve, kilometervergoeding en offertes. Zonder account.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Gratis zzp calculators | ZZP Calculator Hub",
+    title: "Gratis zzp calculators | BerekenZZP.nl",
     description: SITE.description,
     url: "/",
   },
