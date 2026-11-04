@@ -3,7 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Disclaimer",
-  description: "De calculators op ZZP Calculator Hub geven indicaties, geen financieel, juridisch of fiscaal advies. Lees hier wat dat betekent.",
+  description: "De calculators op BerekenZZP.nl geven indicaties, geen financieel, juridisch of fiscaal advies. Lees hier wat dat betekent.",
   alternates: { canonical: "/disclaimer" },
 };
 
