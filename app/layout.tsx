@@ -7,8 +7,8 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Gratis zzp calculators | ZZP Calculator Hub",
-    template: "%s | ZZP Calculator Hub",
+    default: "Gratis zzp calculators | BerekenZZP.nl",
+    template: "%s | BerekenZZP.nl",
   },
   description: SITE.description,
   openGraph: {
