@@ -7,7 +7,7 @@ import AdPlaceholderTop from "@/components/AdPlaceholderTop";
 import DisclaimerBox from "@/components/DisclaimerBox";
 
 export const metadata: Metadata = {
-  title: "Gratis zzp calculators 2026 | Btw, uurtarief en netto inkomen",
+  title: "Gratis zzp calculators 2026 | BerekenZZP.nl",
   description:
     "Gratis rekentools voor zzp'ers met de echte tarieven van 2026: btw, uurtarief, bruto-netto, belastingreserve, kilometervergoeding en offertes. Zonder account.",
   alternates: { canonical: "/" },
