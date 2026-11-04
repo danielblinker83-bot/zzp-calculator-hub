@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "ZZP Calculator Hub",
+  name: "BerekenZZP.nl",
   url: "https://www.berekenzzp.nl",
   description:
     "Gratis rekentools voor zzp'ers: btw, uurtarief, netto inkomen en belasting berekenen met de echte tarieven van 2026.",
