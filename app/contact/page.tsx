@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Vragen, feedback of een idee voor een nieuwe calculator? Neem contact op met ZZP Calculator Hub.",
+  description: "Vragen, feedback of een idee voor een nieuwe calculator? Neem contact op met BerekenZZP.nl.",
   alternates: { canonical: "/contact" },
 };
 
