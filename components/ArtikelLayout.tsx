@@ -151,7 +151,7 @@ export default function ArtikelLayout({
             .
           </p>
           <p className="mt-3 text-xs text-slate-500">
-            Cijfers gecontroleerd op {datumNL(dateModified)} tegen de Belastingdienst en Rijksoverheid.
+            Bekijk de bronnen bij dit artikel voor de gebruikte uitgangspunten.
           </p>
         </aside>
 
