@@ -58,6 +58,19 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 
 export const ARTIKELEN: Artikel[] = [
   {
+    slug: "verschil-marge-en-opslag",
+    title: "Verschil tussen marge en opslag: zo voorkom je een te lage prijs",
+    description: "30% opslag is geen 30% marge. Bekijk de formules, omrekentabel en voorbeelden voor je verkoopprijs, extra kosten en korting.",
+    datum: "2026-11-04",
+    gecontroleerd: "2026-11-04",
+    leestijd: 6,
+    gerelateerdeTools: ["marge-berekenen", "offerte-calculator", "uurtarief-berekenen"],
+    bronnen: [
+      { label: "KVK — Kostprijs en verkoopprijs bepalen", url: "https://www.kvk.nl/marketing/hoe-bereken-je-een-goede-verkoopprijs-voor-je-product/" },
+      { label: "Ondernemersplein — Directe, indirecte, vaste en variabele kosten", url: "https://ondernemersplein.overheid.nl/geldzaken-en-belastingen/cashflow/prijs-bepalen-of-aanpassen/" },
+    ],
+  },
+  {
     slug: "wat-is-een-goed-uurtarief-als-zzper",
     title: "Wat is een goed uurtarief als zzp'er?",
     description:

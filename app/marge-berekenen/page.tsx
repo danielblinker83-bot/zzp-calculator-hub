@@ -80,6 +80,12 @@ export default function Page() {
           <section>
             <h2 className="text-xl font-bold text-ink">Hoe je marge en opslag berekent</h2>
             <p className="mt-2">
+              Twijfel je welk percentage je moet gebruiken? Lees het{" "}
+              <Link href="/kennisbank/verschil-marge-en-opslag" className="font-medium text-petrol-700 underline">
+                verschil tussen marge en opslag, met omrekentabel en kortingsvoorbeeld
+              </Link>.
+            </p>
+            <p className="mt-2">
               Winst per verkoop is je verkoopprijs min al je directe kosten. Stel: je koopt een
               product in voor €60, betaalt €5 aan verzending en verkoopt het voor €100 exclusief
               btw. Je winst is dan €35. De marge zet die winst af tegen de verkoopprijs: 35 / 100

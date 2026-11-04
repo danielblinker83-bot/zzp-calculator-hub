@@ -141,10 +141,10 @@ export default function ArtikelLayout({
         <aside className="mt-10 rounded-2xl border border-slate-200 bg-mist p-5">
           <p className="font-semibold text-ink">Over de maker</p>
           <p className="mt-2 text-sm text-slate-600">
-            berekenzzp.nl is gemaakt door Daniel Blinker, zelf ondernemer met een eenmanszaak. Uit
-            ergernis over rekentools met verouderde of verkeerde cijfers bouwde hij deze calculators
-            en artikelen, en controleerde alle bedragen tegen de Belastingdienst en Rijksoverheid.
-            Geen belastingadviseur, wel een zzp'er die zijn cijfers op orde wil hebben.{" "}
+            BerekenZZP.nl is een initiatief van Daniel Blinker, zelf ondernemer. De site biedt
+            praktische rekentools en uitleg voor zzp&apos;ers. De uitgangspunten en bronnen staan
+            bij de berekeningen en artikelen, zodat je ze kunt controleren en kunt beoordelen
+            of ze passen bij jouw situatie.{" "}
             <Link href="/over-ons" className="font-medium text-petrol-700 underline">
               Meer over ons
             </Link>
