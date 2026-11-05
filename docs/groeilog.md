@@ -2,6 +2,8 @@
 
 ## 5 november 2026 — blogafbeeldingen
 
+- Controle geslaagd: productiebuild 26 routes, HTML-afbeeldingsverwijzingen op beide artikelen/homepage/overzicht en OG 1536 × 864 gecontroleerd. Vercel-deploy success. Live browser bevestigt beide afbeeldingen geladen op artikel, kennisbank en homepagekaarten. Bestaande oudere beelden laden ook. Geen wijzigingen aan herkenbaarheid, kleding of compositie van de twee aangeleverde beelden gedaan.
+
 - Twee door Daniel aangeleverde afbeeldingen gekoppeld aan kilometervergoeding doorberekenen en verschil marge/opslag. Aangeleverde inhoud behouden, met correcte JPEG-extensie en werkelijke afmetingen 1536 × 864.
 - Afbeeldingen zichtbaar via artikelregistry op artikel en kennisbank. Homepagekaarten uitgebreid met dezelfde afbeeldingen. Responsieve sizes toegevoegd aan alle artikelbeelden; Open Graph neemt de juiste afmetingen mee.
 - `docs/beeldstijl.md` bevat blijvende identiteits-/stijlreferenties, kleding-/houdinglog en publicatiecheck. Dagelijkse taak bijgewerkt: ieder nieuw artikel vereist een nieuw passend beeld met Daniel herkenbaar, ander overhemd en andere houding.
