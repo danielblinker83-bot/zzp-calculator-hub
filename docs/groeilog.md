@@ -1,5 +1,12 @@
 # BerekenZZP groeilog
 
+## 5 november 2026 — mobiele navigatie
+
+- Daniel meldde met telefoonscreenshots dat blogs onvindbaar waren en mobiel alleen een Tools-knop zichtbaar was. Oorzaak: de navigatie gebruikte `hidden sm:flex` zonder mobiel menu, en de homepage bevatte geen artikelverwijzingen.
+- Hamburgerknop Menu/Sluiten onder 1024px toegevoegd, met aria-expanded/controls, alle calculators/generators, Blogs & kennisbank, Home, Over ons en Contact. Sluit bij keuze, Escape (focus terug) en klik buiten het menu. Menu scrollt binnen de schermhoogte; header blijft bereikbaar.
+- Homepage heeft nu een directe Blogs & tips-knop plus de twee nieuwste artikelen vóór alle tools. Dynamisch uit dezelfde artikelregistry, zodat nieuwe blogs vanzelf verschijnen. Footerlabel verduidelijkt.
+- Productiebuild en TypeScript geslaagd, 26 statische routes. Navigatiecodes gecontroleerd op toetsenbordtoegang, effect-opruiming en touchdoelen. Live interactiecontrole volgt na deploy.
+
 ## 5 november 2026
 
 - Publicatie bevestigd: commit `0b2b0b63a4bde5ebb95e34e1508ee72d855655f2`, Vercel-status success. Live artikel en bijgewerkte calculator op 5 november geopend; parkeer-/tolcorrectie en wederzijdse link zichtbaar. Live calculator met 80 km × €0,45 getest: €36,00. Aanvankelijke 404 tijdens de build verdween na voltooiing van de deployment.

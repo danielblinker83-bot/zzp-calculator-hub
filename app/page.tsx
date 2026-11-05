@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { TOOLS, SITE } from "@/lib/site";
+import { recenteArtikelen } from "@/lib/kennisbank";
 import ToolCard from "@/components/ToolCard";
 import FAQ from "@/components/FAQ";
 import AdPlaceholderTop from "@/components/AdPlaceholderTop";
@@ -59,11 +60,31 @@ export default function HomePage() {
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/btw-berekenen" className="btn-primary">Btw berekenen</Link>
             <Link href="/uurtarief-berekenen" className="btn-secondary">Uurtarief berekenen</Link>
+            <Link href="/kennisbank" className="btn-secondary">Blogs & tips lezen</Link>
           </div>
         </div>
       </section>
 
       <AdPlaceholderTop />
+
+      <section className="container-page border-b border-slate-200 py-8" aria-labelledby="blogs-titel">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h2 id="blogs-titel" className="text-2xl font-bold">Nieuwste blogs voor zzp’ers</h2>
+          <Link href="/kennisbank" className="inline-flex min-h-11 items-center text-sm font-semibold text-petrol-700 underline">Alle blogs bekijken →</Link>
+        </div>
+        <p className="mt-1 text-slate-600">Praktische uitleg, rekenvoorbeelden en tips bij de calculators.</p>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          {recenteArtikelen(undefined, 2).map((artikel) => (
+            <Link key={artikel.slug} href={`/kennisbank/${artikel.slug}`}
+              className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-petrol-300 hover:shadow-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-petrol-700">
+              <p className="text-xs text-slate-500"><time dateTime={artikel.datum}>{new Date(artikel.datum).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" })}</time> · {artikel.leestijd} min lezen</p>
+              <h3 className="mt-2 text-lg font-bold text-ink">{artikel.title}</h3>
+              <p className="mt-2 text-sm text-slate-600">{artikel.description}</p>
+              <span className="mt-3 inline-block text-sm font-semibold text-petrol-700">Lees artikel →</span>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {/* Tools */}
       <section id="tools" className="container-page py-12" aria-labelledby="tools-titel">
