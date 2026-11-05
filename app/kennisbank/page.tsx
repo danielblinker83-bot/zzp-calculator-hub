@@ -47,8 +47,9 @@ export default function Page() {
                 <Image
                   src={a.afbeelding}
                   alt={a.afbeeldingAlt ?? a.title}
-                  width={1672}
-                  height={941}
+                  width={a.afbeeldingBreedte ?? 1672}
+                  height={a.afbeeldingHoogte ?? 941}
+                  sizes="(max-width: 640px) calc(100vw - 32px), 440px"
                   className="h-full w-full object-cover transition group-hover:scale-[1.02]"
                 />
               </div>

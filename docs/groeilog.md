@@ -1,5 +1,11 @@
 # BerekenZZP groeilog
 
+## 5 november 2026 — blogafbeeldingen
+
+- Twee door Daniel aangeleverde afbeeldingen gekoppeld aan kilometervergoeding doorberekenen en verschil marge/opslag. Aangeleverde inhoud behouden, met correcte JPEG-extensie en werkelijke afmetingen 1536 × 864.
+- Afbeeldingen zichtbaar via artikelregistry op artikel en kennisbank. Homepagekaarten uitgebreid met dezelfde afbeeldingen. Responsieve sizes toegevoegd aan alle artikelbeelden; Open Graph neemt de juiste afmetingen mee.
+- `docs/beeldstijl.md` bevat blijvende identiteits-/stijlreferenties, kleding-/houdinglog en publicatiecheck. Dagelijkse taak bijgewerkt: ieder nieuw artikel vereist een nieuw passend beeld met Daniel herkenbaar, ander overhemd en andere houding.
+
 ## 5 november 2026 — mobiele navigatie
 
 - Daniel meldde met telefoonscreenshots dat blogs onvindbaar waren en mobiel alleen een Tools-knop zichtbaar was. Oorzaak: de navigatie gebruikte `hidden sm:flex` zonder mobiel menu, en de homepage bevatte geen artikelverwijzingen.

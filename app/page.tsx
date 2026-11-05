@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { TOOLS, SITE } from "@/lib/site";
 import { recenteArtikelen } from "@/lib/kennisbank";
 import ToolCard from "@/components/ToolCard";
@@ -76,11 +77,19 @@ export default function HomePage() {
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {recenteArtikelen(undefined, 2).map((artikel) => (
             <Link key={artikel.slug} href={`/kennisbank/${artikel.slug}`}
-              className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-petrol-300 hover:shadow-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-petrol-700">
+              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:border-petrol-300 hover:shadow-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-petrol-700">
+              {artikel.afbeelding && (
+                <Image src={artikel.afbeelding} alt={artikel.afbeeldingAlt ?? artikel.title}
+                  width={artikel.afbeeldingBreedte ?? 1672} height={artikel.afbeeldingHoogte ?? 941}
+                  sizes="(max-width: 640px) calc(100vw - 32px), 480px"
+                  className="h-auto w-full" />
+              )}
+              <div className="p-5">
               <p className="text-xs text-slate-500"><time dateTime={artikel.datum}>{new Date(artikel.datum).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" })}</time> · {artikel.leestijd} min lezen</p>
               <h3 className="mt-2 text-lg font-bold text-ink">{artikel.title}</h3>
               <p className="mt-2 text-sm text-slate-600">{artikel.description}</p>
               <span className="mt-3 inline-block text-sm font-semibold text-petrol-700">Lees artikel →</span>
+              </div>
             </Link>
           ))}
         </div>

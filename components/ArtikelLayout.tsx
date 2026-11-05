@@ -65,8 +65,9 @@ export default function ArtikelLayout({
           <Image
             src={artikel.afbeelding}
             alt={artikel.afbeeldingAlt ?? artikel.title}
-            width={1672}
-            height={941}
+            width={artikel.afbeeldingBreedte ?? 1672}
+            height={artikel.afbeeldingHoogte ?? 941}
+            sizes="(max-width: 640px) calc(100vw - 32px), 672px"
             priority
             className="h-auto w-full rounded-2xl border border-slate-200"
           />

@@ -16,6 +16,8 @@ export type Artikel = {
   leestijd: number; // minuten
   afbeelding?: string; // pad in /public, bijv. /kennisbank/<slug>.png (16:9)
   afbeeldingAlt?: string;
+  afbeeldingBreedte?: number;
+  afbeeldingHoogte?: number;
   gerelateerdeTools?: string[]; // tool-slugs
   bronnen?: Bron[];
 };
@@ -32,7 +34,7 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
   const title = overrides?.title ?? a.title;
   const description = overrides?.description ?? a.description;
   const images = a.afbeelding
-    ? [{ url: a.afbeelding, width: 1672, height: 941, alt: a.afbeeldingAlt ?? a.title }]
+    ? [{ url: a.afbeelding, width: a.afbeeldingBreedte ?? 1672, height: a.afbeeldingHoogte ?? 941, alt: a.afbeeldingAlt ?? a.title }]
     : undefined;
   return {
     title,
@@ -64,6 +66,10 @@ export const ARTIKELEN: Artikel[] = [
     datum: "2026-11-05",
     gecontroleerd: "2026-11-05",
     leestijd: 5,
+    afbeelding: "/kennisbank/kilometervergoeding-doorberekenen-klant.jpg",
+    afbeeldingAlt: "Daniel Blinker in een wit overhemd bij uitleg over kilometervergoeding doorberekenen aan je klant",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
     gerelateerdeTools: ["kilometervergoeding-berekenen", "btw-berekenen", "factuurtekst-maken", "offerte-calculator"],
     bronnen: [
       { label: "KVK — Afspraken over bijkomende kosten", url: "https://www.kvk.nl/geldzaken/uurtarief-bepalen/" },
@@ -78,6 +84,10 @@ export const ARTIKELEN: Artikel[] = [
     datum: "2026-11-04",
     gecontroleerd: "2026-11-04",
     leestijd: 6,
+    afbeelding: "/kennisbank/verschil-marge-en-opslag.jpg",
+    afbeeldingAlt: "Daniel Blinker legt in een wit overhemd het verschil tussen marge en opslag uit",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
     gerelateerdeTools: ["marge-berekenen", "offerte-calculator", "uurtarief-berekenen"],
     bronnen: [
       { label: "KVK — Kostprijs en verkoopprijs bepalen", url: "https://www.kvk.nl/marketing/hoe-bereken-je-een-goede-verkoopprijs-voor-je-product/" },
