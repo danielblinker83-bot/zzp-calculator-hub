@@ -1,5 +1,16 @@
 # BerekenZZP groeilog
 
+## 5 november 2026
+
+- Artikel `/kennisbank/kilometervergoeding-doorberekenen-klant`: richt zich op facturatie (afspraken, retourafstand, btw, voorbeeldfactuur) in aanvulling op de bestaande kilometercalculator.
+- Onderwerp sluit aan op eerder aangeleverde querysignalen over kilometervergoeding en doorberekenen aan klanten. Geen nieuwe GSC-meting: serviceaccountsleutel niet aanwezig in de checkout; geen toegang of cijfers gefingeerd.
+- Bronnen op 5 november 2026 gelezen: KVK uurtarief/bijkomende kosten, Belastingdienst btw over diensten, Belastingdienst zakelijk gebruik privévervoermiddel 2026. Bronlinks in het artikel.
+- Eigen factuurvoorbeeld: 4 × €65 + 80 × €0,45 = €296 excl. btw; 21% = €62,16; totaal €358,16. Fiscale aftrek van dezelfde 80 km bij €0,25 = €20, geen €20 belastingteruggave.
+- Bestaande kilometerpagina gecorrigeerd: parkeren/tol niet afzonderlijk aftrekbaar naast het privévoertuigforfait. Intro en omschrijving onderscheiden nu aftrek, klanttarief en belastingeffect. Btw-uitzonderingen toegevoegd; niet onderbouwde claim over gebruikelijk klanttarief verwijderd. Contextuele link naar artikel toegevoegd.
+- Artikelregistry verzorgt kennisbank, sitemap en metadata. Bestaande componenten leveren Article, BreadcrumbList en FAQPage. Geen nieuwe afbeelding: factuurgegevens zijn een toegankelijke HTML-tabel.
+- Verificatie vóór publicatie: productiebuild geslaagd (26 statische routes); alle bestaande tests geslaagd via `node --import tsx scripts/test.ts`. HTML gecontroleerd op titel, één H1, canonical, schema’s, sitemap en bestaande interne linkdoelen. Factuurvoorbeeld onafhankelijk nagerekend. De tabel heeft kolomkoppen en een horizontale scrollcontainer voor smalle schermen; geen mobiele viewporttest uitgevoerd.
+- Volgende ronde: controleer overige te brede auto/ov-uitspraken en fiscale rekenvoorbeelden op de oudere pagina’s. Meet pas groei bij werkelijk beschikbare nieuwe Search Console-data.
+
 ## 4 november 2026
 
 - Dagelijkse artikelpublicatie ingesteld tot en met 3 januari 2027. Bestaande groeitaak gewijzigd, geen dubbele taak.

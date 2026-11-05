@@ -6,7 +6,7 @@ import KilometerCalculator from "./KilometerCalculator";
 export const metadata: Metadata = {
   title: "Kilometervergoeding berekenen (2026: €0,25 per km) | Calculator",
   description:
-    "Bereken je kilometervergoeding met het tarief van 2026: €0,25 onbelast per kilometer. Zie direct het bedrag per rit, per maand en per jaar.",
+    "Bereken je kilometerbedrag per rit, maand en jaar. Voor zakelijke ritten met privévervoer geldt in 2026 €0,25 fiscale aftrek per kilometer.",
   alternates: { canonical: "/kilometervergoeding-berekenen" },
   openGraph: {
     title: "Kilometervergoeding berekenen (2026: €0,25 per km)",
@@ -24,7 +24,7 @@ const faq = [
   {
     vraag: "Hoe werkt de kilometeraftrek voor zzp'ers met een privéauto?",
     antwoord:
-      "Rijd je zakelijke kilometers met je privéauto, dan mag je per kilometer het onbelaste tarief (€0,25 in 2026) als zakelijke kosten opvoeren. Dat verlaagt je winst en dus je belasting. De werkelijke autokosten (brandstof, verzekering, onderhoud) mag je dan niet ook nog aftrekken; het bedrag per kilometer dekt alles.",
+      "Rijd je zakelijke kilometers met je privéauto, dan mag je in 2026 €0,25 per kilometer als kosten van je winst aftrekken. Dat is een aftrekpost, geen belastingvrije omzet of directe terugbetaling. Brandstof, verzekering, tol en parkeren van die ritten mag je niet ook nog afzonderlijk aftrekken.",
   },
   {
     vraag: "Geldt de vergoeding ook voor de fiets of het ov?",
@@ -39,7 +39,7 @@ const faq = [
   {
     vraag: "Kan ik reiskosten doorberekenen aan mijn klant?",
     antwoord:
-      "Dat mag, als je het vooraf afspreekt, bijvoorbeeld in je offerte. Je bent daarbij niet gebonden aan €0,25: je mag zakelijk elk tarief afspreken. Let op: over doorberekende reiskosten reken je gewoon btw, tegen hetzelfde tarief als je hoofddienst. Wat je aan de klant factureert is omzet; de kilometeraftrek in je aangifte staat daar los van.",
+      "Maak hierover vooraf afspraken, bijvoorbeeld in je offerte. Voor de factuur gebruik je jullie afgesproken tarief. Bij een gewone belaste dienst horen de reiskosten bij de vergoeding en volgen zij het btw-tarief van die dienst. Bij vrijstelling of verlegging kan dat anders zijn. De kilometeraftrek in je aangifte staat los van je klantfactuur.",
   },
   {
     vraag: "Wat als mijn auto op de zaak staat?",
@@ -58,12 +58,18 @@ export default function Page() {
     <CalculatorLayout
       slug="kilometervergoeding-berekenen"
       h1="Kilometervergoeding berekenen"
-      intro="Bereken in een paar seconden wat je zakelijke kilometers opleveren. De calculator staat standaard op het 2026-tarief van €0,25 per kilometer. Vul je kilometers in, voeg optioneel je ritten per maand toe en zie direct het bedrag per rit, maand en jaar."
+      intro="Bereken het bedrag van je zakelijke kilometers per rit, maand en jaar. De standaardwaarde van €0,25 is de fiscale aftrek per kilometer met privévervoer in 2026, niet je belastingteruggave. Voor een klantfactuur vul je het tarief in dat jullie hebben afgesproken."
       tool={<KilometerCalculator />}
       uitleg={
         <div className="space-y-6 text-slate-600">
           <section>
             <h2 className="text-xl font-bold text-ink">Hoe je de kilometervergoeding berekent</h2>
+            <p className="mt-2">
+              Maak je een klantfactuur? Lees hoe je{" "}
+              <Link href="/kennisbank/kilometervergoeding-doorberekenen-klant" className="font-medium text-petrol-700 underline">
+                kilometervergoeding doorberekent aan je klant, met btw en voorbeeldfactuur
+              </Link>.
+            </p>
             <p className="mt-2">
               De berekening zelf is eenvoudig: aantal kilometers keer het tarief per kilometer.
               Rijd je bijvoorbeeld 45 kilometer naar een klant en terug, dan is dat bij het
@@ -75,8 +81,8 @@ export default function Page() {
               Voor een zzp'er heeft het bedrag twee gezichten. In je aangifte is het een
               aftrekpost: per zakelijke kilometer met je privévoertuig mag je €0,25 van je winst
               aftrekken. Richting je klant is het een afspraak: je mag reiskosten doorberekenen
-              tegen elk tarief dat jullie overeenkomen, al is het gebruikelijke tarief ook daar
-              vaak €0,25.
+              tegen het tarief dat jullie overeenkomen. Dat is een andere berekening dan de
+              fiscale aftrek voor privévervoer.
             </p>
           </section>
 
@@ -87,7 +93,7 @@ export default function Page() {
               per kilometer. De verhoging werkt terug tot 1 januari 2026, dus ook kilometers die
               je eerder dit jaar reed, mag je tegen €0,25 rekenen. Het tarief stond in 2024 en
               2025 op €0,23 en in 2023 op €0,21. Het geldt voor elk vervoermiddel: auto, motor,
-              scooter, fiets of te voet afgelegde zakelijke kilometers.
+              scooter of fiets als privévervoermiddel voor zakelijke ritten.
             </p>
           </section>
 
@@ -108,13 +114,19 @@ export default function Page() {
             <h2 className="text-xl font-bold text-ink">Veelgemaakte fouten bij de kilometervergoeding</h2>
             <ul className="mt-2 list-disc space-y-1 pl-5">
               <li>Geen rittenregistratie bijhouden, waardoor de aftrek bij een controle sneuvelt.</li>
-              <li>Naast de kilometervergoeding ook brandstof of parkeerkosten van dezelfde ritten aftrekken. Parkeren mag overigens wél apart, de brandstof niet.</li>
-              <li>Doorberekende reiskosten zonder btw factureren. Reiskosten volgen het btw-tarief van je hoofddienst.</li>
+              <li>Naast de kilometeraftrek ook brandstof, tol of parkeren van dezelfde privévoertuigritten aftrekken. Die kosten zijn al in het kilometerbedrag verwerkt.</li>
+              <li>De btw-behandeling van doorberekende reiskosten niet controleren. Bij een gewone belaste dienst volgen de bijbehorende reiskosten het tarief van die dienst; vrijstelling en verlegging kunnen een andere behandeling vragen.</li>
               <li>Met het oude tarief van €0,23 blijven rekenen, terwijl 2026-kilometers €0,25 waard zijn.</li>
               <li>Privéritten of geschatte kilometers opvoeren in plaats van werkelijk gereden zakelijke kilometers.</li>
             </ul>
           </section>
 
+          <section>
+            <h2 className="text-xl font-bold text-ink">Bronnen</h2>
+            <p className="mt-2 text-sm">
+              <a href="https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/veranderingen-inkomstenbelasting-2026/zakelijk-gebruik-privevervoermiddel-2026" className="text-petrol-700 underline">Belastingdienst: zakelijk gebruik privévervoermiddel 2026</a>. Tarief en verwerking van parkeren en tol gecontroleerd op 5 november 2026.
+            </p>
+          </section>
           <section>
             <p className="mt-2">
               Bereken je reiskosten voor een klus, verwerk ze dan meteen in een compleet

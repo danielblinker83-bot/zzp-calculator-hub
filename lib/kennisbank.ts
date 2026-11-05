@@ -58,6 +58,20 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 
 export const ARTIKELEN: Artikel[] = [
   {
+    slug: "kilometervergoeding-doorberekenen-klant",
+    title: "Kilometervergoeding doorberekenen aan je klant: tarief, btw en voorbeeld",
+    description: "Hoe zet je reiskosten op je factuur als zzp’er? Met voorbeeldfactuur, afspraken over kilometers en uitleg over het verschil met je fiscale aftrek in 2026.",
+    datum: "2026-11-05",
+    gecontroleerd: "2026-11-05",
+    leestijd: 5,
+    gerelateerdeTools: ["kilometervergoeding-berekenen", "btw-berekenen", "factuurtekst-maken", "offerte-calculator"],
+    bronnen: [
+      { label: "KVK — Afspraken over bijkomende kosten", url: "https://www.kvk.nl/geldzaken/uurtarief-bepalen/" },
+      { label: "Belastingdienst — Btw over diensten en reiskosten", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/btw_berekenen_aan_uw_klanten/waarover_btw_berekenen/diensten/" },
+      { label: "Belastingdienst — Zakelijk gebruik privévervoermiddel 2026", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/veranderingen-inkomstenbelasting-2026/zakelijk-gebruik-privevervoermiddel-2026" },
+    ],
+  },
+  {
     slug: "verschil-marge-en-opslag",
     title: "Verschil tussen marge en opslag: zo voorkom je een te lage prijs",
     description: "30% opslag is geen 30% marge. Bekijk de formules, omrekentabel en voorbeelden voor je verkoopprijs, extra kosten en korting.",
