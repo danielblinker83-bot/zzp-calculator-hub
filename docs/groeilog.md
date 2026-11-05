@@ -5,7 +5,7 @@
 - Daniel meldde met telefoonscreenshots dat blogs onvindbaar waren en mobiel alleen een Tools-knop zichtbaar was. Oorzaak: de navigatie gebruikte `hidden sm:flex` zonder mobiel menu, en de homepage bevatte geen artikelverwijzingen.
 - Hamburgerknop Menu/Sluiten onder 1024px toegevoegd, met aria-expanded/controls, alle calculators/generators, Blogs & kennisbank, Home, Over ons en Contact. Sluit bij keuze, Escape (focus terug) en klik buiten het menu. Menu scrollt binnen de schermhoogte; header blijft bereikbaar.
 - Homepage heeft nu een directe Blogs & tips-knop plus de twee nieuwste artikelen vóór alle tools. Dynamisch uit dezelfde artikelregistry, zodat nieuwe blogs vanzelf verschijnen. Footerlabel verduidelijkt.
-- Productiebuild en TypeScript geslaagd, 26 statische routes. Navigatiecodes gecontroleerd op toetsenbordtoegang, effect-opruiming en touchdoelen. Live interactiecontrole volgt na deploy.
+- Productiebuild en TypeScript geslaagd, 26 statische routes. Navigatiecodes gecontroleerd op toetsenbordtoegang, effect-opruiming en touchdoelen. Vercel-deploy geslaagd; live homepage toont blogknop en beide nieuwe artikelen. Geïsoleerde DOM-test met de echte Header geslaagd: openen, 16 links, Escape/focusterugkeer, buitenklik en linkkeuze. Browser-viewport was 1363px en kon via beschikbare bediening niet naar telefoongrootte worden gezet; dus geen echte mobiele viewport- of toesteltest geclaimd. Publieke screenshot van homepage bewaard als bewijs van blogtoegang.
 
 ## 5 november 2026
 
