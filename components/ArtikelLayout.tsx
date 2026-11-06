@@ -42,7 +42,9 @@ export default function ArtikelLayout({
     articleSection: "Kennisbank",
     mainEntityOfPage: url,
     ...(artikel.afbeelding ? { image: `${SITE.url}${artikel.afbeelding}` } : {}),
-    author: { "@type": "Person", name: "Daniel Blinker", url: `${SITE.url}/over-ons` },
+    author: artikel.redactie
+      ? { "@id": `${SITE.url}/#organization` }
+      : { "@type": "Person", name: "Daniel Blinker", url: `${SITE.url}/over-ons` },
     publisher: { "@id": `${SITE.url}/#organization` },
   };
 

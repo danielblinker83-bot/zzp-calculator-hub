@@ -1,5 +1,14 @@
 # BerekenZZP groeilog
 
+## 6 november 2026 — verkoopprijs met platformkosten
+
+- Nieuw artikel `/kennisbank/verkoopprijs-platformkosten`. Onderscheidt vaste vergoeding en prijsafhankelijke commissie, met een formule voor een doelmarge en een terugcontrole in de margecalculator. De bestaande pagina over marge versus opslag blijft de uitleg bij die begrippen.
+- Keuze op basis van de beschikbare Search Console-export (2 augustus–1 november 2026): 23 vertoningen voor ‘bol.com marge berekenen’ en 2.184 vertoningen voor de margecalculator. Totaal in deze export 10 klikken en 3.419 vertoningen. Historische periode, geen nieuwe API-meting: lokale serviceaccountsleutel ontbreekt. Voor de wijziging live vier bestaande kennisbankartikelen aangetroffen.
+- KVK (kostprijs en platformkosten), bol Partnerplatform (commissie en afrekening) en Belastingdienst (btw-tarieven en aftrekvoorwaarden) gecontroleerd op 6 november. Commissietarieven in de voorbeelden zijn fictief. Nagerekend: €35 ÷ 0,70 = €50 met 20% marge. Bij 10% commissie over €60,50 inclusief btw blijft €8,95 of 17,9% over. Kostendekkende prijs in het eerste scenario €38,89 en doelprijs in het tweede scenario €51,55, beide naar boven afgerond.
+- Teruglinks vanuit margecalculator en artikel over marge versus opslag. Btw-uitleg bij de calculator verduidelijkt voor niet-aftrekbare inkoop-btw; ongefundeerde branchepercentages verwijderd en kortingsvoorbeeld beperkt tot gelijkblijvende kosten.
+- Nieuw beeld `public/kennisbank/verkoopprijs-platformkosten.jpg`, 1536 × 864, 149.917 bytes. Beide aangeleverde referenties gebruikt. Lichtblauw overhemd met opgerolde mouwen, zijwaarts op een kruk met een doos op schoot. Gezicht, handen en Nederlandse kop visueel gecontroleerd, ook verkleind tot 320px breed.
+- Productiebuild (27 statische routes) en bestaande calculatortests geslaagd. Prerender gecontroleerd op canonieke URL, Article/BreadcrumbList/FAQPage, Open Graph en sociale afbeelding, sitemap, bronnen, geldige interne linkdoelen en afbeeldingen op artikel, kennisbank en homepage. Tabel met twee kolommen en meeschalende breedte; geen test op fysiek toestel.
+
 ## 5 november 2026 — blogafbeeldingen
 
 - Controle geslaagd: productiebuild 26 routes, HTML-afbeeldingsverwijzingen op beide artikelen/homepage/overzicht en OG 1536 × 864 gecontroleerd. Vercel-deploy success. Live browser bevestigt beide afbeeldingen geladen op artikel, kennisbank en homepagekaarten. Bestaande oudere beelden laden ook. Geen wijzigingen aan herkenbaarheid, kleding of compositie van de twee aangeleverde beelden gedaan.

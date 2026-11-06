@@ -14,6 +14,7 @@ export type Artikel = {
   bijgewerkt?: string; // ISO, laatst inhoudelijk bijgewerkt
   gecontroleerd?: string; // ISO, laatst gecontroleerd op actualiteit (versheidssignaal)
   leestijd: number; // minuten
+  redactie?: boolean;
   afbeelding?: string; // pad in /public, bijv. /kennisbank/<slug>.png (16:9)
   afbeeldingAlt?: string;
   afbeeldingBreedte?: number;
@@ -59,6 +60,26 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 }
 
 export const ARTIKELEN: Artikel[] = [
+  {
+    slug: "verkoopprijs-platformkosten",
+    title: "Verkoopprijs berekenen met platformkosten",
+    description: "Bereken je verkoopprijs met een vaste vergoeding, platformcommissie en gewenste marge. Met rekenvoorbeelden en uitleg over de commissiegrondslag bij bol.",
+    datum: "2026-11-06",
+    leestijd: 5,
+    redactie: true,
+    afbeelding: "/kennisbank/verkoopprijs-platformkosten.jpg",
+    afbeeldingAlt: "Daniel Blinker in een lichtblauw overhemd met een verzenddoos op schoot",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
+    gerelateerdeTools: ["marge-berekenen", "btw-berekenen"],
+    bronnen: [
+      { label: "KVK — Kostprijs en verkoopprijs bepalen", url: "https://www.kvk.nl/marketing/hoe-bereken-je-een-goede-verkoopprijs-voor-je-product/" },
+      { label: "KVK — Kosten bij verkoop via een online platform", url: "https://www.kvk.nl/starten/spullen-verkopen-via-een-online-platform/" },
+      { label: "bol Partnerplatform — Commissie en berekeningsgrondslag", url: "https://partnerplatform.bol.com/nl/idp/commissie" },
+      { label: "bol Partnerplatform — Verkoopfactuur en verrekeningen", url: "https://partnerplatform.bol.com/nl/idp/verkoopfactuur" },
+      { label: "Belastingdienst — Btw-tarieven", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/btw_berekenen_aan_uw_klanten/btw_berekenen/btw_tarief/btw_tarief" },
+    ],
+  },
   {
     slug: "kilometervergoeding-doorberekenen-klant",
     title: "Kilometervergoeding doorberekenen aan je klant: tarief, btw en voorbeeld",

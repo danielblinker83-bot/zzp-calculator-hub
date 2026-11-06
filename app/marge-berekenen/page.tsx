@@ -34,12 +34,12 @@ const faq = [
   {
     vraag: "Reken ik mijn marge met bedragen inclusief of exclusief btw?",
     antwoord:
-      "Altijd exclusief btw. De btw op je verkoopfactuur draag je af aan de Belastingdienst en de btw op je inkoop vraag je terug; beide zijn geen omzet of kosten. Reken je per ongeluk met inclusief-bedragen, dan lijkt je marge hoger dan hij is.",
+      "Laat de btw die je over je verkoop berekent buiten je opbrengst. Neem bij inkoop en extra kosten alleen de btw mee die je niet kunt aftrekken. Kun je alle inkoop-btw aftrekken, dan vul je de kosten exclusief btw in.",
   },
   {
     vraag: "Wat is een gezonde winstmarge?",
     antwoord:
-      "Dat verschilt sterk per branche. Handel en e-commerce werken vaak met brutomarges van 20 tot 50% en hoog volume; dienstverleners rekenen doorgaans hogere marges omdat hun uren de kostprijs zijn. Belangrijker dan een benchmark: uit je marge moeten ook je vaste lasten, je eigen inkomen en je belasting betaald worden.",
+      "Dat hangt af van je kosten en hoeveel je verwacht te verkopen. Vermenigvuldig wat je per verkoop overhoudt met je verwachte aantal verkopen. Vergelijk dat bedrag met de vaste lasten en andere kosten die nog niet in je berekening zitten.",
   },
   {
     vraag: "Wat vul ik in bij extra kosten?",
@@ -49,7 +49,7 @@ const faq = [
   {
     vraag: "Hoe bereken ik of een korting nog rendabel is?",
     antwoord:
-      "Vul je inkoopprijs en de verlaagde verkoopprijs in de calculator in. Zie je de winst per verkoop, dan weet je meteen hoeveel extra stuks je moet verkopen om de korting terug te verdienen. Bij een marge van 40% kost 10% korting je een kwart van je winst per verkoop.",
+      "Vergelijk in de calculator wat je per verkoop overhoudt vóór en na de korting. Bij €100 verkoopprijs en €60 kosten gaat dat bedrag door 10% korting van €40 naar €30 als de kosten gelijk blijven. Bereken prijsafhankelijke kosten zoals commissie opnieuw als je korting geeft.",
   },
   {
     vraag: "Hoe bereken ik mijn winstpercentage?",
@@ -83,6 +83,12 @@ export default function Page() {
               Twijfel je welk percentage je moet gebruiken? Lees het{" "}
               <Link href="/kennisbank/verschil-marge-en-opslag" className="font-medium text-petrol-700 underline">
                 verschil tussen marge en opslag, met omrekentabel en kortingsvoorbeeld
+              </Link>.
+            </p>
+            <p className="mt-2">
+              Verkoop je via een platform? Lees hoe je je{" "}
+              <Link href="/kennisbank/verkoopprijs-platformkosten" className="font-medium text-petrol-700 underline">
+                verkoopprijs berekent met platformcommissie en vaste kosten
               </Link>.
             </p>
             <p className="mt-2">
@@ -148,13 +154,12 @@ export default function Page() {
           <section>
             <h2 className="text-xl font-bold text-ink">Marge en btw: houd ze uit elkaar</h2>
             <p className="mt-2">
-              Reken je marge altijd met bedragen exclusief btw. De 21% (of 9%) die je op je
-              factuur zet, is geen omzet: die draag je af bij de kwartaalaangifte. Andersom is de
-              btw op je inkoopfactuur geen kostenpost, want die vraag je als voorbelasting terug.
-              De btw-tarieven zijn in 2026 ongewijzigd (21%, 9% en 0%), maar dat verandert niets
-              aan het principe: marge is een verhaal exclusief btw. Verkoop je aan particulieren,
-              onthoud dan dat de prijs die de klant ziet inclusief btw is; jouw marge zit in het
-              exclusieve deel.
+              Bereken je btw over de verkoop, laat die dan buiten de opbrengst in je margeberekening.
+              Bij inkoop en extra kosten laat je de btw die je mag aftrekken buiten de berekening.
+              Niet-aftrekbare btw neem je mee als kosten. Bekijk de{" "}
+              <a href="https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/btw_aftrekken/welke_btw_is_aftrekbaar/welke_btw_mag_u_aftrekken" className="font-medium text-petrol-700 underline">
+                voorwaarden voor btw-aftrek bij de Belastingdienst
+              </a>.
             </p>
           </section>
 
@@ -163,7 +168,7 @@ export default function Page() {
             <ul className="mt-2 list-disc space-y-1 pl-5">
               <li>Marge en opslag door elkaar halen, waardoor de prijs structureel te laag uitvalt.</li>
               <li>Een gewenste marge omrekenen door te vermenigvuldigen in plaats van te delen.</li>
-              <li>Rekenen met bedragen inclusief btw, waardoor de marge op papier hoger lijkt.</li>
+              <li>Verkoop-btw als opbrengst behandelen of aftrekbare btw bij je kosten optellen.</li>
               <li>Directe kosten per verkoop vergeten: verzending, verpakking, transactiekosten en platformcommissie eten stilletjes marge op.</li>
               <li>Vergeten dat uit de marge ook vaste lasten, je eigen inkomen en de belasting betaald moeten worden; brutomarge is geen nettowinst.</li>
             </ul>

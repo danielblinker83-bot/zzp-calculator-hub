@@ -65,6 +65,7 @@ export default function Page() {
       <section id="kosten" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">Je percentage is zo compleet als je kostenbasis</h2>
         <p className="mt-2">Een inkoopprijs van €100 vertelt niet altijd het hele verhaal. Betaal je per verkoop ook €5 verzending, €2 verpakking en €3 transactiekosten, dan kost die verkoop €110. Bij een verkoopprijs van €150 blijft €40 over. De marge is dan 26,7% in plaats van 33,3%.</p>
+        <p className="mt-2">Betaal je een percentage van je verkoopprijs aan een platform? In het artikel over <Link href="/kennisbank/verkoopprijs-platformkosten" className={link}>verkoopprijzen met platformkosten</Link> zie je hoe je die commissie al bij je prijsbepaling meerekent.</p>
         <p className="mt-2">Gebruik consequent dezelfde grondslag voor inkoop en verkoop. De voorbeelden hier laten btw buiten beschouwing en gaan uit van bedragen exclusief btw en kosten zonder aftrekbare btw. Bij een andere btw-situatie moet je eerst vaststellen welke bedragen daadwerkelijk je kosten en opbrengsten zijn.</p>
         <h3 className="mt-4 font-bold text-ink">Vergeet de vaste lasten niet</h3>
         <p className="mt-2">KVK en Ondernemersplein onderscheiden onder meer vaste en variabele kosten bij prijsbepaling. De bedragen hierboven tonen de bijdrage per verkoop na de meegenomen kosten. Huur en andere vaste lasten moeten ook worden terugverdiend. Verdeel je die voor je prijsplanning over een verwacht aantal verkopen, tel ze dan niet nogmaals als extra kosten mee.</p>

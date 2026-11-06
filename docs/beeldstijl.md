@@ -22,7 +22,8 @@ Gebruik de beschikbare imagegen-tool met deze bestanden expliciet als identiteit
 
 ## Beeldlog
 
-| Datum | Artikel | Overhemd | Houding |
+| Datum | Bestand in `public/kennisbank/` | Overhemd | Houding |
 | --- | --- | --- | --- |
-| 2026-11-05 | Kilometervergoeding doorberekenen | Wit | Zittend, handen bij elkaar |
-| 2026-11-05 | Verschil marge en opslag | Wit | Voorover leunend, presenterende hand |
+| 2026-11-05 | `kilometervergoeding-doorberekenen-klant.jpg` | Wit | Zittend, handen bij elkaar |
+| 2026-11-05 | `verschil-marge-en-opslag.jpg` | Wit | Voorover leunend, presenterende hand |
+| 2026-11-06 | `verkoopprijs-platformkosten.jpg` | Lichtblauw, mouwen opgerold | Zijwaarts op een kruk, romp naar camera, verzenddoos op schoot |
