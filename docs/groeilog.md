@@ -1,5 +1,14 @@
 # BerekenZZP groeilog
 
+## 7 november 2026 — btw op een gemengde bon
+
+- Nieuw artikel `/kennisbank/btw-terugrekenen-gemengde-bon`, gericht op een bon met meerdere tarieven, ontbrekende uitsplitsing en centverschillen. Sluit aan op de bestaande btwcalculator en de historische zoekvragen ‘btw omrekenen’ (11 vertoningen) en ‘bedrag zonder btw berekenen’ (7 vertoningen) in de beschikbare export 2 augustus–1 november. Geen gemeten zoekvolume voor de specifieke nieuwe titel geclaimd. De calculator blijft de interactieve rekenpagina.
+- Live kennisbank gaf vóór publicatie HTTP 200. Repository bijgewerkt vanaf `88c0459`. Geen nieuwe GSC-API-data beschikbaar doordat de lokale sleutel ontbreekt. De oudere export blijft een historische aanwijzing; de nieuwere nulmeting uit de gesprekshistorie is geen actuele meting voor vandaag.
+- Op 7 november primaire Belastingdienst-bronnen gelezen over terugrekenen, afronden, factuureisen, aftrekvoorwaarden en verlegging. Eigen voorbeelden onafhankelijk gecontroleerd met de bestaande btwfunctie. €121 inclusief 21% en €109 inclusief 9% geeft samen €200 exclusief plus €30 btw. Het hele totaal terugrekenen tegen 21% geeft €9,92 te veel btw. Tweede verdeling van €230 geeft €24,50 btw. Afrondingsvoorbeeld gecontroleerd.
+- Contextuele link vanuit btwcalculator toegevoegd. Onjuiste uitleg ‘0% rekenen’ bij verlegging in dezelfde calculator vervangen door de juiste factuurvermelding met primaire bron.
+- Nieuw herkenbaar beeld met olijfgroen overhemd en staande houding met bon en pen. Beide vaste Daniel-referenties gebruikt, zie beeldlog. Metadata met werkelijke JPEG-afmetingen 1536 × 864, redactie als auteur, echte publicatiedatum 7 november. Registry verzorgt kennisbank, homepage, sitemap en gerelateerde artikelen.
+- Productiebuild met TypeScript en 28 statische routes geslaagd; alle bestaande calculatortests geslaagd. Responsieve markup en tabel met toegankelijke koppen en focusbare scrollcontainer gecontroleerd. Geen fysieke telefoontest uitgevoerd.
+
 ## 6 november 2026 — verkoopprijs met platformkosten
 
 - Nieuw artikel `/kennisbank/verkoopprijs-platformkosten`. Onderscheidt vaste vergoeding en prijsafhankelijke commissie, met een formule voor een doelmarge en een terugcontrole in de margecalculator. De bestaande pagina over marge versus opslag blijft de uitleg bij die begrippen.

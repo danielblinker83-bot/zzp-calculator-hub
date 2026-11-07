@@ -27,3 +27,6 @@ Gebruik de beschikbare imagegen-tool met deze bestanden expliciet als identiteit
 | 2026-11-05 | `kilometervergoeding-doorberekenen-klant.jpg` | Wit | Zittend, handen bij elkaar |
 | 2026-11-05 | `verschil-marge-en-opslag.jpg` | Wit | Voorover leunend, presenterende hand |
 | 2026-11-06 | `verkoopprijs-platformkosten.jpg` | Lichtblauw, mouwen opgerold | Zijwaarts op een kruk, romp naar camera, verzenddoos op schoot |
+| 2026-11-07 | `btw-terugrekenen-gemengde-bon.jpg` | Zacht olijfgroen | Rechtop staand, bon in linkerhand en pen in rechterhand |
+
+Beeldcontrole 7 november 2026: beide vaste referenties bekeken en expliciet aan de ingebouwde beeldgenerator meegegeven. Gezicht, handen, kleur en Nederlandse kop gecontroleerd. Promptkern: Daniel staand met bon en pen, olijfgroen overhemd, rustige werkomgeving met donkergroen/gebroken wit/goud en grote kop ‘Btw terugrekenen op een gemengde bon’. JPEG geoptimaliseerd naar 1536 × 864 (151.572 bytes).

@@ -67,6 +67,13 @@ export default function Page() {
       tool={<BtwCalculator />}
       uitleg={
         <div className="space-y-6 text-slate-600">
+          <p>
+            Staan er meerdere tarieven op één bon? Lees hoe je{" "}
+            <Link href="/kennisbank/btw-terugrekenen-gemengde-bon" className="font-medium text-petrol-700 underline">
+              btw terugrekent op een gemengde bon
+            </Link>{" "}
+            en centverschillen controleert.
+          </p>
           <section>
             <h2 className="text-xl font-bold text-ink">Hoe je btw berekent</h2>
             <p className="mt-2">
@@ -150,7 +157,12 @@ export default function Page() {
             <ul className="mt-2 list-disc space-y-1 pl-5">
               <li>Een percentage van het inclusief-bedrag aftrekken in plaats van door de factor (1,21 of 1,09) te delen.</li>
               <li>Btw berekenen over het bedrag vóór korting in plaats van erna.</li>
-              <li>Bij verlegde btw naar het buitenland toch 21% in rekening brengen in plaats van het btw-nummer van de klant te vermelden en 0% te rekenen.</li>
+              <li>
+                Bij toepassing van de verleggingsregeling toch btw in rekening brengen. Vermeld dan{" "}
+                <a href="https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/btw_berekenen_aan_uw_klanten/waarover_btw_berekenen/verleggingsregeling/hoe_werkt_btw_verleggen" className="text-petrol-700 underline">
+                  ‘btw verlegd’ en het btw-identificatienummer van de afnemer
+                </a>.
+              </li>
               <li>Vergeten dat je onder de KOR geen btw mag vermelden, ook niet 0%, maar juist een verwijzing naar de KOR-vrijstelling.</li>
               <li>Het verlaagde tarief van 9% toepassen op een dienst die daar niet onder valt, omdat de tarieventabel per productgroep verschilt.</li>
             </ul>

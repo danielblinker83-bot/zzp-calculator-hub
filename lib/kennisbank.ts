@@ -61,6 +61,25 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 
 export const ARTIKELEN: Artikel[] = [
   {
+    slug: "btw-terugrekenen-gemengde-bon",
+    title: "Btw terugrekenen op een gemengde bon",
+    description: "Een bon met 21% en 9% btw narekenen? Splits per tarief en controleer de bedragen met voorbeelden, een tabel en uitleg over afronding.",
+    datum: "2026-11-07",
+    redactie: true,
+    leestijd: 5,
+    afbeelding: "/kennisbank/btw-terugrekenen-gemengde-bon.jpg",
+    afbeeldingAlt: "Daniel Blinker in een olijfgroen overhemd bekijkt een bon met een pen in de hand",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
+    gerelateerdeTools: ["btw-berekenen", "marge-berekenen"],
+    bronnen: [
+      { label: "Belastingdienst — Btw terugrekenen", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/btw_berekenen_aan_uw_klanten/btw_berekenen/rekenvoorbeeld_btw_berekenen" },
+      { label: "Belastingdienst — Btw-bedragen afronden", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/administratie_bijhouden/facturen_maken/btw-bedrag_afronden" },
+      { label: "Belastingdienst — Factuureisen en verschillende tarieven", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/administratie_bijhouden/facturen_maken/factuureisen/" },
+      { label: "Belastingdienst — Voorwaarden voor btw-aftrek", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/btw_aftrekken/welke_btw_is_aftrekbaar/welke_btw_mag_u_aftrekken" },
+    ],
+  },
+  {
     slug: "verkoopprijs-platformkosten",
     title: "Verkoopprijs berekenen met platformkosten",
     description: "Bereken je verkoopprijs met een vaste vergoeding, platformcommissie en gewenste marge. Met rekenvoorbeelden en uitleg over de commissiegrondslag bij bol.",
