@@ -8,6 +8,8 @@
 - Contextuele link vanuit btwcalculator toegevoegd. Onjuiste uitleg ‘0% rekenen’ bij verlegging in dezelfde calculator vervangen door de juiste factuurvermelding met primaire bron.
 - Nieuw herkenbaar beeld met olijfgroen overhemd en staande houding met bon en pen. Beide vaste Daniel-referenties gebruikt, zie beeldlog. Metadata met werkelijke JPEG-afmetingen 1536 × 864, redactie als auteur, echte publicatiedatum 7 november. Registry verzorgt kennisbank, homepage, sitemap en gerelateerde artikelen.
 - Productiebuild met TypeScript en 28 statische routes geslaagd; alle bestaande calculatortests geslaagd. Responsieve markup en tabel met toegankelijke koppen en focusbare scrollcontainer gecontroleerd. Geen fysieke telefoontest uitgevoerd.
+- Publicatie `1dc275d134b4d69f29a35213fadc749c629d5ffd` geslaagd, Vercel-status success. Live HTTP-nacontrole op 7 november: artikel, kennisbank, calculator, sitemap, JPEG en 384px-thumbnail allemaal 200. HTML toont beeld op artikel, kennisbank en homepagekaart, met juiste canonical/OG/Twitter, schema’s en teruglink. Live JPEG bytegelijk aan de gecontroleerde repository-afbeelding, thumbnail 384 × 216 en 20.349 bytes. Beeld ook op 320px visueel bekeken. Geen gerenderde mobiele browsercheck uitgevoerd.
+- Eén externe homepage-HTTP-meting gaf 7,794 s tot eerste byte en 7,796 s totale ophaaltijd. Dit is één netwerkmeting vanuit deze omgeving en geen Core Web Vitals- of bezoekersmeting; geen snelheidstrend of rankingwinst vastgesteld.
 
 ## 6 november 2026 — verkoopprijs met platformkosten
 
