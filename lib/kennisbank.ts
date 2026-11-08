@@ -61,6 +61,24 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 
 export const ARTIKELEN: Artikel[] = [
   {
+    slug: "declarabele-uren-plannen",
+    title: "Declarabele uren realistisch plannen als zzp’er",
+    description: "Van werkweek naar declarabele uren per jaar en maand. Met rekenvoorbeelden, tarieftabel en uitleg om vrije weken één keer mee te nemen.",
+    datum: "2026-11-08",
+    redactie: true,
+    leestijd: 5,
+    afbeelding: "/kennisbank/declarabele-uren-plannen.jpg",
+    afbeeldingAlt: "Daniel Blinker in een zandkleurig overhemd wijst naar een weekplanner",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
+    gerelateerdeTools: ["uurtarief-berekenen", "offerte-calculator"],
+    bronnen: [
+      { label: "KVK — Uurtarief en declarabele uren", url: "https://www.kvk.nl/geldzaken/uurtarief-bepalen/" },
+      { label: "KVK — Urenregistratie bijhouden", url: "https://www.kvk.nl/starten/waarom-een-goede-urenregistratie-onmisbaar-is/" },
+      { label: "Belastingdienst — Welke uren tellen mee voor het urencriterium?", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/inkomstenbelasting_voor_ondernemers/voorwaarden_urencriterium" },
+    ],
+  },
+  {
     slug: "btw-terugrekenen-gemengde-bon",
     title: "Btw terugrekenen op een gemengde bon",
     description: "Een bon met 21% en 9% btw narekenen? Splits per tarief en controleer de bedragen met voorbeelden, een tabel en uitleg over afronding.",

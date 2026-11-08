@@ -29,7 +29,7 @@ const faq = [
   {
     vraag: "Waarom rekent de tool met declarabele uren en niet met gewerkte uren?",
     antwoord:
-      "Niet elk gewerkt uur is factureerbaar. Administratie, acquisitie, offertes schrijven en reistijd betaal je zelf. De meeste zzp'ers factureren 50 tot 70 procent van hun werktijd. Reken daarom alleen met uren die je echt aan klanten kunt factureren, anders komt je tarief structureel te laag uit.",
+      "Niet elk gewerkt uur kun je factureren. Reserveer tijd voor je eigen administratie en het vinden van klanten. Voor klantgebonden voorbereiding en reistijd bepaalt je afspraak welke uren je in rekening brengt. Onderbouw je verwachte declarabele uren met je agenda en urenregistratie.",
   },
   {
     vraag: "Hoeveel belasting betaal ik als zzp'er in 2026?",
@@ -62,6 +62,13 @@ export default function Page() {
       tool={<UurtariefCalculator />}
       uitleg={
         <div className="space-y-6 text-slate-600">
+          <p>
+            Wil je weten hoeveel uur je realistisch kunt factureren? Lees hoe je{" "}
+            <Link href="/kennisbank/declarabele-uren-plannen" className="font-medium text-petrol-700 underline">
+              declarabele uren per week, jaar en maand plant
+            </Link>{" "}
+            en vakantie één keer in de berekening verwerkt.
+          </p>
           <section>
             <h2 className="text-xl font-bold text-ink">Hoe de berekening werkt</h2>
             <p className="mt-2">

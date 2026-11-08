@@ -28,5 +28,8 @@ Gebruik de beschikbare imagegen-tool met deze bestanden expliciet als identiteit
 | 2026-11-05 | `verschil-marge-en-opslag.jpg` | Wit | Voorover leunend, presenterende hand |
 | 2026-11-06 | `verkoopprijs-platformkosten.jpg` | Lichtblauw, mouwen opgerold | Zijwaarts op een kruk, romp naar camera, verzenddoos op schoot |
 | 2026-11-07 | `btw-terugrekenen-gemengde-bon.jpg` | Zacht olijfgroen | Rechtop staand, bon in linkerhand en pen in rechterhand |
+| 2026-11-08 | `declarabele-uren-plannen.jpg` | Zand/beige | Driekwart staand naast planner, één hand wijst naar een blok |
+
+Beeldcontrole 8 november 2026: beide vaste identiteitsbeelden bekeken en aan de ingebouwde generator meegegeven. Promptkern: Daniel in zandkleurig overhemd naast een abstracte weekplanner met donkergroene/gouden blokken, off-white kantoor, grote Nederlandse kop ‘Declarabele uren realistisch plannen’. Geen exacte tijdsgegevens in het beeld. Gezicht, handen en kop gecontroleerd. JPEG 1536 × 864, 146.204 bytes, ook bekeken op 320px.
 
 Beeldcontrole 7 november 2026: beide vaste referenties bekeken en expliciet aan de ingebouwde beeldgenerator meegegeven. Gezicht, handen, kleur en Nederlandse kop gecontroleerd. Promptkern: Daniel staand met bon en pen, olijfgroen overhemd, rustige werkomgeving met donkergroen/gebroken wit/goud en grote kop ‘Btw terugrekenen op een gemengde bon’. JPEG geoptimaliseerd naar 1536 × 864 (151.572 bytes).

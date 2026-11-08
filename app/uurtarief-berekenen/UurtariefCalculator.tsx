@@ -64,7 +64,13 @@ export default function UurtariefCalculator() {
       <div className="grid gap-4 sm:grid-cols-2">
         <InputField id="netto" label="Gewenst netto inkomen per maand" value={netto} onChange={setNetto} placeholder="Bijv. 3500" suffix="€" error={errors.netto} />
         <InputField id="kosten" label="Zakelijke kosten per maand" value={kosten} onChange={setKosten} placeholder="Bijv. 500" suffix="€" error={errors.kosten} />
-        <InputField id="uren" label="Declarabele uren per maand" value={uren} onChange={setUren} placeholder="Bijv. 100" suffix="uur" error={errors.uren} />
+        <div>
+          <InputField id="uren" label="Declarabele uren per maand" value={uren} onChange={setUren} placeholder="Bijv. 100" suffix="uur" error={errors.uren} />
+          <p className="mt-1 text-sm text-slate-600">
+            Vul je hieronder vrije weken in? Gebruik dan uren vóór die vermindering.
+            Heb je vakantie al verwerkt in je jaargemiddelde per maand, zet vrije weken dan op 0.
+          </p>
+        </div>
         <InputField id="vrijeweken" label="Vrije of lege weken per jaar" value={vrijeWeken} onChange={setVrijeWeken} placeholder="Bijv. 6" suffix="wk" optional error={errors.vrijeWeken} />
         <InputField id="buffer" label="Extra buffer" value={buffer} onChange={setBuffer} placeholder="Bijv. 10" suffix="%" optional error={errors.buffer} />
         <fieldset className="flex flex-col justify-center gap-2">

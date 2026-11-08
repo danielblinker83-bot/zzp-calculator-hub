@@ -1,5 +1,15 @@
 # BerekenZZP groeilog
 
+## 8 november 2026 — declarabele uren plannen
+
+- Nieuw artikel `/kennisbank/declarabele-uren-plannen`. Verdiept week-, jaar- en maandplanning, lege uren en het dubbel verwerken van vakantie. Aanvulling op de bestaande algemene tariefuitleg en interactieve calculator. Historische export 2 augustus–1 november toont 110 vertoningen voor ‘uurtarief berekenen zzp’ en 41 voor ‘zzp tarief berekenen’. Specifiek zoekvolume voor deze nieuwe titel is onbekend. Geen nieuwe GSC-meting beschikbaar: lokale serviceaccountsleutel ontbreekt.
+- Repository bijgewerkt vanaf `5e0a321`. Live kennisbank vooraf HTTP 200. Eén externe HTTP-meting gaf TTFB 4,587 s en totaal 4,628 s. Dit is een netwerkmeting vanuit deze omgeving, geen bezoekersmeting of snelheidstrend.
+- Op 8 november primaire KVK- en Belastingdienstbronnen gelezen over tariefplanning, urenregistratie en welke uren meetellen. Artikel gebruikt eigen scenario’s en noemt geen nieuw fiscaal tarief of aanbevolen branchepercentage.
+- Nagerekend met calculatorfunctie: 20 × 46 = 920 uur/jaar, 76,67 uur/maand. 86,666… uur/maand met 6 vrije weken is equivalent aan 76,666… uur/maand zonder aparte vrije weken. 76,67 met opnieuw 6 weken geeft 67,82. Tabel bij €60.000 omzet onafhankelijk gecontroleerd, tarieven naar boven op centen afgerond.
+- Contextuele teruglink en zichtbare uitleg bij de ureninvoer toegevoegd. Onbewezen algemene bandbreedte in calculator-FAQ verwijderd; de afspraak over factureerbare klanttijd verduidelijkt. Rekenlogica ongewijzigd.
+- Nieuw beeld `public/kennisbank/declarabele-uren-plannen.jpg`, zandkleurig overhemd en andere houding. Identiteit en stijl met beide vaste referenties bewaakt, zie beeldlog.
+- Productiebuild/TypeScript (29 statische routes), alle bestaande tests en artikelberekeningen geslaagd. Canonical, OG/Twitter-afbeelding, Article/BreadcrumbList/FAQPage, geldige interne linkdoelen, sitemap en beeldverwijzingen op homepage/kennisbank/artikel gecontroleerd. Tabel heeft toegankelijke koppen en focusbare scrollcontainer. Mobiele markup gecontroleerd; geen gerenderde mobiele browser- of toesteltest uitgevoerd.
+
 ## 7 november 2026 — btw op een gemengde bon
 
 - Nieuw artikel `/kennisbank/btw-terugrekenen-gemengde-bon`, gericht op een bon met meerdere tarieven, ontbrekende uitsplitsing en centverschillen. Sluit aan op de bestaande btwcalculator en de historische zoekvragen ‘btw omrekenen’ (11 vertoningen) en ‘bedrag zonder btw berekenen’ (7 vertoningen) in de beschikbare export 2 augustus–1 november. Geen gemeten zoekvolume voor de specifieke nieuwe titel geclaimd. De calculator blijft de interactieve rekenpagina.
