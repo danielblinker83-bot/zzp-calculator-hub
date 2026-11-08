@@ -9,6 +9,7 @@
 - Contextuele teruglink en zichtbare uitleg bij de ureninvoer toegevoegd. Onbewezen algemene bandbreedte in calculator-FAQ verwijderd; de afspraak over factureerbare klanttijd verduidelijkt. Rekenlogica ongewijzigd.
 - Nieuw beeld `public/kennisbank/declarabele-uren-plannen.jpg`, zandkleurig overhemd en andere houding. Identiteit en stijl met beide vaste referenties bewaakt, zie beeldlog.
 - Productiebuild/TypeScript (29 statische routes), alle bestaande tests en artikelberekeningen geslaagd. Canonical, OG/Twitter-afbeelding, Article/BreadcrumbList/FAQPage, geldige interne linkdoelen, sitemap en beeldverwijzingen op homepage/kennisbank/artikel gecontroleerd. Tabel heeft toegankelijke koppen en focusbare scrollcontainer. Mobiele markup gecontroleerd; geen gerenderde mobiele browser- of toesteltest uitgevoerd.
+- Publicatie `2bb6829ff69d71e02946007ae4031ab208c893ae` geslaagd, Vercel-status success. Lokale productie-HTTP-test en live HTTP-nacontrole geslaagd. Homepage, kennisbank, artikel, calculator, sitemap, origineel beeld en 384px-thumbnail geven 200. Live HTML bevat teruglink, nieuwe invoeruitleg, schema’s, social metadata en drie beeldplekken. Live JPEG bytegelijk aan repositorybestand, thumbnail 384 × 216 en 18.660 bytes. Beeld op 320px gecontroleerd. Geen nieuwe rankings, bezoekersresultaten of veldmetingen vastgesteld.
 
 ## 7 november 2026 — btw op een gemengde bon
 
