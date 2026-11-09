@@ -29,12 +29,12 @@ const faq = [
   {
     vraag: "Geldt de vergoeding ook voor de fiets of het ov?",
     antwoord:
-      "Ja, het tarief van €0,25 per kilometer (2026) geldt ongeacht het vervoermiddel, dus ook voor de fiets, e-bike of scooter. Reis je met het ov, dan kun je in plaats daarvan de werkelijke kosten van je kaartjes of abonnement opvoeren als dat gunstiger is.",
+      "Het bedrag van €0,25 per kilometer in 2026 geldt voor zakelijk gebruik van een privévervoermiddel, zoals een fiets of auto. Bij een zakelijke ov-reis gebruik je de aantoonbare werkelijke reiskosten.",
   },
   {
     vraag: "Moet ik een rittenregistratie bijhouden?",
     antwoord:
-      "Ja. Houd per rit de datum, het vertrek- en aankomstadres, het doel van de rit en het aantal kilometers bij. Zonder registratie kan de Belastingdienst je aftrek weigeren. Een simpele spreadsheet of een app volstaat, als de administratie maar controleerbaar is.",
+      "Leg je zakelijke kilometers controleerbaar vast. Noteer bijvoorbeeld per rit de datum, vertrek en bestemming, het doel en het aantal kilometers. Voor het bewijs van beperkt privégebruik van een auto van de zaak gelden aparte eisen.",
   },
   {
     vraag: "Kan ik reiskosten doorberekenen aan mijn klant?",
@@ -49,7 +49,7 @@ const faq = [
   {
     vraag: "Telt woon-werkverkeer ook als zakelijke kilometers?",
     antwoord:
-      "Voor zzp'ers wel: ritten van huis naar een klant, opdracht of werklocatie gelden als zakelijk. Werk je vanuit huis, dan zijn er geen woon-werkkilometers. Puur privéritten tellen uiteraard niet mee.",
+      "Voor de inkomstenbelasting telt woon-werkverkeer met je privéauto mee als zakelijk. Voor de btw geldt woon-werkverkeer als privégebruik. Leg woon-werkritten daarom apart vast.",
   },
 ];
 
@@ -62,6 +62,12 @@ export default function Page() {
       tool={<KilometerCalculator />}
       uitleg={
         <div className="space-y-6 text-slate-600">
+          <p>
+            Gebruik je je privéauto voor je werk? Lees hoe je{" "}
+            <Link href="/kennisbank/zakelijke-ritten-bijhouden" className="font-medium text-petrol-700 underline">
+              zakelijke ritten en woon-werkritten bijhoudt
+            </Link>.
+          </p>
           <section>
             <h2 className="text-xl font-bold text-ink">Hoe je de kilometervergoeding berekent</h2>
             <p className="mt-2">
@@ -74,8 +80,8 @@ export default function Page() {
               De berekening zelf is eenvoudig: aantal kilometers keer het tarief per kilometer.
               Rijd je bijvoorbeeld 45 kilometer naar een klant en terug, dan is dat bij het
               2026-tarief van €0,25 per kilometer een bedrag van €11,25 per rit. Doe je die rit 8
-              keer per maand, dan gaat het om €90 per maand en €1.080 per jaar. Dat zijn kosten
-              die je winst verlagen, en dus rechtstreeks belasting schelen.
+              keer per maand, dan gaat het om €90 per maand en €1.080 per jaar. Dat bedrag
+              verlaagt je winst. Het belastingeffect hangt af van je situatie.
             </p>
             <p className="mt-2">
               Voor een zzp'er heeft het bedrag twee gezichten. In je aangifte is het een
@@ -113,7 +119,7 @@ export default function Page() {
           <section>
             <h2 className="text-xl font-bold text-ink">Veelgemaakte fouten bij de kilometervergoeding</h2>
             <ul className="mt-2 list-disc space-y-1 pl-5">
-              <li>Geen rittenregistratie bijhouden, waardoor de aftrek bij een controle sneuvelt.</li>
+              <li>Zakelijke kilometers opvoeren zonder die te kunnen onderbouwen.</li>
               <li>Naast de kilometeraftrek ook brandstof, tol of parkeren van dezelfde privévoertuigritten aftrekken. Die kosten zijn al in het kilometerbedrag verwerkt.</li>
               <li>De btw-behandeling van doorberekende reiskosten niet controleren. Bij een gewone belaste dienst volgen de bijbehorende reiskosten het tarief van die dienst; vrijstelling en verlegging kunnen een andere behandeling vragen.</li>
               <li>Met het oude tarief van €0,23 blijven rekenen, terwijl 2026-kilometers €0,25 waard zijn.</li>

@@ -1,5 +1,14 @@
 # BerekenZZP groeilog
 
+## 9 november 2026 — zakelijke ritten bijhouden
+
+- Nieuw artikel `/kennisbank/zakelijke-ritten-bijhouden` over registratie met een privéauto, ritcategorieën en maandcontrole. Sluit aan op de kilometercalculator en het bestaande artikel over klantfacturen. Historische export 2 augustus–1 november bevat 77 vertoningen voor ‘kilometervergoeding zzp’ en 33 voor ‘kilometervergoeding berekenen’. Geen aparte meting voor het nieuwe onderwerp of nieuwe GSC-cijfers beschikbaar. De lokale serviceaccountsleutel ontbreekt.
+- Repository bijgewerkt vanaf `0707ea2`. Live kennisbank vóór publicatie HTTP 200, alle zeven bestaande artikelen aangetroffen. Eén HTTP-meting vanuit deze omgeving gaf 4,570 s tot de eerste byte. Er zijn geen actuele bezoekersmetingen beschikbaar.
+- Belastingdienst gecontroleerd op 9 november voor de aftrek van €0,25 per zakelijke kilometer met privévervoer in 2026, behandeling woon-werkverkeer voor inkomstenbelasting en btw en afzonderlijke eisen bij bewijs voor privégebruik van een auto van de zaak. Rekenvoorbeeld gecontroleerd met bestaande functie. Van 76 km tellen 64 km mee voor de inkomstenbelasting (€16 winstaftrek) en zijn 48 km zakelijk voor de btw.
+- Contextuele teruglink vanuit kilometercalculator. FAQ over woon-werkverkeer, zakelijke ov-kosten en bewijs van ritten verduidelijkt. Onderscheid tussen winstaftrek en belastingeffect aangescherpt.
+- Nieuw beeld `public/kennisbank/zakelijke-ritten-bijhouden.jpg` met leigrijs overhemd, zittend in geparkeerde auto. Beide referenties gebruikt en JPEG geoptimaliseerd. Zie beeldlog.
+- Productiebuild (30 statische routes), TypeScript, bestaande rekentests, aparte rekenvoorbeelden, canonical, social metadata, Article/BreadcrumbList/FAQPage, sitemap, interne links en drie beeldplekken gecontroleerd. Mobiele markup en beeld op 320px bekeken, geen gerenderde mobiele browsertest uitgevoerd.
+
 ## 8 november 2026 — declarabele uren plannen
 
 - Nieuw artikel `/kennisbank/declarabele-uren-plannen`. Verdiept week-, jaar- en maandplanning, lege uren en het dubbel verwerken van vakantie. Aanvulling op de bestaande algemene tariefuitleg en interactieve calculator. Historische export 2 augustus–1 november toont 110 vertoningen voor ‘uurtarief berekenen zzp’ en 41 voor ‘zzp tarief berekenen’. Specifiek zoekvolume voor deze nieuwe titel is onbekend. Geen nieuwe GSC-meting beschikbaar: lokale serviceaccountsleutel ontbreekt.

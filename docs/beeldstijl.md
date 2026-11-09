@@ -29,6 +29,9 @@ Gebruik de beschikbare imagegen-tool met deze bestanden expliciet als identiteit
 | 2026-11-06 | `verkoopprijs-platformkosten.jpg` | Lichtblauw, mouwen opgerold | Zijwaarts op een kruk, romp naar camera, verzenddoos op schoot |
 | 2026-11-07 | `btw-terugrekenen-gemengde-bon.jpg` | Zacht olijfgroen | Rechtop staand, bon in linkerhand en pen in rechterhand |
 | 2026-11-08 | `declarabele-uren-plannen.jpg` | Zand/beige | Driekwart staand naast planner, één hand wijst naar een blok |
+| 2026-11-09 | `zakelijke-ritten-bijhouden.jpg` | Leigrijs | Zijwaarts in geparkeerde auto, met notitieboek op de knie |
+
+Beeldcontrole 9 november 2026. Beide vaste referenties bekeken en gebruikt. Daniel zit met pen en notitieboek in een geparkeerde auto, naast de kop ‘Zakelijke ritten bijhouden’. Gezicht, houding, handen en kop gecontroleerd, ook op 320px. JPEG 1536 × 864, 150.348 bytes.
 
 Beeldcontrole 8 november 2026: beide vaste identiteitsbeelden bekeken en aan de ingebouwde generator meegegeven. Promptkern: Daniel in zandkleurig overhemd naast een abstracte weekplanner met donkergroene/gouden blokken, off-white kantoor, grote Nederlandse kop ‘Declarabele uren realistisch plannen’. Geen exacte tijdsgegevens in het beeld. Gezicht, handen en kop gecontroleerd. JPEG 1536 × 864, 146.204 bytes, ook bekeken op 320px.
 

@@ -61,6 +61,25 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 
 export const ARTIKELEN: Artikel[] = [
   {
+    slug: "zakelijke-ritten-bijhouden",
+    title: "Zakelijke ritten bijhouden met je privéauto",
+    description: "Leg zakelijke kilometers vast als zzp’er. Bekijk een voorbeeld van een rittenoverzicht en hoe woon-werkverkeer meetelt voor inkomstenbelasting en btw.",
+    datum: "2026-11-09",
+    redactie: true,
+    leestijd: 4,
+    afbeelding: "/kennisbank/zakelijke-ritten-bijhouden.jpg",
+    afbeeldingAlt: "Daniel Blinker in een grijs overhemd met een notitieboek in een geparkeerde auto",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
+    gerelateerdeTools: ["kilometervergoeding-berekenen"],
+    bronnen: [
+      { label: "Belastingdienst — Zakelijk gebruik privévervoermiddel in 2026", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/veranderingen-inkomstenbelasting-2026/zakelijk-gebruik-privevervoermiddel-2026" },
+      { label: "Belastingdienst — Woon-werkverkeer voor de inkomstenbelasting", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/inkomstenbelasting_voor_ondernemers/zakelijk-gebruik-privevervoermiddel" },
+      { label: "Belastingdienst — Btw en zakelijk gebruik van de privéauto", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/btw_aftrekken/btw_en_de_auto/zakelijk_gebruik_van_de_priveauto/" },
+      { label: "Belastingdienst — Rittenregistratie voor privégebruik van een auto van de zaak", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/inkomstenbelasting_voor_ondernemers/privegebruik_auto/rittenregistratie" },
+    ],
+  },
+  {
     slug: "declarabele-uren-plannen",
     title: "Declarabele uren realistisch plannen als zzp’er",
     description: "Van werkweek naar declarabele uren per jaar en maand. Met rekenvoorbeelden, tarieftabel en uitleg om vrije weken één keer mee te nemen.",
