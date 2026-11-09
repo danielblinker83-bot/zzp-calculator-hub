@@ -8,6 +8,7 @@
 - Contextuele teruglink vanuit kilometercalculator. FAQ over woon-werkverkeer, zakelijke ov-kosten en bewijs van ritten verduidelijkt. Onderscheid tussen winstaftrek en belastingeffect aangescherpt.
 - Nieuw beeld `public/kennisbank/zakelijke-ritten-bijhouden.jpg` met leigrijs overhemd, zittend in geparkeerde auto. Beide referenties gebruikt en JPEG geoptimaliseerd. Zie beeldlog.
 - Productiebuild (30 statische routes), TypeScript, bestaande rekentests, aparte rekenvoorbeelden, canonical, social metadata, Article/BreadcrumbList/FAQPage, sitemap, interne links en drie beeldplekken gecontroleerd. Mobiele markup en beeld op 320px bekeken, geen gerenderde mobiele browsertest uitgevoerd.
+- Vercel-publicatie `2b24c4eb0e79faa02b79cf73b8fbc66fb2b61a29` geslaagd. Live HTTP 200 voor artikel, homepage, kennisbank, calculator, sitemap en beide beeldvarianten. Beeldverwijzingen op alle drie plekken, social metadata en teruglink gecontroleerd. Live JPEG bytegelijk aan repositorybestand, 384px-thumbnail 19.377 bytes.
 
 ## 8 november 2026 — declarabele uren plannen
 
