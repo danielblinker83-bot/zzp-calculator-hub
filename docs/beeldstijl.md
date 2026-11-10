@@ -30,6 +30,9 @@ Gebruik de beschikbare imagegen-tool met deze bestanden expliciet als identiteit
 | 2026-11-07 | `btw-terugrekenen-gemengde-bon.jpg` | Zacht olijfgroen | Rechtop staand, bon in linkerhand en pen in rechterhand |
 | 2026-11-08 | `declarabele-uren-plannen.jpg` | Zand/beige | Driekwart staand naast planner, één hand wijst naar een blok |
 | 2026-11-09 | `zakelijke-ritten-bijhouden.jpg` | Leigrijs | Zijwaarts in geparkeerde auto, met notitieboek op de knie |
+| 2026-11-10 | `omzet-winst-banksaldo.jpg` | Bordeauxrood | Zittend aan tafel, met uitgestrekte arm een factuur in een postbak leggen |
+
+Beeldcontrole 10 november 2026. Beide vaste referenties bekeken en expliciet gebruikt. Kop ‘Omzet, winst en banksaldo’, gezicht en handen gecontroleerd, ook op 320px. JPEG 1536 × 864, 130.924 bytes.
 
 Beeldcontrole 9 november 2026. Beide vaste referenties bekeken en gebruikt. Daniel zit met pen en notitieboek in een geparkeerde auto, naast de kop ‘Zakelijke ritten bijhouden’. Gezicht, houding, handen en kop gecontroleerd, ook op 320px. JPEG 1536 × 864, 150.348 bytes.
 

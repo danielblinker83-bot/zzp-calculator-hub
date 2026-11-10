@@ -1,5 +1,14 @@
 # BerekenZZP groeilog
 
+## 10 november 2026 — omzet, winst en banksaldo
+
+- Nieuw artikel `/kennisbank/omzet-winst-banksaldo` over een openstaande factuur, kasplanning en de omzet- en kostenvelden van de nettocalculator. Historische export 2 augustus–1 november bevat 20 vertoningen voor ‘bruto netto zzp’ en 3 voor ‘zzp winst berekenen’. Het specifieke onderwerp heeft geen eigen zoekmeting. De lokale GSC-sleutel ontbreekt en er zijn geen nieuwe Search Console-cijfers beschikbaar.
+- Repository bijgewerkt vanaf `85bb8ec`. Live kennisbank vóór publicatie HTTP 200, acht bestaande artikelen gevonden. Eén externe HTTP-meting gaf 5,253 s tot de eerste byte. Er is geen nieuwe veldmeting of snelheidstrend vastgesteld.
+- KVK-bronnen voor exploitatie en liquiditeit en Belastingdienst-bronnen voor zakelijke kosten en btw gecontroleerd. Fictief voorbeeld nagerekend. €4.000 omzet min €700 kosten geeft €3.300 winst vóór belasting. €1.000 beginsaldo plus €3.025 ontvangen min €847 betaald geeft €3.178 banksaldo. De openstaande factuur is €1.815 inclusief btw.
+- Link vanuit de nettocalculator toegevoegd. De uitleg over niet-aftrekbare btw, gemengde uitgaven en afschrijving verduidelijkt.
+- Nieuw beeld in bordeauxrood overhemd met factuur en postbakken. Beide vaste referenties gebruikt. Zie beeldlog.
+- Productiebuild (31 statische routes), bestaande tests, calculatorinvoer, tabel, interne links, canonical, Article/BreadcrumbList/FAQPage, sitemap en sociale metadata gecontroleerd. Lokale productie-HTTP-test geeft 200 voor artikel, calculator, origineel en 384px-variant. Mobiele markup en beeld op 320px bekeken. Chromium kon niet starten door een geblokkeerde lokale socket, waardoor er geen gerenderde mobiele controle is uitgevoerd.
+
 ## 9 november 2026 — zakelijke ritten bijhouden
 
 - Nieuw artikel `/kennisbank/zakelijke-ritten-bijhouden` over registratie met een privéauto, ritcategorieën en maandcontrole. Sluit aan op de kilometercalculator en het bestaande artikel over klantfacturen. Historische export 2 augustus–1 november bevat 77 vertoningen voor ‘kilometervergoeding zzp’ en 33 voor ‘kilometervergoeding berekenen’. Geen aparte meting voor het nieuwe onderwerp of nieuwe GSC-cijfers beschikbaar. De lokale serviceaccountsleutel ontbreekt.

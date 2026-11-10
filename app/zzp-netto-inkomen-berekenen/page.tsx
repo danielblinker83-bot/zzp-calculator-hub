@@ -34,7 +34,7 @@ const faq = [
   {
     vraag: "Moet ik omzet inclusief of exclusief btw invullen?",
     antwoord:
-      "Exclusief btw. De btw die je aan klanten rekent is niet van jou; die draag je af bij de btw-aangifte. Reken voor je inkomen dus altijd met bedragen exclusief btw.",
+      "Vul omzet exclusief btw in. Neem bij de zakelijke kosten de btw alleen mee voor zover je die niet kunt aftrekken en de uitgave zelf zakelijk aftrekbaar is.",
   },
   {
     vraag: "Waarom is de uitkomst een indicatie en geen exact bedrag?",
@@ -49,7 +49,7 @@ const faq = [
   {
     vraag: "Wat valt er onder zakelijke kosten?",
     antwoord:
-      "Alles wat je uitgeeft om je omzet te kunnen draaien: software, telefoon, werkruimte, vervoer, verzekeringen, administratie, inkoop en opleidingen. Deze kosten verlagen je winst en dus je belasting. Privéuitgaven horen er niet bij.",
+      "Gebruik de aftrekbare zakelijke kosten uit je administratie. Bij gemengde uitgaven neem je het zakelijke deel mee. Voor sommige kosten gelden beperkingen, en investeringen kunnen via afschrijving over meerdere jaren worden verdeeld.",
   },
   {
     vraag: "Hoeveel moet ik reserveren voor pensioen en arbeidsongeschiktheid?",
@@ -67,6 +67,12 @@ export default function Page() {
       tool={<NettoCalculator />}
       uitleg={
         <div className="space-y-6 text-slate-600">
+          <p>
+            Twijfel je welke bedragen je moet invullen? Lees hoe je{" "}
+            <Link href="/kennisbank/omzet-winst-banksaldo" className="font-medium text-petrol-700 underline">
+              omzet, winst en banksaldo uit elkaar houdt
+            </Link>.
+          </p>
           <section>
             <h2 className="text-xl font-bold text-ink">Waarom bruto-netto voor een zzp'er anders werkt</h2>
             <p className="mt-2">

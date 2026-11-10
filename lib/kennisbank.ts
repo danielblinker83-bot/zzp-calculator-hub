@@ -61,6 +61,25 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 
 export const ARTIKELEN: Artikel[] = [
   {
+    slug: "omzet-winst-banksaldo",
+    title: "Omzet, winst en banksaldo als zzp’er",
+    description: "Bereken je winst uit omzet en kosten. Zie met een openstaande factuur waarom je banksaldo afwijkt en welke cijfers je invult bij de nettocalculator.",
+    datum: "2026-11-10",
+    redactie: true,
+    leestijd: 4,
+    afbeelding: "/kennisbank/omzet-winst-banksaldo.jpg",
+    afbeeldingAlt: "Daniel Blinker legt in een bordeauxrood overhemd een factuur in een postbak",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
+    gerelateerdeTools: ["zzp-netto-inkomen-berekenen", "belasting-reserveren-zzp", "btw-berekenen"],
+    bronnen: [
+      { label: "KVK — Verwachte winst en kosten in de exploitatiebegroting", url: "https://www.kvk.nl/geldzaken/exploitatiebegroting/" },
+      { label: "KVK — Ontvangsten en betalingen in de liquiditeitsbegroting", url: "https://www.kvk.nl/geldzaken/liquiditeitsbegroting/" },
+      { label: "Belastingdienst — Zakelijke kosten en aftrekbare btw", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/inkomstenbelasting_voor_ondernemers/zakelijke_kosten/" },
+      { label: "Belastingdienst — Btw-tarieven", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/btw_berekenen_aan_uw_klanten/btw_berekenen/btw_tarief/btw_tarief" },
+    ],
+  },
+  {
     slug: "zakelijke-ritten-bijhouden",
     title: "Zakelijke ritten bijhouden met je privéauto",
     description: "Leg zakelijke kilometers vast als zzp’er. Bekijk een voorbeeld van een rittenoverzicht en hoe woon-werkverkeer meetelt voor inkomstenbelasting en btw.",
