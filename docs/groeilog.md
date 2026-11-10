@@ -8,6 +8,7 @@
 - Link vanuit de nettocalculator toegevoegd. De uitleg over niet-aftrekbare btw, gemengde uitgaven en afschrijving verduidelijkt.
 - Nieuw beeld in bordeauxrood overhemd met factuur en postbakken. Beide vaste referenties gebruikt. Zie beeldlog.
 - Productiebuild (31 statische routes), bestaande tests, calculatorinvoer, tabel, interne links, canonical, Article/BreadcrumbList/FAQPage, sitemap en sociale metadata gecontroleerd. Lokale productie-HTTP-test geeft 200 voor artikel, calculator, origineel en 384px-variant. Mobiele markup en beeld op 320px bekeken. Chromium kon niet starten door een geblokkeerde lokale socket, waardoor er geen gerenderde mobiele controle is uitgevoerd.
+- Vercel-publicatie `10bf005d234f83a841105135dd233019614e3eb5` geslaagd. Artikel, homepage, kennisbank, calculator, sitemap, JPEG en 384px-variant geven live 200. Teruglink, beide rekenuitkomsten, drie beeldplekken, schema’s en sociale metadata bevestigd. Live JPEG bytegelijk aan het repositorybestand, thumbnail 384 × 216 en 17.217 bytes.
 
 ## 9 november 2026 — zakelijke ritten bijhouden
 
