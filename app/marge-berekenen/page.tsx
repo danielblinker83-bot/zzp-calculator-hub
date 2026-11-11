@@ -77,6 +77,13 @@ export default function Page() {
       tool={<MargeCalculator />}
       uitleg={
         <div className="space-y-6 text-slate-600">
+          <p>
+            Wil je weten hoeveel verkopen je nodig hebt om je vaste kosten te dekken? Gebruik
+            het bedrag dat je per verkoop overhoudt om je{" "}
+            <Link href="/kennisbank/break-even-afzet-berekenen" className="font-medium text-petrol-700 underline">
+              break-even afzet te berekenen
+            </Link>.
+          </p>
           <section>
             <h2 className="text-xl font-bold text-ink">Hoe je marge en opslag berekent</h2>
             <p className="mt-2">

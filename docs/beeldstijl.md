@@ -31,6 +31,9 @@ Gebruik de beschikbare imagegen-tool met deze bestanden expliciet als identiteit
 | 2026-11-08 | `declarabele-uren-plannen.jpg` | Zand/beige | Driekwart staand naast planner, één hand wijst naar een blok |
 | 2026-11-09 | `zakelijke-ritten-bijhouden.jpg` | Leigrijs | Zijwaarts in geparkeerde auto, met notitieboek op de knie |
 | 2026-11-10 | `omzet-winst-banksaldo.jpg` | Bordeauxrood | Zittend aan tafel, met uitgestrekte arm een factuur in een postbak leggen |
+| 2026-11-11 | `break-even-afzet-berekenen.jpg` | Marineblauw | Rechtop bij een werkbank, productdoos met beide handen vasthouden |
+
+Beeldcontrole 11 november 2026. Beide vaste referenties bekeken en expliciet gebruikt. Gezicht, handen en kop ‘Break-even afzet berekenen’ gecontroleerd, ook op 320px. JPEG 1536 × 864, 126.705 bytes.
 
 Beeldcontrole 10 november 2026. Beide vaste referenties bekeken en expliciet gebruikt. Kop ‘Omzet, winst en banksaldo’, gezicht en handen gecontroleerd, ook op 320px. JPEG 1536 × 864, 130.924 bytes.
 

@@ -61,6 +61,24 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 
 export const ARTIKELEN: Artikel[] = [
   {
+    slug: "break-even-afzet-berekenen",
+    title: "Break-even afzet berekenen",
+    description: "Bereken hoeveel verkopen je nodig hebt om je vaste kosten te dekken. Met de formule voor break-even afzet, een tabel en een scenario met winstdoel.",
+    datum: "2026-11-11",
+    redactie: true,
+    leestijd: 4,
+    afbeelding: "/kennisbank/break-even-afzet-berekenen.jpg",
+    afbeeldingAlt: "Daniel Blinker in een marineblauw overhemd houdt een productdoos vast",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
+    gerelateerdeTools: ["marge-berekenen"],
+    bronnen: [
+      { label: "KVK — Vaste en variabele kosten in de exploitatiebegroting", url: "https://www.kvk.nl/geldzaken/exploitatiebegroting/" },
+      { label: "OpenStax — Break-even afzet en contributiemarge", url: "https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars" },
+      { label: "Belastingdienst — Zakelijke kosten en aftrekbare btw", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/inkomstenbelasting_voor_ondernemers/zakelijke_kosten/" },
+    ],
+  },
+  {
     slug: "omzet-winst-banksaldo",
     title: "Omzet, winst en banksaldo als zzp’er",
     description: "Bereken je winst uit omzet en kosten. Zie met een openstaande factuur waarom je banksaldo afwijkt en welke cijfers je invult bij de nettocalculator.",

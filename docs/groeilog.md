@@ -1,5 +1,14 @@
 # BerekenZZP groeilog
 
+## 11 november 2026 — break-even afzet
+
+- Nieuw artikel `/kennisbank/break-even-afzet-berekenen`. Rekent van de bijdrage per verkoop naar het aantal verkopen voor kostendekking en een winstdoel. Historische Search Console-export van 2 augustus–1 november bevat 118 vertoningen voor ‘winstmarge berekenen’ en één voor ‘contributiemarge’. Geen gemeten zoekvolume voor de nieuwe titel. Lokale GSC-sleutel ontbreekt en er zijn geen nieuwe cijfers beschikbaar.
+- Repository bijgewerkt vanaf `d35e64d`. Live kennisbank vooraf HTTP 200, 4,751 s tot de eerste byte bij één externe meting vanuit deze omgeving. Geen nieuwe veldmetingen beschikbaar.
+- KVK, OpenStax en Belastingdienst gecontroleerd voor kostenindeling, formule en aftrekbare btw. Eigen voorbeeld met margefunctie nagerekend. €45 min €28 geeft €17 per verkoop. Bij 70 stuks ontbreekt €10 en bij 71 resteert €7 na €1.200 vaste kosten. Bij €40 verkoopprijs zijn 100 verkopen nodig. Voor €500 winst bij €45 eveneens 100.
+- Contextuele link vanaf de margecalculator. Het artikel verwijst naar die calculator, het voorbeeld over platformkosten en de uitleg over winst en banksaldo.
+- Nieuw JPEG met beide vaste identiteitsreferenties. Daniel staat in marineblauw bij een werkbank en houdt een productdoos vast. Zie beeldlog.
+- Productiebuild met TypeScript (32 statische routes), rekentests, rekenvoorbeelden, interne links, canonical, Article/BreadcrumbList/FAQPage, sitemap en sociale metadata gecontroleerd. Mobiele markup en beeld op 320px bekeken. Er is geen gerenderde mobiele browsertest uitgevoerd.
+
 ## 10 november 2026 — omzet, winst en banksaldo
 
 - Nieuw artikel `/kennisbank/omzet-winst-banksaldo` over een openstaande factuur, kasplanning en de omzet- en kostenvelden van de nettocalculator. Historische export 2 augustus–1 november bevat 20 vertoningen voor ‘bruto netto zzp’ en 3 voor ‘zzp winst berekenen’. Het specifieke onderwerp heeft geen eigen zoekmeting. De lokale GSC-sleutel ontbreekt en er zijn geen nieuwe Search Console-cijfers beschikbaar.
