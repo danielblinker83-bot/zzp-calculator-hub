@@ -8,6 +8,7 @@
 - Contextuele link vanaf de margecalculator. Het artikel verwijst naar die calculator, het voorbeeld over platformkosten en de uitleg over winst en banksaldo.
 - Nieuw JPEG met beide vaste identiteitsreferenties. Daniel staat in marineblauw bij een werkbank en houdt een productdoos vast. Zie beeldlog.
 - Productiebuild met TypeScript (32 statische routes), rekentests, rekenvoorbeelden, interne links, canonical, Article/BreadcrumbList/FAQPage, sitemap en sociale metadata gecontroleerd. Mobiele markup en beeld op 320px bekeken. Er is geen gerenderde mobiele browsertest uitgevoerd.
+- Vercel-publicatie `088054761cc537360feeac0cdb669ee039c21ad0` geslaagd. Lokale productie-HTTP-test en live nacontrole geslaagd. Homepage, kennisbank, artikel, calculator, sitemap en beide beeldvarianten geven 200. Teruglink, schema’s, sociale metadata en drie beeldplekken bevestigd. Live JPEG bytegelijk aan repositorybestand. Thumbnail 384 × 216 en 17.577 bytes.
 
 ## 10 november 2026 — omzet, winst en banksaldo
 
