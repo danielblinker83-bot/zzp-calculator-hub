@@ -8,6 +8,7 @@
 - Teruglink vanuit belastingcalculator toegevoegd. Stellige uitspraken over het voorkomen van belastingrente, het tijdstip van de aanslag en het marginale schijftarief vervangen door uitleg over betaaldata, schatting en herberekening.
 - Nieuw beeld in roestoranje overhemd, zijwaarts aan tafel met envelop. Beide identiteitsreferenties gebruikt. Zie beeldlog.
 - Productiebuild (33 statische routes), bestaande tests, rekenvoorbeeld, lokale productie-HTTP, interne links, canonical, Article/BreadcrumbList/FAQPage, sitemap, sociale metadata en drie beeldplekken gecontroleerd. Mobiele opmaak via HTML en beeld op 320px gecontroleerd. Geen gerenderde mobiele browsertest uitgevoerd.
+- Vercel-publicatie `286063f97d010c1952081c2860725d3ffb1d44b6` geslaagd. Live HTTP 200 voor homepage, kennisbank, artikel, calculator, sitemap en beide beeldvarianten. Teruglink, bedragen, schema’s en sociale metadata bevestigd. Origineel bytegelijk aan de repository, thumbnail 384 × 216 en 18.004 bytes.
 
 ## 11 november 2026 — break-even afzet
 
