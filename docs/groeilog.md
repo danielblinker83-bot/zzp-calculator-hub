@@ -1,5 +1,11 @@
 # BerekenZZP groeilog
 
+## 12 november 2026 — sitemap en vindbaarheid
+
+- Live robots.txt verwijst naar de sitemap. Alle elf artikelen staan in de sitemap en zijn gelinkt vanuit de kennisbank. Elk artikel gaf HTTP 200, verwees canoniek naar de eigen URL en bevatte geen `noindex` in HTML of headers. Actuele indexstatus in Search Console niet beschikbaar.
+- De sitemap gebruikte de buildtijd als wijzigingsdatum voor elke URL. Artikelen krijgen nu hun inhoudelijke wijzigingsdatum of publicatiedatum. URL’s zonder vastgelegde datum laten `lastmod` weg.
+- Productiebuild en rekentests geslaagd. De gebouwde sitemap bevat dezelfde 28 URL’s. Alle elf artikeldatums gecontroleerd tegen de kennisbankregistry.
+
 ## 12 november 2026 — voorlopige aanslag en belastingreserve
 
 - Nieuw artikel `/kennisbank/voorlopige-aanslag-belastingreserve`. Vergelijkt de jaarinschatting met betaalde en geplande termijnen en behandelt al opgebouwde reserves. Vult de belastingcalculator en de uitleg over winst aan. Historische export 2 augustus–1 november bevat drie vertoningen voor ‘belasting berekenen zzp’ en twee voor ‘zzp inkomen belasting berekenen’. Geen aparte meting voor de nieuwe titel. GSC-sleutel ontbreekt, geen nieuwe Search Console-cijfers.
