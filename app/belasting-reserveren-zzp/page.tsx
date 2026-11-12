@@ -29,12 +29,12 @@ const faq = [
   {
     vraag: "Wanneer betaal ik inkomstenbelasting als zzp'er?",
     antwoord:
-      "Standaard na je aangifte over het afgelopen jaar, dus vaak pas in de zomer of het najaar erna. Je kunt ook een voorlopige aanslag aanvragen en maandelijks betalen; dan spreid je de last en voorkom je belastingrente. Juist omdat de aanslag zo laat komt, is maandelijks reserveren belangrijk.",
+      "De betaaldata staan op je aanslag. Heb je een voorlopige aanslag voor het lopende jaar, dan kun je onder voorwaarden in maandelijkse termijnen betalen. De Belastingdienst verrekent de voorlopige aanslag bij de definitieve aanslag.",
   },
   {
     vraag: "Wat is een voorlopige aanslag en is die verstandig?",
     antwoord:
-      "Een voorlopige aanslag is een schatting van je belasting over het lopende jaar, die je in maandelijkse termijnen betaalt. Handig als je moeite hebt om gereserveerd geld te laten staan, en het voorkomt dat je later belastingrente betaalt over een groot bedrag. Vraag hem aan via Mijn Belastingdienst en pas hem aan als je winst wijzigt.",
+      "Een voorlopige aanslag is gebaseerd op een schatting van onder meer je inkomen. Je kunt een voorlopige aanslag aanvragen via Mijn Belastingdienst. Controleer de gegevens als je winst verandert en pas de aanslag zo nodig aan.",
   },
   {
     vraag: "Waar zet ik mijn belastingreserve het beste neer?",
@@ -49,7 +49,7 @@ const faq = [
   {
     vraag: "Wat gebeurt er als ik te weinig heb gereserveerd?",
     antwoord:
-      "Dan moet je de aanslag alsnog betalen, eventueel via een betalingsregeling met de Belastingdienst. Daar komt vaak belastingrente bovenop. Voorkom het door je reservering elk kwartaal opnieuw te berekenen, zeker als je winst stijgt: elke extra euro winst wordt tegen je hoogste schijftarief belast.",
+      "De betaalverplichting volgt uit je aanslag. Kun je die niet op tijd betalen, kijk dan bij de Belastingdienst welke mogelijkheden er zijn. Controleer je jaarwinst en reservering opnieuw als je winstverwachting verandert.",
   },
   {
     vraag: "Betaal ik als zzp'er loonbelasting?",
@@ -72,6 +72,12 @@ export default function Page() {
       tool={<BelastingCalculator />}
       uitleg={
         <div className="space-y-6 text-slate-600">
+          <p>
+            Betaal je al een voorlopige aanslag? Lees hoe je{" "}
+            <Link href="/kennisbank/voorlopige-aanslag-belastingreserve" className="font-medium text-petrol-700 underline">
+              je extra belastingreserve naast de termijnen berekent
+            </Link>.
+          </p>
           <section>
             <h2 className="text-xl font-bold text-ink">Hoe de berekening werkt</h2>
             <p className="mt-2">
@@ -147,7 +153,7 @@ export default function Page() {
             <h2 className="text-xl font-bold text-ink">Veelgemaakte fouten bij belasting reserveren</h2>
             <ul className="mt-2 list-disc space-y-1 pl-5">
               <li>De btw-ontvangsten als omzet behandelen en uitgeven. Die 21% op je factuur moet er bij de kwartaalaangifte weer uit.</li>
-              <li>Een vast percentage blijven hanteren terwijl je winst flink is gestegen. Elke extra euro wordt tegen je hoogste schijftarief belast.</li>
+              <li>Een vast percentage blijven hanteren zonder je reservering opnieuw te berekenen als je winstverwachting verandert.</li>
               <li>Reserveren over je omzet in plaats van over je winst, waardoor je onnodig veel vastzet.</li>
               <li>Geen rekening houden met de voorlopige aanslag: wie die maandelijks betaalt, hoeft daarnaast niet ook nog het volle bedrag te reserveren.</li>
               <li>Het gereserveerde geld op de lopende rekening laten staan, waar het ongemerkt opgaat aan uitgaven.</li>

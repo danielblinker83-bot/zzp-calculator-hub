@@ -32,6 +32,9 @@ Gebruik de beschikbare imagegen-tool met deze bestanden expliciet als identiteit
 | 2026-11-09 | `zakelijke-ritten-bijhouden.jpg` | Leigrijs | Zijwaarts in geparkeerde auto, met notitieboek op de knie |
 | 2026-11-10 | `omzet-winst-banksaldo.jpg` | Bordeauxrood | Zittend aan tafel, met uitgestrekte arm een factuur in een postbak leggen |
 | 2026-11-11 | `break-even-afzet-berekenen.jpg` | Marineblauw | Rechtop bij een werkbank, productdoos met beide handen vasthouden |
+| 2026-11-12 | `voorlopige-aanslag-belastingreserve.jpg` | Roestoranje | Zijwaarts aan ronde tafel, met envelop en open notitieboek |
+
+Beeldcontrole 12 november 2026. Beide vaste referenties bekeken en expliciet gebruikt. Gezicht, handen en kop ‘Voorlopige aanslag en belastingreserve’ bekeken op volledige grootte en op 320px. JPEG 1536 × 864, 153.978 bytes.
 
 Beeldcontrole 11 november 2026. Beide vaste referenties bekeken en expliciet gebruikt. Gezicht, handen en kop ‘Break-even afzet berekenen’ gecontroleerd, ook op 320px. JPEG 1536 × 864, 126.705 bytes.
 

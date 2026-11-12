@@ -1,5 +1,14 @@
 # BerekenZZP groeilog
 
+## 12 november 2026 — voorlopige aanslag en belastingreserve
+
+- Nieuw artikel `/kennisbank/voorlopige-aanslag-belastingreserve`. Vergelijkt de jaarinschatting met betaalde en geplande termijnen en behandelt al opgebouwde reserves. Vult de belastingcalculator en de uitleg over winst aan. Historische export 2 augustus–1 november bevat drie vertoningen voor ‘belasting berekenen zzp’ en twee voor ‘zzp inkomen belasting berekenen’. Geen aparte meting voor de nieuwe titel. GSC-sleutel ontbreekt, geen nieuwe Search Console-cijfers.
+- Repository bijgewerkt vanaf `0e256f6`. Live kennisbank vooraf HTTP 200 en tien bestaande artikelen. Eén externe HTTP-meting gaf 10,083 s tot de eerste byte. Geen veldmeting beschikbaar.
+- Belastingdienst geraadpleegd voor wijzigen bij meer of minder winst, termijnen, verrekening en de afzonderlijke Zvw-aanslag. Fictieve bedragen nagerekend. Extra reserve €800 inkomstenbelasting plus €400 bijdrage Zvw, samen €300 per maand bij vier maanden. Met €600 beschikbaar voor het verschil resteert €150 per maand.
+- Teruglink vanuit belastingcalculator toegevoegd. Stellige uitspraken over het voorkomen van belastingrente, het tijdstip van de aanslag en het marginale schijftarief vervangen door uitleg over betaaldata, schatting en herberekening.
+- Nieuw beeld in roestoranje overhemd, zijwaarts aan tafel met envelop. Beide identiteitsreferenties gebruikt. Zie beeldlog.
+- Productiebuild (33 statische routes), bestaande tests, rekenvoorbeeld, lokale productie-HTTP, interne links, canonical, Article/BreadcrumbList/FAQPage, sitemap, sociale metadata en drie beeldplekken gecontroleerd. Mobiele opmaak via HTML en beeld op 320px gecontroleerd. Geen gerenderde mobiele browsertest uitgevoerd.
+
 ## 11 november 2026 — break-even afzet
 
 - Nieuw artikel `/kennisbank/break-even-afzet-berekenen`. Rekent van de bijdrage per verkoop naar het aantal verkopen voor kostendekking en een winstdoel. Historische Search Console-export van 2 augustus–1 november bevat 118 vertoningen voor ‘winstmarge berekenen’ en één voor ‘contributiemarge’. Geen gemeten zoekvolume voor de nieuwe titel. Lokale GSC-sleutel ontbreekt en er zijn geen nieuwe cijfers beschikbaar.

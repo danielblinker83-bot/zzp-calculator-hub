@@ -61,6 +61,25 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 
 export const ARTIKELEN: Artikel[] = [
   {
+    slug: "voorlopige-aanslag-belastingreserve",
+    title: "Voorlopige aanslag en belastingreserve als zzp’er",
+    description: "Bereken hoeveel je extra reserveert naast je voorlopige aanslag. Met een rekenvoorbeeld voor inkomstenbelasting, Zvw en openstaande termijnen.",
+    datum: "2026-11-12",
+    redactie: true,
+    leestijd: 4,
+    afbeelding: "/kennisbank/voorlopige-aanslag-belastingreserve.jpg",
+    afbeeldingAlt: "Daniel Blinker met een envelop en notitieboek in een roestoranje overhemd",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
+    gerelateerdeTools: ["belasting-reserveren-zzp", "zzp-netto-inkomen-berekenen"],
+    bronnen: [
+      { label: "Belastingdienst — Wanneer wijzig je de voorlopige aanslag?", url: "https://www.belastingdienst.nl/wps/wcm/connect/nl/voorlopige-aanslag/content/in-welke-situaties-moet-ik-mijn-voorlopige-aanslag-wijzigen" },
+      { label: "Belastingdienst — Betalen van de voorlopige aanslag", url: "https://www.belastingdienst.nl/wps/wcm/connect/nl/voorlopige-aanslag/content/voorlopige-aanslag-aangevraagd-hoe-gaat-het-met-betalen" },
+      { label: "Belastingdienst — Verrekening bij de definitieve aanslag", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/inkomstenbelasting/hoe_werkt_inkomstenbelasting/aanslag/definitieve_aanslag" },
+      { label: "Belastingdienst — Inkomensafhankelijke bijdrage Zvw", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/werk_en_inkomen/zorgverzekeringswet/bijdrage_zorgverzekeringswet/" },
+    ],
+  },
+  {
     slug: "break-even-afzet-berekenen",
     title: "Break-even afzet berekenen",
     description: "Bereken hoeveel verkopen je nodig hebt om je vaste kosten te dekken. Met de formule voor break-even afzet, een tabel en een scenario met winstdoel.",
