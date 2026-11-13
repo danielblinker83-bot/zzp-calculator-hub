@@ -77,7 +77,7 @@ export default function ArtikelLayout({
 
         <h1 className="mt-6 text-3xl font-extrabold sm:text-4xl">{artikel.title}</h1>
         <p className="mt-3 text-sm text-slate-500">
-          Door Daniel Blinker, zelf zzp'er · {datumNL(artikel.datum)} · {artikel.leestijd} min lezen
+          {artikel.redactie ? "Redactie BerekenZZP.nl" : "Door Daniel Blinker, zelf zzp’er"} · {datumNL(artikel.datum)} · {artikel.leestijd} min lezen
         </p>
         <p className="mt-4 text-lg text-slate-600">{intro}</p>
 

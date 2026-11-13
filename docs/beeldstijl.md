@@ -33,6 +33,9 @@ Gebruik de beschikbare imagegen-tool met deze bestanden expliciet als identiteit
 | 2026-11-10 | `omzet-winst-banksaldo.jpg` | Bordeauxrood | Zittend aan tafel, met uitgestrekte arm een factuur in een postbak leggen |
 | 2026-11-11 | `break-even-afzet-berekenen.jpg` | Marineblauw | Rechtop bij een werkbank, productdoos met beide handen vasthouden |
 | 2026-11-12 | `voorlopige-aanslag-belastingreserve.jpg` | Roestoranje | Zijwaarts aan ronde tafel, met envelop en open notitieboek |
+| 2026-11-13 | `maximale-korting-berekenen.jpg` | Lila | Zittend op een hoge kruk bij een toonbank, met prijskaartje in één hand |
+
+Beeldcontrole 13 november 2026. Beide vaste referenties bekeken en gebruikt. Gezicht, handen en de kop ‘Hoeveel korting kun je geven?’ gecontroleerd op volledige grootte en op 320px. JPEG 1536 × 864, 182.996 bytes.
 
 Beeldcontrole 12 november 2026. Beide vaste referenties bekeken en expliciet gebruikt. Gezicht, handen en kop ‘Voorlopige aanslag en belastingreserve’ bekeken op volledige grootte en op 320px. JPEG 1536 × 864, 153.978 bytes.
 

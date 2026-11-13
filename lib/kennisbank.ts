@@ -61,6 +61,23 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 
 export const ARTIKELEN: Artikel[] = [
   {
+    slug: "maximale-korting-berekenen",
+    title: "Hoeveel korting kun je geven bij een minimale marge?",
+    description: "Bereken hoeveel korting je kunt geven en houd je gewenste marge over. Met een minimumprijs, rekentabel en voorbeeld met verkoopcommissie.",
+    datum: "2026-11-13",
+    redactie: true,
+    leestijd: 4,
+    afbeelding: "/kennisbank/maximale-korting-berekenen.jpg",
+    afbeeldingAlt: "Daniel Blinker houdt in een lila overhemd een prijskaartje vast bij een toonbank",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
+    gerelateerdeTools: ["marge-berekenen"],
+    bronnen: [
+      { label: "KVK — Verkoopprijs, kostprijs en marge", url: "https://www.kvk.nl/marketing/hoe-bereken-je-een-goede-verkoopprijs-voor-je-product/" },
+      { label: "OpenStax — Brutomarge en nettoverkoop", url: "https://openstax.org/books/principles-financial-accounting/pages/6-key-terms" },
+    ],
+  },
+  {
     slug: "voorlopige-aanslag-belastingreserve",
     title: "Voorlopige aanslag en belastingreserve als zzp’er",
     description: "Bereken hoeveel je extra reserveert naast je voorlopige aanslag. Met een rekenvoorbeeld voor inkomstenbelasting, Zvw en openstaande termijnen.",

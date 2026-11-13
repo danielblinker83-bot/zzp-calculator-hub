@@ -1,5 +1,13 @@
 # BerekenZZP groeilog
 
+## 13 november 2026 — maximale korting bij een minimale marge
+
+- Nieuw artikel `/kennisbank/maximale-korting-berekenen`. Vertrekt vanuit een minimale marge om een maximale korting te bepalen, inclusief percentagecommissie en afronding. Bestaand marge/opslagartikel legt het effect van een gegeven korting uit. De historische nulmeting geeft 2.193 vertoningen voor de margecalculator. Geen actuele Search Console-export of afzonderlijke meting voor deze zoekvraag beschikbaar.
+- Live sitemap en margecalculator gaven vooraf HTTP 200. Eén externe meting vanuit deze omgeving gaf 4,00 s en 4,02 s tot de eerste byte. Geen veldmeting.
+- KVK en OpenStax gecontroleerd voor kostenbasis, marge en nettoverkoop. Fictieve prijzen en kortingsgrenzen onafhankelijk nagerekend. €54 ÷ 0,75 = €72, maximaal 20% korting op €90. Bij 5% commissie is €77,15 de eerste prijs op hele centen die het margedoel haalt.
+- De margecalculator linkt naar de nieuwe uitleg. Zichtbare byline gebruikt de bestaande redactievlag, in overeenstemming met de Article-gegevens. Nieuw herkenbaar beeld met lila overhemd, op een kruk bij de toonbank. Zie beeldstijl.
+- Productiebuild (34 statische routes), rekentests en lokale productie-HTTP geslaagd. Alle interne artikellinks, sitemap (29 URL’s), FAQ, canonical, schema’s, sociale metadata en drie beeldplekken geverifieerd. Mobiele HTML, tabel en voorbeeldbeeld op 320 px gecontroleerd. De lokale browser kon niet starten door de beperking op Unix-sockets.
+
 ## 12 november 2026 — sitemap en vindbaarheid
 
 - Live robots.txt verwijst naar de sitemap. Alle elf artikelen staan in de sitemap en zijn gelinkt vanuit de kennisbank. Elk artikel gaf HTTP 200, verwees canoniek naar de eigen URL en bevatte geen `noindex` in HTML of headers. Actuele indexstatus in Search Console niet beschikbaar.

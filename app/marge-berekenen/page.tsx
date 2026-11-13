@@ -78,6 +78,12 @@ export default function Page() {
       uitleg={
         <div className="space-y-6 text-slate-600">
           <p>
+            Wil je een actieprijs bepalen? Bereken{" "}
+            <Link href="/kennisbank/maximale-korting-berekenen" className="font-medium text-petrol-700 underline">
+              hoeveel korting je kunt geven bij je gewenste marge
+            </Link>.
+          </p>
+          <p>
             Wil je weten hoeveel verkopen je nodig hebt om je vaste kosten te dekken? Gebruik
             het bedrag dat je per verkoop overhoudt om je{" "}
             <Link href="/kennisbank/break-even-afzet-berekenen" className="font-medium text-petrol-700 underline">
