@@ -6,7 +6,8 @@
 - Live kennisbank, sitemap en kilometercalculator vooraf HTTP 200. De eenmalige tijd tot eerste byte voor de calculator was 4,42 s vanuit deze omgeving. Geen veldmeting. Live sitemap vooraf 29 URL’s, waarvan 12 artikelen.
 - ANWB geraadpleegd voor kostenposten en waardedaling en Belastingdienst voor €0,25 aftrek per zakelijke kilometer met privévervoer in 2026. Fictieve jaarkosten €6.000 ÷ 15.000 km = €0,40 per km. Bij 80 km gemiddeld €32 toerekenen, €9,60 aan extra brandstof en €20 forfaitaire winstaftrek. Voorbeelden nagerekend.
 - Teruglinks vanuit kilometercalculator en het bestaande factuurartikel. Calculator verduidelijkt dat het forfait de afzonderlijke kosten vervangt voor de winstaangifte. Nieuw beeld in okergeel bij geopende autodeur, zie beeldstijl.
-- Productiebuild, bestaande tests en lokale productie-HTTP-controle geslaagd. Sitemap, drie beeldplekken, thumbnail, FAQ, schema’s, social metadata en links gecontroleerd. Mobiele HTML en afbeelding op 320 px gecontroleerd.
+- Productiebuild, bestaande tests en lokale productie-HTTP-controle geslaagd. Sitemap, drie beeldplekken, thumbnail, FAQ, schema’s, social metadata en links gecontroleerd. Mobiele HTML en afbeelding op 320 px gecontroleerd. Geen gerenderde browsertest uitgevoerd.
+- Live nacontrole van `47a7026` geslaagd voor artikel, homepage, kennisbank, kilometercalculator, factuurartikel, sitemap en beide beeldvarianten. De ANWB-link gaat rechtstreeks naar de uitleg over de kostenposten. Voor fiscale informatie verwijst het artikel naar de Belastingdienst.
 
 ## 13 november 2026 — maximale korting bij een minimale marge
 

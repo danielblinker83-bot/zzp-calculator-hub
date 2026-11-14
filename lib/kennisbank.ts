@@ -73,7 +73,7 @@ export const ARTIKELEN: Artikel[] = [
     afbeeldingHoogte: 864,
     gerelateerdeTools: ["kilometervergoeding-berekenen"],
     bronnen: [
-      { label: "ANWB — Autokosten en kilometervergoeding berekenen", url: "https://www.anwb.nl/auto/autokosten/kilometervergoeding" },
+      { label: "ANWB — Vaste en variabele autokosten", url: "https://www.anwb.nl/auto/autokosten/autokosten-per-maand" },
       { label: "ANWB — Afschrijving van je auto", url: "https://www.anwb.nl/auto/autokosten/afschrijving-auto-berekenen" },
       { label: "Belastingdienst — Zakelijk gebruik privévervoermiddel 2026", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/veranderingen-inkomstenbelasting-2026/zakelijk-gebruik-privevervoermiddel-2026" },
     ],
