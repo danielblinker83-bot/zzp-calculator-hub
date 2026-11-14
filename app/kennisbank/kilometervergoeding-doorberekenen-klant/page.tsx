@@ -79,6 +79,7 @@ export default function Page() {
           <li>Klopt de btw-behandeling van de hele opdracht?</li>
           <li>Kun je datum, rit en afstand terugvinden in je administratie?</li>
         </ol>
+        <p className="mt-3">Wil je eerst weten wat de rit je zelf kost? Bereken je <Link href="/kennisbank/autokosten-per-kilometer-berekenen" className={link}>werkelijke autokosten per kilometer</Link> met brandstof, onderhoud en afschrijving.</p>
         <p className="mt-3">Begin je nog aan de prijsafspraak? Zet je werk en reiskosten samen in een <Link href="/offerte-calculator" className={link}>offerteberekening</Link>. Zo ziet de klant vooraf wat een bezoek kost en kun je achteraf dezelfde uitgangspunten gebruiken.</p>
       </section>
     </ArtikelLayout>

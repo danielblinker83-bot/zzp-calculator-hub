@@ -1,5 +1,13 @@
 # BerekenZZP groeilog
 
+## 14 november 2026 — werkelijke autokosten per kilometer
+
+- Nieuw artikel `/kennisbank/autokosten-per-kilometer-berekenen` over de eigen kostprijs van rijden, aanvullend op de calculator voor aftrek en klanttarieven, de uitleg over rittenregistratie en het factuurvoorbeeld. Historische export 2 augustus–1 november bevat 77 vertoningen voor ‘kilometervergoeding zzp’ en 33 voor ‘kilometervergoeding berekenen’. Geen afzonderlijke zoekmeting voor dit onderwerp of nieuwe Search Console-cijfers beschikbaar.
+- Live kennisbank, sitemap en kilometercalculator vooraf HTTP 200. De eenmalige tijd tot eerste byte voor de calculator was 4,42 s vanuit deze omgeving. Geen veldmeting. Live sitemap vooraf 29 URL’s, waarvan 12 artikelen.
+- ANWB geraadpleegd voor kostenposten en waardedaling en Belastingdienst voor €0,25 aftrek per zakelijke kilometer met privévervoer in 2026. Fictieve jaarkosten €6.000 ÷ 15.000 km = €0,40 per km. Bij 80 km gemiddeld €32 toerekenen, €9,60 aan extra brandstof en €20 forfaitaire winstaftrek. Voorbeelden nagerekend.
+- Teruglinks vanuit kilometercalculator en het bestaande factuurartikel. Calculator verduidelijkt dat het forfait de afzonderlijke kosten vervangt voor de winstaangifte. Nieuw beeld in okergeel bij geopende autodeur, zie beeldstijl.
+- Productiebuild, bestaande tests en lokale productie-HTTP-controle geslaagd. Sitemap, drie beeldplekken, thumbnail, FAQ, schema’s, social metadata en links gecontroleerd. Mobiele HTML en afbeelding op 320 px gecontroleerd.
+
 ## 13 november 2026 — maximale korting bij een minimale marge
 
 - Nieuw artikel `/kennisbank/maximale-korting-berekenen`. Vertrekt vanuit een minimale marge om een maximale korting te bepalen, inclusief percentagecommissie en afronding. Bestaand marge/opslagartikel legt het effect van een gegeven korting uit. De historische nulmeting geeft 2.193 vertoningen voor de margecalculator. Geen actuele Search Console-export of afzonderlijke meting voor deze zoekvraag beschikbaar.

@@ -61,6 +61,24 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 
 export const ARTIKELEN: Artikel[] = [
   {
+    slug: "autokosten-per-kilometer-berekenen",
+    title: "Wat kost je auto per kilometer?",
+    description: "Bereken je werkelijke autokosten per kilometer met afschrijving, verzekering, onderhoud en brandstof. Zie wat een zakelijke rit je gemiddeld kost.",
+    datum: "2026-11-14",
+    redactie: true,
+    leestijd: 4,
+    afbeelding: "/kennisbank/autokosten-per-kilometer-berekenen.jpg",
+    afbeeldingAlt: "Daniel Blinker in een okergeel overhemd naast een geopende autodeur",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
+    gerelateerdeTools: ["kilometervergoeding-berekenen"],
+    bronnen: [
+      { label: "ANWB — Autokosten en kilometervergoeding berekenen", url: "https://www.anwb.nl/auto/autokosten/kilometervergoeding" },
+      { label: "ANWB — Afschrijving van je auto", url: "https://www.anwb.nl/auto/autokosten/afschrijving-auto-berekenen" },
+      { label: "Belastingdienst — Zakelijk gebruik privévervoermiddel 2026", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/veranderingen-inkomstenbelasting-2026/zakelijk-gebruik-privevervoermiddel-2026" },
+    ],
+  },
+  {
     slug: "maximale-korting-berekenen",
     title: "Hoeveel korting kun je geven bij een minimale marge?",
     description: "Bereken hoeveel korting je kunt geven en houd je gewenste marge over. Met een minimumprijs, rekentabel en voorbeeld met verkoopcommissie.",

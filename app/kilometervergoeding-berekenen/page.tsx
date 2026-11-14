@@ -63,6 +63,12 @@ export default function Page() {
       uitleg={
         <div className="space-y-6 text-slate-600">
           <p>
+            Wil je een tarief voor je offerte bepalen? Bereken eerst je{" "}
+            <Link href="/kennisbank/autokosten-per-kilometer-berekenen" className="font-medium text-petrol-700 underline">
+              werkelijke autokosten per kilometer
+            </Link>.
+          </p>
+          <p>
             Gebruik je je privéauto voor je werk? Lees hoe je{" "}
             <Link href="/kennisbank/zakelijke-ritten-bijhouden" className="font-medium text-petrol-700 underline">
               zakelijke ritten en woon-werkritten bijhoudt
@@ -108,7 +114,7 @@ export default function Page() {
             <p className="mt-2">
               De kilometervergoeding geldt alleen voor zakelijke ritten met een privévoertuig. Je
               mag dan niets anders aftrekken: geen brandstof, geen onderhoud, geen afschrijving.
-              Het bedrag per kilometer dekt alle kosten. Staat je auto op de zaak, dan werkt het
+              Voor de winstaangifte zijn deze kosten verwerkt in het vaste aftrekbedrag per kilometer. Staat je auto op de zaak, dan werkt het
               omgekeerd: je trekt de werkelijke autokosten af, betaalt bijtelling bij privégebruik
               en laat de kilometervergoeding links liggen. Welke variant gunstiger is, hangt af
               van hoeveel je rijdt en wat de auto kost; bij veel zakelijke kilometers met een
