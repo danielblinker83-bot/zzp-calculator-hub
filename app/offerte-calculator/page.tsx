@@ -62,6 +62,13 @@ export default function Page() {
       tool={<OfferteCalculator />}
       uitleg={
         <div className="space-y-6 text-slate-600">
+          <p>
+            Spreek je één totaalbedrag af voor de opdracht? Bekijk hoe je een{" "}
+            <Link href="/kennisbank/vaste-projectprijs-berekenen" className="font-medium text-petrol-700 underline">
+              vaste projectprijs berekent
+            </Link>{" "}
+            en wat je per uur overhoudt als het werk uitloopt.
+          </p>
           <section>
             <h2 className="text-xl font-bold text-ink">Hoe de berekening werkt</h2>
             <p className="mt-2">

@@ -35,6 +35,9 @@ Gebruik de beschikbare imagegen-tool met deze bestanden expliciet als identiteit
 | 2026-11-12 | `voorlopige-aanslag-belastingreserve.jpg` | Roestoranje | Zijwaarts aan ronde tafel, met envelop en open notitieboek |
 | 2026-11-13 | `maximale-korting-berekenen.jpg` | Lila | Zittend op een hoge kruk bij een toonbank, met prijskaartje in één hand |
 | 2026-11-14 | `autokosten-per-kilometer-berekenen.jpg` | Okergeel | Staand bij een geopende autodeur met notitieboek |
+| 2026-11-15 | `vaste-projectprijs-berekenen.jpg` | Blauwgroen | Achterover in een vergaderstoel, schuift een map over tafel |
+
+Beeldcontrole 15 november 2026. Beide vaste referenties bekeken en gebruikt. Gezicht, handen en de kop ‘Vaste projectprijs berekenen’ op volledige grootte en op 320 px gecontroleerd. JPEG 1536 × 864, 168.298 bytes.
 
 Beeldcontrole 14 november 2026. Beide vaste referenties bekeken en gebruikt. Gezicht, handen en de kop ‘Autokosten per kilometer’ bekeken op volledige grootte en op 320 px. JPEG 1536 × 864, 142.828 bytes.
 

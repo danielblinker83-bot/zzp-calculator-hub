@@ -1,5 +1,13 @@
 # BerekenZZP groeilog
 
+## 15 november 2026 — vaste projectprijs als zzp’er
+
+- Nieuw artikel `/kennisbank/vaste-projectprijs-berekenen`. Voegt een methode toe om de uren, speling en directe kosten voor een vaste prijs te begroten en het effect van uitloop na te rekenen. De bestaande offertecalculator blijft de totaalberekening doen. In de historische Search Console-export van 2 augustus–1 november had ‘uurtarief berekenen zzp’ 110 vertoningen en ‘zzp tarief berekenen’ 41. Geen signaal voor ‘projectprijs’ zelf en geen nieuwe export of serviceaccountsleutel beschikbaar.
+- Voor publicatie live kennisbank, sitemap en offertecalculator HTTP 200. Offertecalculator 5,11 s tot de eerste byte in één externe meting vanuit deze omgeving. Geen veldmeting. Sitemap vooraf 30 URL’s, waarvan 13 artikelen.
+- KVK en Ondernemersplein geraadpleegd voor uren- en kostenbasis, prijssoorten en afspraken over werkzaamheden en oplevering. Fictief voorbeeld onafhankelijk nagerekend. €1.560 totaal en €1.440 na directe kosten. Bij 16, 18 en 22 uur blijft respectievelijk €90, €80 en €65,45 per uur over.
+- Contextuele teruglink toegevoegd vanuit de offertecalculator. Het artikel verwijst naar de offerte- en uurtariefcalculators. Nieuw beeld met blauwgroen overhemd aan een vergadertafel. Zie beeldstijl.
+- Productiebuild (36 statische routes), bestaande tests en lokale productie-HTTP-controle geslaagd. Sitemap (31 URL’s), interne links, FAQ, canonical, sociale metadata en schema’s bevestigd. Alle drie beeldplekken, origineel en thumbnail getest. Mobiele HTML en beeld op 320 px gecontroleerd. Geen gerenderde mobiele browsertest uitgevoerd.
+
 ## 14 november 2026 — werkelijke autokosten per kilometer
 
 - Nieuw artikel `/kennisbank/autokosten-per-kilometer-berekenen` over de eigen kostprijs van rijden, aanvullend op de calculator voor aftrek en klanttarieven, de uitleg over rittenregistratie en het factuurvoorbeeld. Historische export 2 augustus–1 november bevat 77 vertoningen voor ‘kilometervergoeding zzp’ en 33 voor ‘kilometervergoeding berekenen’. Geen afzonderlijke zoekmeting voor dit onderwerp of nieuwe Search Console-cijfers beschikbaar.

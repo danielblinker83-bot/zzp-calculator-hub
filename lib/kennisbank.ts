@@ -61,6 +61,24 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 
 export const ARTIKELEN: Artikel[] = [
   {
+    slug: "vaste-projectprijs-berekenen",
+    title: "Vaste projectprijs berekenen als zzp’er",
+    description: "Bereken een vaste projectprijs met je uurtarief, projectkosten en extra tijd. Zie wat je per uur overhoudt als de opdracht uitloopt.",
+    datum: "2026-11-15",
+    redactie: true,
+    leestijd: 4,
+    afbeelding: "/kennisbank/vaste-projectprijs-berekenen.jpg",
+    afbeeldingAlt: "Daniel Blinker in een blauwgroen overhemd schuift een map over een vergadertafel",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
+    gerelateerdeTools: ["offerte-calculator", "uurtarief-berekenen"],
+    bronnen: [
+      { label: "KVK — Een offerte maken met duidelijke prijsafspraken", url: "https://www.kvk.nl/marketing/een-winnende-offerte-maken-9-tips/" },
+      { label: "Ondernemersplein — Kostprijs, verkoopprijs en prijsafspraken", url: "https://ondernemersplein.overheid.nl/geldzaken-en-belastingen/cashflow/prijs-bepalen-of-aanpassen/" },
+      { label: "KVK — Uurtarief bepalen als zzp’er", url: "https://www.kvk.nl/geldzaken/uurtarief-bepalen/" },
+    ],
+  },
+  {
     slug: "autokosten-per-kilometer-berekenen",
     title: "Wat kost je auto per kilometer?",
     description: "Bereken je werkelijke autokosten per kilometer met afschrijving, verzekering, onderhoud en brandstof. Zie wat een zakelijke rit je gemiddeld kost.",
