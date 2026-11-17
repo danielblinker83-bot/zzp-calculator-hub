@@ -63,6 +63,12 @@ export default function Page() {
       uitleg={
         <div className="space-y-6 text-slate-600">
           <p>
+            Heb je al een tarief en wil je een afgesproken index toepassen? Lees hoe je je{" "}
+            <Link href="/kennisbank/uurtarief-indexeren" className="font-medium text-petrol-700 underline">
+              uurtarief indexeert
+            </Link>.
+          </p>
+          <p>
             Wil je weten hoeveel uur je realistisch kunt factureren? Lees hoe je{" "}
             <Link href="/kennisbank/declarabele-uren-plannen" className="font-medium text-petrol-700 underline">
               declarabele uren per week, jaar en maand plant

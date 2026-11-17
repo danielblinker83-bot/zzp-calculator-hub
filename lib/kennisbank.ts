@@ -61,6 +61,24 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 
 export const ARTIKELEN: Artikel[] = [
   {
+    slug: "uurtarief-indexeren",
+    title: "Uurtarief indexeren als zzp’er met CBS-indexcijfers",
+    description: "Bereken je nieuwe uurtarief met oude en nieuwe CBS-indexcijfers. Met een rekenvoorbeeld, je maandomzet en uitleg over de ingangsdatum.",
+    datum: "2026-11-17",
+    redactie: true,
+    leestijd: 4,
+    afbeelding: "/kennisbank/uurtarief-indexeren.jpg",
+    afbeeldingAlt: "Daniel Blinker in een oudroze overhemd houdt vellen papier vast bij een werkblad",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
+    gerelateerdeTools: ["uurtarief-berekenen", "prijsverhoging-mail-maken"],
+    bronnen: [
+      { label: "CBS — Indexeringen voor nieuwe contracten", url: "https://www.cbs.nl/nl-nl/achtergrond/2025/12/indexeringen-voor-nieuwe-contracten" },
+      { label: "CBS — Gebruik van CPI-reeksen voor indexering", url: "https://www.cbs.nl/nl-nl/longread/rapportages/2026/de-consumentenprijsindex-vanaf-2026/2-advies-over-het-gebruik-van-cpi-reeksen-voor-indexeringsdoeleinden" },
+      { label: "KVK — Je uurtarief verhogen", url: "https://www.kvk.nl/geldzaken/uurtarief-verhogen/" },
+    ],
+  },
+  {
     slug: "vaste-projectprijs-berekenen",
     title: "Vaste projectprijs berekenen als zzp’er",
     description: "Bereken een vaste projectprijs met je uurtarief, projectkosten en extra tijd. Zie wat je per uur overhoudt als de opdracht uitloopt.",

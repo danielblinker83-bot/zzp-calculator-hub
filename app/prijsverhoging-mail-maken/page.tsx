@@ -34,7 +34,7 @@ const faq = [
   {
     vraag: "Hoeveel procent prijsverhoging is redelijk?",
     antwoord:
-      "Een jaarlijkse indexatie van enkele procenten volgt de inflatie en verrast niemand. Heb je je tarief jaren niet aangepast of is je ervaring flink gegroeid, dan kan een grotere stap van 10 tot 20 procent gerechtvaardigd zijn; onderbouw die dan wel. Reken vooraf uit wat je nieuwe tarief netto oplevert, zodat je niet binnen een jaar opnieuw moet verhogen.",
+      "Gebruik bij een afgesproken indexering de index en meetperiode uit je overeenkomst. Wil je een andere prijs afspreken, leg dan uit wat er veranderd is en reken vooraf door welk tarief past bij je kosten en je factureerbare uren.",
   },
   {
     vraag: "Wat doe ik met lopende offertes en contracten?",
@@ -62,6 +62,12 @@ export default function Page() {
       tool={<PrijsverhogingGenerator />}
       uitleg={
         <div className="space-y-6 text-slate-600">
+          <p>
+            Wil je eerst je nieuwe bedrag uitrekenen aan de hand van een afgesproken index? Bekijk hoe je je{" "}
+            <Link href="/kennisbank/uurtarief-indexeren" className="font-medium text-petrol-700 underline">
+              uurtarief indexeert
+            </Link>.
+          </p>
           <section>
             <h2 className="text-xl font-bold text-ink">De anatomie van een goede prijsverhogingsmail</h2>
             <p className="mt-2">

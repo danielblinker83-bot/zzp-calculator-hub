@@ -36,6 +36,9 @@ Gebruik de beschikbare imagegen-tool met deze bestanden expliciet als identiteit
 | 2026-11-13 | `maximale-korting-berekenen.jpg` | Lila | Zittend op een hoge kruk bij een toonbank, met prijskaartje in één hand |
 | 2026-11-14 | `autokosten-per-kilometer-berekenen.jpg` | Okergeel | Staand bij een geopende autodeur met notitieboek |
 | 2026-11-15 | `vaste-projectprijs-berekenen.jpg` | Blauwgroen | Achterover in een vergaderstoel, schuift een map over tafel |
+| 2026-11-17 | `uurtarief-indexeren.jpg` | Oudroze | Half gedraaid bij werkblad, één arm leunt en de andere houdt vellen papier omhoog |
+
+Beeldcontrole 17 november 2026. Beide referenties bekeken en gebruikt. Gezicht, houding, handen en de kop ‘Je uurtarief indexeren’ op volledige grootte en op 320 px gecontroleerd. JPEG 1536 × 864, 163.992 bytes.
 
 Beeldcontrole 15 november 2026. Beide vaste referenties bekeken en gebruikt. Gezicht, handen en de kop ‘Vaste projectprijs berekenen’ op volledige grootte en op 320 px gecontroleerd. JPEG 1536 × 864, 168.298 bytes.
 

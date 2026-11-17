@@ -1,5 +1,13 @@
 # BerekenZZP groeilog
 
+## 17 november 2026 — uurtarief indexeren
+
+- Nieuw artikel `/kennisbank/uurtarief-indexeren` rekent een afgesproken index door naar nieuw tarief en maandomzet. Vult de calculator voor het basistarief en de mailgenerator aan. In de beschikbare historische Search Console-export (2 augustus–1 november) had ‘uurtarief berekenen zzp’ 110 vertoningen, geen gemeten indexeringsquery. Geen actuele export of serviceaccountsleutel beschikbaar.
+- Live sitemap, kennisbank en uurtariefcalculator vooraf HTTP 200. Sitemap 31 URL’s, waarvan 14 artikelen. Eenmalige meting voor de uurtariefcalculator vanuit deze omgeving 5,59 s tot de eerste byte. Geen veldmeting.
+- CBS-formule en gebruik van indexreeksen gecontroleerd, KVK geraadpleegd over prijsaanpassingen. Fictieve index 108,15 ÷ 105 = 1,03. €80 wordt €82,40. Bij 60 uur stijgt de omzet van €4.800 naar €4.944. Bij 58 uur is die €4.779,20. Met decimale rekencontrole bevestigd.
+- Teruglinks vanaf beide tools. De mailgenerator verwijst bij indexering naar de prijsafspraak en gebruikt geen algemene aanbeveling van 10 tot 20 procent meer. Nieuw beeld in oudroze overhemd bij werkblad, zie beeldstijl.
+- Productiebuild (37 statische routes), bestaande tests en lokale productie-HTTP-controle geslaagd. Sitemap (32 URL’s), links, schema’s, FAQ’s en sociale metadata gecontroleerd. Origineel en thumbnail bevestigd op de drie beeldplekken. Mobiele HTML en het beeld op 320 px gecontroleerd. Geen gerenderde browsertest uitgevoerd.
+
 ## 15 november 2026 — vaste projectprijs als zzp’er
 
 - Nieuw artikel `/kennisbank/vaste-projectprijs-berekenen`. Voegt een methode toe om de uren, speling en directe kosten voor een vaste prijs te begroten en het effect van uitloop na te rekenen. De bestaande offertecalculator blijft de totaalberekening doen. In de historische Search Console-export van 2 augustus–1 november had ‘uurtarief berekenen zzp’ 110 vertoningen en ‘zzp tarief berekenen’ 41. Geen signaal voor ‘projectprijs’ zelf en geen nieuwe export of serviceaccountsleutel beschikbaar.
