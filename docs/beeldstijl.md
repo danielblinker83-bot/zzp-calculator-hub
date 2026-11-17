@@ -37,6 +37,7 @@ Gebruik de beschikbare imagegen-tool met deze bestanden expliciet als identiteit
 | 2026-11-14 | `autokosten-per-kilometer-berekenen.jpg` | Okergeel | Staand bij een geopende autodeur met notitieboek |
 | 2026-11-15 | `vaste-projectprijs-berekenen.jpg` | Blauwgroen | Achterover in een vergaderstoel, schuift een map over tafel |
 | 2026-11-17 | `uurtarief-indexeren.jpg` | Oudroze | Half gedraaid bij werkblad, één arm leunt en de andere houdt vellen papier omhoog |
+| 2026-11-17 | `hoeveel-belasting-betaal-je-als-zzper-2026.jpg` | Lichtblauw | Zittend aan bureau, open handgebaar, zakelijke uitstraling |
 
 Beeldcontrole 17 november 2026. Beide referenties bekeken en gebruikt. Gezicht, houding, handen en de kop ‘Je uurtarief indexeren’ op volledige grootte en op 320 px gecontroleerd. JPEG 1536 × 864, 163.992 bytes.
 
@@ -57,3 +58,6 @@ Beeldcontrole 9 november 2026. Beide vaste referenties bekeken en gebruikt. Dani
 Beeldcontrole 8 november 2026: beide vaste identiteitsbeelden bekeken en aan de ingebouwde generator meegegeven. Promptkern: Daniel in zandkleurig overhemd naast een abstracte weekplanner met donkergroene/gouden blokken, off-white kantoor, grote Nederlandse kop ‘Declarabele uren realistisch plannen’. Geen exacte tijdsgegevens in het beeld. Gezicht, handen en kop gecontroleerd. JPEG 1536 × 864, 146.204 bytes, ook bekeken op 320px.
 
 Beeldcontrole 7 november 2026: beide vaste referenties bekeken en expliciet aan de ingebouwde beeldgenerator meegegeven. Gezicht, handen, kleur en Nederlandse kop gecontroleerd. Promptkern: Daniel staand met bon en pen, olijfgroen overhemd, rustige werkomgeving met donkergroen/gebroken wit/goud en grote kop ‘Btw terugrekenen op een gemengde bon’. JPEG geoptimaliseerd naar 1536 × 864 (151.572 bytes).
+
+
+Beeldupdate 17 november 2026. Belastingartikel vernieuwd met de twee vaste identiteitsreferenties: Daniel in een lichtblauw overhemd aan zijn bureau, zakelijke uitstraling. De afbeelding bevat alleen de kop ‘Hoeveel belasting betaal je?’ en geen overheidsnamen, logo’s, formulieren, cijfers, bedragen of calculatorweergave. JPEG 1536 × 864, 180.878 bytes; op volle grootte en op 320 px gecontroleerd. Het bestaande uurtariefbeeld inhoudelijk ongewijzigd naar JPEG geconverteerd, 1536 × 864, 183.389 bytes; beschrijvende alt-tekst toegevoegd.

@@ -203,6 +203,13 @@ export default function Page() {
               </Link>{" "}
               uren, materiaal en btw voor je om naar een compleet voorstel.
             </p>
+            <p className="mt-2">
+              Lees ook de uitleg over{" "}
+              <Link href="/kennisbank/wat-is-een-goed-uurtarief-als-zzper" className="font-medium text-petrol-700 underline">
+                wat een goed uurtarief als zzp’er is
+              </Link>
+              , met de punten die je meeneemt naast de uitkomst van deze calculator.
+            </p>
           </section>
         </div>
       }

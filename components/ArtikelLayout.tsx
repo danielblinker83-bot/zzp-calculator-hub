@@ -5,7 +5,7 @@ import DisclaimerBox from "@/components/DisclaimerBox";
 import FAQ, { FaqItem } from "@/components/FAQ";
 import AdPlaceholderInline from "@/components/AdPlaceholderInline";
 import { SITE, toolBySlug } from "@/lib/site";
-import { Artikel, recenteArtikelen } from "@/lib/kennisbank";
+import { Artikel, aanbevolenArtikelen } from "@/lib/kennisbank";
 
 function datumNL(iso: string) {
   return new Date(iso).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
@@ -51,7 +51,7 @@ export default function ArtikelLayout({
   const tools = (artikel.gerelateerdeTools ?? [])
     .map((s) => toolBySlug(s))
     .filter((t): t is NonNullable<typeof t> => Boolean(t));
-  const meerArtikelen = recenteArtikelen(artikel.slug, 2);
+  const meerArtikelen = aanbevolenArtikelen(artikel.slug, 2);
 
   return (
     <div className="container-page py-6">

@@ -1,4 +1,15 @@
 # BerekenZZP groeilog
+## 17 november 2026 — wijzigingen naar aanleiding van de review
+
+- Kilometerartikel aangepast op basis van Claude’s Search Console-analyse: titeltag, meta description, eerste alinea, btw-kop (naar voren verplaatst) en FAQ-vraag bijgewerkt. H1 en URL zijn gelijk gebleven. Het punt over ov- en parkeerkosten is niet toegevoegd; dat volgt pas na controle bij de Belastingdienst.
+- Search Console (Claude, export/rapport van 17-11): voor het kilometerartikel is de nulmeting 591 vertoningen, 0 klikken en gemiddelde positie 19,45 over 1–15 november; de aparte AI-features-export toont 61 vertoningen. Dit zijn Search Console-metingen. Geen prestatiemeting na de wijzigingen beschikbaar.
+- Afbeeldingen: nieuw belastingbeeld volgens docs/beeldstijl.md, met Daniel herkenbaar in lichtblauw en zonder overheidsnamen, logo’s, formulieren of cijfers. Het uurtariefbeeld is inhoudelijk behouden en naar JPEG geconverteerd. Eigen omgeving/bestandscontrole: beide 1536 × 864; belastingbeeld 180.878 bytes, uurtariefbeeld 183.389 bytes. Dit zijn bestandsmetingen, geen Search Console-cijfers.
+- Interne links toegevoegd van /uurtarief-berekenen naar het uurtariefartikel en van /belasting-reserveren-zzp naar het belastingartikel. ‘Meer uit de kennisbank’ kiest eerst artikelen met dezelfde gerelateerde tools en vult daarna aan met recente publicaties.
+- Publicatieritme ingesteld op maximaal drie artikelen per week tot en met 1 december 2026. Daarna volgt een besluit op basis van de indexering van de tien op 17-11 aangemelde artikelen. Na iedere publicatie moet dezelfde dag de URL in de sheet komen met de actie ‘aanmelden bij Google’; Daniel of Claude doet de aanvraag in Search Console.
+- Geen belastingberekeningen, tarieven, formules of calculatorlogica aangepast.
+- Metingen aan websiteprestaties worden gelabeld naar bron: Search Console voor Google-rapportages, eigen omgeving voor lokale code-, beeld- of servermetingen. Googlebot 125 ms is afkomstig uit Search Console volgens rij 23; eerdere 4–10 s waren eigen omgevingsmetingen en zijn niet als Googlebot-snelheid gebruikt.
+- Productiepublicatie en live nacontrole worden vastgelegd zodra de Vercel-deployment gereed is.
+
 
 ## 17 november 2026 — uurtarief indexeren
 

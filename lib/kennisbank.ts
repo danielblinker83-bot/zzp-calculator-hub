@@ -266,7 +266,7 @@ export const ARTIKELEN: Artikel[] = [
   {
     slug: "kilometervergoeding-doorberekenen-klant",
     title: "Kilometervergoeding doorberekenen aan je klant: tarief, btw en voorbeeld",
-    description: "Hoe zet je reiskosten op je factuur als zzp’er? Met voorbeeldfactuur, afspraken over kilometers en uitleg over het verschil met je fiscale aftrek in 2026.",
+    description: "Reken je reiskosten door aan je klant? Bij een gewone dienst reken je dezelfde btw als over je werk. Met voorbeeldfactuur en het verschil met €0,25 aftrek.",
     datum: "2026-11-05",
     gecontroleerd: "2026-11-05",
     leestijd: 5,
@@ -306,8 +306,10 @@ export const ARTIKELEN: Artikel[] = [
     datum: "2026-08-10",
     gecontroleerd: "2026-08-10",
     leestijd: 7,
-    afbeelding: "/kennisbank/wat-is-een-goed-uurtarief-als-zzper.png",
-    afbeeldingAlt: "Daniel, maker van berekenzzp.nl, bij de vraag wat een goed uurtarief is als zzp'er",
+    afbeelding: "/kennisbank/wat-is-een-goed-uurtarief-als-zzper.jpg",
+    afbeeldingAlt: "Daniel Blinker in een donkergroen overhemd naast de titel over een goed uurtarief als zzp’er.",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
     gerelateerdeTools: ["uurtarief-berekenen", "loondienst-naar-zzp", "zzp-netto-inkomen-berekenen"],
     bronnen: [
       { label: "Belastingdienst — Zelfstandigenaftrek 2026", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/veranderingen-inkomstenbelasting-2026/ondernemersaftrek-2026/zelfstandigenaftrek-2026" },
@@ -322,8 +324,10 @@ export const ARTIKELEN: Artikel[] = [
     datum: "2026-08-07",
     gecontroleerd: "2026-08-07",
     leestijd: 7,
-    afbeelding: "/kennisbank/hoeveel-belasting-betaal-je-als-zzper-2026.png",
-    afbeeldingAlt: "Daniel, maker van berekenzzp.nl, bij de vraag hoeveel belasting je betaalt als zzp'er in 2026",
+    afbeelding: "/kennisbank/hoeveel-belasting-betaal-je-als-zzper-2026.jpg",
+    afbeeldingAlt: "Daniel Blinker in een lichtblauw overhemd zit aan zijn bureau en legt uit hoeveel belasting een zzp’er betaalt.",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
     gerelateerdeTools: ["belasting-reserveren-zzp", "zzp-netto-inkomen-berekenen", "uurtarief-berekenen"],
     bronnen: [
       { label: "Belastingdienst — Box 1 tarieven 2026", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/inkomstenbelasting/heffingskortingen_boxen_tarieven/boxen_en_tarieven/box_1/box_1" },
@@ -335,6 +339,20 @@ export const ARTIKELEN: Artikel[] = [
 
 export function artikelBySlug(slug: string) {
   return ARTIKELEN.find((a) => a.slug === slug);
+}
+
+export function aanbevolenArtikelen(currentSlug: string, count = 2) {
+  const current = artikelBySlug(currentSlug);
+  const andereArtikelen = ARTIKELEN.filter((a) => a.slug !== currentSlug);
+  const tools = new Set(current?.gerelateerdeTools ?? []);
+  const gerelateerd = andereArtikelen
+    .filter((a) => (a.gerelateerdeTools ?? []).some((tool) => tools.has(tool)))
+    .sort((a, b) => (a.datum < b.datum ? 1 : -1));
+  const gerelateerdSlugs = new Set(gerelateerd.map((a) => a.slug));
+  const recent = andereArtikelen
+    .filter((a) => !gerelateerdSlugs.has(a.slug))
+    .sort((a, b) => (a.datum < b.datum ? 1 : -1));
+  return [...gerelateerd, ...recent].slice(0, count);
 }
 
 export function recenteArtikelen(exclSlug?: string, count = 3) {

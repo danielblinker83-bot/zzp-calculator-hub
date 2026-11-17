@@ -178,6 +178,12 @@ export default function Page() {
               </Link>
               .
             </p>
+            <p className="mt-2">
+              Wil je weten hoe de belasting over je winst is opgebouwd? Lees{" "}
+              <Link href="/kennisbank/hoeveel-belasting-betaal-je-als-zzper-2026" className="font-medium text-petrol-700 underline">
+                hoeveel belasting je als zzp’er in 2026 betaalt
+              </Link>.
+            </p>
           </section>
         </div>
       }

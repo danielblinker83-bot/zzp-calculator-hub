@@ -4,12 +4,12 @@ import { artikelBySlug, artikelMetadata } from "@/lib/kennisbank";
 
 const artikel = artikelBySlug("kilometervergoeding-doorberekenen-klant")!;
 export const metadata = artikelMetadata(artikel, {
-  title: "Kilometervergoeding doorberekenen: btw en voorbeeld",
+  title: "Reiskosten factureren als zzp’er: btw en kilometervergoeding",
 });
 const toc = [
   { id: "afspraken", label: "Welke afspraken maak je vooraf?" },
+  { id: "btw", label: "Btw over reiskosten: hetzelfde tarief als je dienst" },
   { id: "voorbeeld", label: "Voorbeeld: kilometers op je factuur" },
-  { id: "btw", label: "Hoe zit het met de btw?" },
   { id: "aftrek", label: "Factureren is iets anders dan aftrekken" },
   { id: "check", label: "Controle voordat je de factuur verstuurt" },
 ];
@@ -18,14 +18,14 @@ const faq = [
   { vraag: "Moet ik de heen- en terugreis allebei tellen?", antwoord: "Als jullie afspreken de werkelijk gereden heen- en terugreis te factureren, neem je beide mee. Een afstand van 40 kilometer enkele reis wordt dan 80 kilometer voor die retourrit. Vermeld duidelijk welke afstand je rekent." },
   { vraag: "Kan ik reistijd naast kilometers factureren?", antwoord: "Reistijd en kilometers zijn verschillende onderdelen van je prijs. Neem ze alleen naast elkaar op als dat in jullie prijsafspraak past. Maak duidelijk of het tijdtarief alleen voor het werk op locatie geldt of ook voor de reis." },
   { vraag: "Is doorberekende kilometervergoeding belastingvrij inkomen?", antwoord: "Nee. Wat je voor de opdracht factureert, inclusief reiskosten, behoort tot je omzet exclusief eventuele btw. De aftrek voor zakelijke kilometers met een privévervoermiddel is een afzonderlijke kostenpost. Die twee bedragen hoeven niet gelijk te zijn." },
-  { vraag: "Hoeveel btw reken ik over reiskosten bij een dienst met 21% btw?", antwoord: "Als de reiskosten bij die dienst horen, bereken je in de normale situatie ook 21% over de reiskosten. Bij €36 reiskosten is dat €7,56 btw. Een vrijstelling of verleggingsregeling vraagt om een andere behandeling." },
+  { vraag: "Moet ik btw rekenen over reiskosten die ik doorbereken?", antwoord: "Als de reiskosten bij die dienst horen, bereken je in de normale situatie ook 21% over de reiskosten. Bij €36 reiskosten is dat €7,56 btw. Een vrijstelling of verleggingsregeling vraagt om een andere behandeling." },
 ];
 const link = "font-medium text-petrol-700 underline";
 
 export default function Page() {
   return (
     <ArtikelLayout artikel={artikel} inhoudsopgave={toc} faq={faq}
-      intro="Je kunt reiskosten aan je klant doorberekenen als jullie daar afspraken over maken. Leg het kilometertarief en de te rekenen afstand vooraf vast. De vergoeding op je factuur is onderdeel van je omzet. De fiscale kilometeraftrek voor een privévoertuig staat daar los van. Bij een gewone belaste dienst bereken je ook btw over de bijbehorende reiskosten."
+      intro="Reiskosten die je aan je klant doorberekent, horen bij de prijs van je dienst. Bij een gewone dienst met 21% btw reken je ook 21% btw over die reiskosten. Het kilometertarief op je factuur spreek je zelf af; €0,25 per kilometer is de aftrek voor je eigen winst."
       disclaimerTekst="Dit artikel beschrijft algemene uitgangspunten voor Nederlandse zzp’ers. Het factuurvoorbeeld veronderstelt één dienst met 21% btw, zonder vrijstelling of verlegging. De fiscale kilometeraftrek geldt hier voor een ondernemer met een privévervoermiddel. Bronnen geraadpleegd op 5 november 2026."
     >
       <section id="afspraken" className="scroll-mt-20">
@@ -34,6 +34,12 @@ export default function Page() {
         <blockquote className="mt-3 border-l-4 border-petrol-700 bg-mist p-4">Reiskosten: €0,45 per werkelijk gereden kilometer voor de heen- en terugreis tussen de afgesproken vertrekplaats en de werklocatie, exclusief btw. Reistijd is in dit voorbeeld inbegrepen in de opdrachtprijs.</blockquote>
         <p className="mt-3">Bedenk ook wat jullie doen bij meerdere locaties of een gewijzigde afspraak. Spreek af welke vertrekplaats telt. Noteer per bezoek datum, bestemming en afstand, zodat je factuurregels terug te vinden zijn. Dat is een praktische controle voor jezelf en je klant.</p>
         <p className="mt-2">Reken het afgesproken bedrag door met de <Link href="/kilometervergoeding-berekenen" className={link}>kilometercalculator</Link>. Pas het tariefveld aan naar jullie afspraak: de standaardwaarde is niet automatisch jouw factuurtarief.</p>
+      </section>
+
+      <section id="btw" className="scroll-mt-20">
+        <h2 className="text-xl font-bold text-ink">Btw over reiskosten: hetzelfde tarief als je dienst</h2>
+        <p className="mt-2">De Belastingdienst rekent reiskosten mee in de totale vergoeding voor een dienst. Bij de gewone situatie uit het voorbeeld vallen de kilometers daarom onder hetzelfde btw-tarief als het werk. Dat verandert niet doordat je ze op een eigen factuurregel zet.</p>
+        <p className="mt-2">KVK noemt ook vrijstellingen, de kleineondernemersregeling en verlegging als situaties waarbij de btw-behandeling anders kan zijn. Kopieer het voorbeeld dan niet automatisch. Een doorlopende post is bovendien een apart begrip: een uitgave wordt dat niet alleen doordat je haar zonder opslag aan je klant doorberekent.</p>
       </section>
 
       <section id="voorbeeld" className="scroll-mt-20">
@@ -57,11 +63,7 @@ export default function Page() {
         <p className="mt-2">Schrijf bijvoorbeeld: ‘Reiskosten bezoek 5 november 2026, Rotterdam–werklocatie–Rotterdam, 80 km × €0,45’. Gebruik je werkelijke route en datum. Dit is één omschrijvingsregel, geen volledige factuur. Met <Link href="/factuurtekst-maken" className={link}>factuurtekst maken</Link> kun je ook de omschrijving van de opdracht voorbereiden.</p>
       </section>
 
-      <section id="btw" className="scroll-mt-20">
-        <h2 className="text-xl font-bold text-ink">Een aparte reiskostenregel maakt de kosten niet btw-vrij</h2>
-        <p className="mt-2">De Belastingdienst rekent reiskosten mee in de totale vergoeding voor een dienst. Bij de gewone situatie uit het voorbeeld vallen de kilometers daarom onder hetzelfde btw-tarief als het werk. Dat verandert niet doordat je ze op een eigen factuurregel zet.</p>
-        <p className="mt-2">KVK noemt ook vrijstellingen, de kleineondernemersregeling en verlegging als situaties waarbij de btw-behandeling anders kan zijn. Kopieer het voorbeeld dan niet automatisch. Een doorlopende post is bovendien een apart begrip: een uitgave wordt dat niet alleen doordat je haar zonder opslag aan je klant doorberekent.</p>
-      </section>
+
 
       <section id="aftrek" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">Het factuurtarief en de fiscale aftrek zijn twee verschillende bedragen</h2>
