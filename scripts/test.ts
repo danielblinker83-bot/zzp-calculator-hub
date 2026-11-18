@@ -1,4 +1,5 @@
 import { berekenBtw } from "../lib/calc/btw";
+import { calculateBox3 } from "../lib/calc/box3";
 import { berekenHeffing2026, berekenNettoLoondienst } from "../lib/calc/belasting2026";
 import { berekenLoondienstZzp } from "../lib/calc/loondienstZzp";
 import { berekenUurtarief } from "../lib/calc/uurtarief";
@@ -116,6 +117,29 @@ const p = maakPrijsverhogingMail({ bedrijfsnaam: "Studio X", huidigePrijs: 75, n
 check("prijsverhoging", p.tekst.includes("Studio X") && p.tekst.includes("75,00") && p.tekst.includes("85,00"));
 const f = maakFactuurteksten({ dienst: "webdesign", periode: "juni 2026", klantType: "bedrijf", toon: "uitgebreid" });
 check("factuurtekst", f.length === 3 && f.every((t) => t.includes("webdesign") && t.includes("juni 2026")));
+
+// Box 3 voor zzp’ers: testgevallen T1–T11 uit het Claude-ontwerp (2026-forfaits).
+const box3Test = (x: Partial<Parameters<typeof calculateBox3>[0]> = {}) => calculateBox3({ savings: 0, investments: 0, debts: 0, fiscalPartner: false, ...x });
+const round2 = (n: number) => Math.round(n * 100) / 100;
+const t1=box3Test({savings:40000}), t2=box3Test({savings:59357}), t3=box3Test({savings:70000}), t4=box3Test({savings:100000});
+check("box3 T1", t1.netAssets===40000 && t1.deemedReturn===512 && t1.taxableBase===0 && t1.tax===0);
+check("box3 T2", t2.netAssets===59357 && approx(t2.deemedReturn,759.7696) && t2.taxableBase===0 && t2.tax===0);
+check("box3 T3", t3.netAssets===70000 && round2(t3.deemedReturn)===896 && t3.taxableBase===10643 && round2(t3.taxableReturn)===136.23 && round2(t3.tax)===49.04);
+check("box3 T4", t4.netAssets===100000 && t4.deemedReturn===1280 && t4.taxableBase===40643 && round2(t4.taxableReturn)===520.23 && round2(t4.tax)===187.28);
+const t5=box3Test({savings:100000,taxReserve:30000});
+check("box3 T5", round2(t5.reserveTaxCost)===138.24 && round2(t5.tax)===187.28);
+const t6=box3Test({investments:100000});
+check("box3 T6", t6.netAssets===100000 && t6.deemedReturn===6000 && t6.taxableBase===40643 && round2(t6.taxableReturn)===2438.58 && round2(t6.tax)===877.89);
+const t7=box3Test({savings:50000,investments:50000});
+check("box3 T7", t7.netAssets===100000 && t7.deemedReturn===3640 && t7.taxableBase===40643 && round2(t7.taxableReturn)===1479.41 && round2(t7.tax)===532.59);
+const t8=box3Test({savings:100000,debts:10000});
+check("box3 T8", t8.netAssets===93800 && round2(t8.deemedReturn)===1112.6 && t8.taxableBase===34443 && round2(t8.taxableReturn)===408.54 && round2(t8.tax)===147.08);
+const t9=box3Test({savings:150000,fiscalPartner:true});
+check("box3 T9", t9.netAssets===150000 && t9.deemedReturn===1920 && t9.taxableBase===31286 && round2(t9.taxableReturn)===400.46 && round2(t9.tax)===144.17);
+const t10=box3Test({savings:100000,eligibleTaxDebt:12000});
+check("box3 T10", t10.netAssets===88000 && t10.deemedReturn===1126.4 && t10.taxableBase===28643 && round2(t10.taxableReturn)===366.63 && round2(t10.tax)===131.99);
+const t11=box3Test({savings:5000,eligibleTaxDebt:12000});
+check("box3 T11", t11.savingsAfterEligibleTaxDebt===0 && t11.netAssets===0 && t11.deemedReturn===0 && t11.taxableBase===0 && t11.tax===0);
 
 console.log(fails === 0 ? "\nALLE TESTS GESLAAGD" : `\n${fails} TESTS GEFAALD`);
 process.exit(fails === 0 ? 0 : 1);
