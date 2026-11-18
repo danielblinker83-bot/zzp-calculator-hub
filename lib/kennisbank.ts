@@ -77,7 +77,7 @@ export const ARTIKELEN: Artikel[] = [
       { label: "Belastingdienst — Berekening voorlopige aanslag 2026", url: "https://www.belastingdienst.nl/wps/wcm/connect/nl/box-3/content/berekening-box-3-inkomen-2026" },
       { label: "Belastingdienst — Belastingschulden in box 3", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/vermogen_en_aanmerkelijk_belang/vermogen/wat_zijn_uw_bezittingen_en_schulden/uw_schulden/belastingschulden" },
       { label: "Belastingdienst — Werkelijk rendement", url: "https://www.belastingdienst.nl/wps/wcm/connect/nl/box-3/content/wat-is-mijn-werkelijk-rendement" },
-      { label: "Belastingdienst — Vermogen van uw onderneming", url: "https://www.belastingdienst.nl/wps/wcm/connect/nl/ondernemers/content/vermogen-van-uw-onderneming" },
+      { label: "Belastingdienst — Vermogen van uw onderneming", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/inkomstenbelasting_voor_ondernemers/vermogensetikettering-bedrijfsmiddel" },
       { label: "Eerste Kamer — Wet werkelijk rendement box 3", url: "https://www.eerstekamer.nl/wetsvoorstel/36748_wet_werkelijk_rendement_box" },
     ],
   },

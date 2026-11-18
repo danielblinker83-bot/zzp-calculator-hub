@@ -183,3 +183,4 @@
 - Geen bestaande belastingberekeningen gewijzigd. Calculator niet op productie publiceren voordat de Eerste Kamer over de relevante wetgeving heeft gestemd.
 
 - Na live nacontrole de directe Belastingdienst-link voor de voorlopige box 3-berekening genormaliseerd naar de actuele officiële URL `/berekening-box-3-inkomen-2026`.
+- De officiële Belastingdienst-link voor vermogensetikettering is eveneens gecontroleerd en gecorrigeerd naar de werkende pagina over vermogensetikettering en duurzaam overtollige liquide middelen.
