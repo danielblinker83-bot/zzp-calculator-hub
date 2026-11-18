@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 6099)
+Total output lines: 383
+
 // Metadata van de kennisbank-artikelen. Elk artikel heeft daarnaast een eigen
 // pagina onder app/kennisbank/<slug>/page.tsx (net zoals de tools). Deze lijst
 // voedt de overzichtspagina, de sitemap en de interne links.
@@ -69,7 +72,7 @@ export const ARTIKELEN: Artikel[] = [
     redactie: true,
     leestijd: 6,
     afbeelding: "/kennisbank/box-3-zzp-belastingreserve.jpg",
-    afbeeldingAlt: "Daniel Blinker legt aan zijn bureau uit hoe een belastingreserve in box 3 meetelt",
+    afbeeldingAlt: "Daniel Blinker met bril en sikje in een wit overhemd bij uitleg over box 3 en de belastingreserve",
     afbeeldingBreedte: 1536,
     afbeeldingHoogte: 864,
     gerelateerdeTools: ["belasting-reserveren-zzp", "zzp-netto-inkomen-berekenen"],
@@ -204,9 +207,7 @@ export const ARTIKELEN: Artikel[] = [
     bronnen: [
       { label: "KVK — Verwachte winst en kosten in de exploitatiebegroting", url: "https://www.kvk.nl/geldzaken/exploitatiebegroting/" },
       { label: "KVK — Ontvangsten en betalingen in de liquiditeitsbegroting", url: "https://www.kvk.nl/geldzaken/liquiditeitsbegroting/" },
-      { label: "Belastingdienst — Zakelijke kosten en aftrekbare btw", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/winst/inkomstenbelasting/inkomstenbelasting_voor_ondernemers/zakelijke_kosten/" },
-      { label: "Belastingdienst — Btw-tarieven", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/btw_berekenen_aan_uw_klanten/btw_berekenen/btw_tarief/btw_tarief" },
-    ],
+      { label: "Belastingdienst — Zakelijke kosten en aftrekbare bt…99 tokens truncated…    ],
   },
   {
     slug: "zakelijke-ritten-bijhouden",
