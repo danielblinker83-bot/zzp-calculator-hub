@@ -68,6 +68,12 @@ export default function Page() {
       uitleg={
         <div className="space-y-6 text-slate-600">
           <p>
+            Wil je de uitkomst stap voor stap begrijpen? Lees de{" "}
+            <Link href="/kennisbank/hoeveel-belasting-betaal-je-als-zzper-2026" className="font-medium text-petrol-700 underline">
+              uitleg over belasting voor zzp’ers in 2026
+            </Link>.
+          </p>
+          <p>
             Twijfel je welke bedragen je moet invullen? Lees hoe je{" "}
             <Link href="/kennisbank/omzet-winst-banksaldo" className="font-medium text-petrol-700 underline">
               omzet, winst en banksaldo uit elkaar houdt

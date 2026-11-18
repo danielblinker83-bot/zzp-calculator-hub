@@ -1,4 +1,14 @@
 # BerekenZZP groeilog
+
+## 18 november 2026 — ontbrekende links vanuit calculators afgerond
+
+- Review-sheet ‘Kansen & review’ gelezen t/m rij 27. Bron Search Console via Claude, rapportage 17 november (rij 22): netto-calculator 63 vertoningen en loondienstcalculator 22 vertoningen plus één klik over 6–15 november. Rij 26 bevestigt tien indexeringsaanvragen door Claude op 17 november, controle rond 20 en 24 november. Geen nieuwe indexstatus gemeten.
+- Deze kalenderweek (16–22 november, Europe/Amsterdam) bevat de artikelregistry één publicatie, uurtarief-indexeren op 17 november. Vandaag gekozen voor bestaande pagina’s tijdens de wachtperiode op indexering.
+- Ontbrekende twee links uit rij 6 uitgevoerd. Netto-calculator linkt onder de tool naar de belastinguitleg. Loondienstcalculator linkt onder de tool naar het uurtariefartikel. De twee andere links en thematisch gerelateerde artikelen waren op 17 november uitgevoerd.
+- Productiebuild, bestaande rekentests en lokale productie-HTTP-controle geslaagd. Twee calculators en beide artikelbestemmingen geven 200, canonicals en mobiele HTML gecontroleerd. Sitemap bevat 32 URL’s. Geen gerenderde mobiele browsertest uitgevoerd.
+- Geen wijziging aan belastingberekeningen of calculatorlogica. Geen indexeringsaanvraag gedaan.
+- Publicatieafspraak vastgelegd voor volgende runs. Tot en met 1 december maximaal drie nieuwe artikelen per kalenderweek. Na 1 december geen nieuwe artikelen tot Daniels besluit. Sheet alleen onderaan aanvullen na eerst lezen, nieuwe artikel-URL dezelfde dag met ‘aanmelden bij Google’ opnemen.
+
 ## 17 november 2026 — wijzigingen naar aanleiding van de review
 
 - Kilometerartikel aangepast op basis van Claude’s Search Console-analyse: titeltag, meta description, eerste alinea, btw-kop (naar voren verplaatst) en FAQ-vraag bijgewerkt. H1 en URL zijn gelijk gebleven. Het punt over ov- en parkeerkosten is niet toegevoegd; dat volgt pas na controle bij de Belastingdienst.

@@ -62,6 +62,12 @@ export default function Page() {
       tool={<LoondienstZzpCalculator />}
       uitleg={
         <div className="space-y-6 text-slate-600">
+          <p>
+            Wil je de uitkomst gebruiken voor je eerste prijsafspraak? Lees{" "}
+            <Link href="/kennisbank/wat-is-een-goed-uurtarief-als-zzper" className="font-medium text-petrol-700 underline">
+              hoe je een passend uurtarief als zzp’er bepaalt
+            </Link>.
+          </p>
           <section>
             <h2 className="text-xl font-bold text-ink">Je oude salaris is niet je nieuwe omzet</h2>
             <p className="mt-2">
