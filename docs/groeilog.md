@@ -184,3 +184,11 @@
 
 - Na live nacontrole de directe Belastingdienst-link voor de voorlopige box 3-berekening genormaliseerd naar de actuele officiële URL `/berekening-box-3-inkomen-2026`.
 - De officiële Belastingdienst-link voor vermogensetikettering is eveneens gecontroleerd en gecorrigeerd naar de werkende pagina over vermogensetikettering en duurzaam overtollige liquide middelen.
+
+
+## 18 november 2026 — box 3-calculator live gezet
+
+- Daniel gaf op 18-11 een nieuwe instructie om de calculator live te zetten; daarmee is de eerdere wachtinstructie tot de Eerste Kamerstemming vervallen. Calculator gepubliceerd op `/box-3-berekenen-zzp`.
+- Productiecontrole: pagina opent en toont de invoervelden, indicatie en reservevergelijking. Eigen omgeving/livecontrole: HTTP 200 en de standaardinvoer toont €187,28 heffing, €49,04 zonder de reserve en €138,24 verschil. Dit zijn testuitkomsten in de eigen omgeving, geen Search Console-metingen.
+- Automatische tests T1–T11 geslaagd; Next.js productiebuild geslaagd. De actuele code bevat alleen 2026-uitgangspunten, geeft een schatting en noemt geen heffingsvrij bedrag voor 2027. Werkelijk rendement wordt niet berekend.
+- De regels en percentages kunnen wijzigen. Eerstvolgende actualiteitscontrole na de Eerste Kamerbehandeling; parameters voor een later jaar pas toevoegen na officiële bevestiging. Search Console heeft nog geen post-publicatie meting.
