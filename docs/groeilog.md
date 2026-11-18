@@ -181,3 +181,5 @@
 - Calculator rekent uitsluitend met 2026-uitgangspunten, labelt uitkomsten als indicatie, houdt de belastingreserve binnen het spaarbedrag en bevat uitleg over voorlopige forfaits. Testgevallen T1–T11 uit Claude’s document toegevoegd aan `scripts/test.ts`; automatische testuitvoering wordt bij de feature branch-build geregistreerd.
 - Nog geen actuele Search Console-meting van dit artikel of deze calculator. Na artikelpublicatie wordt de URL in de eerstvolgende lege sheetrij gezet met `aanmelden bij Google`; indexering zelf laat ik aan Daniel of Claude.
 - Geen bestaande belastingberekeningen gewijzigd. Calculator niet op productie publiceren voordat de Eerste Kamer over de relevante wetgeving heeft gestemd.
+
+- Na live nacontrole de directe Belastingdienst-link voor de voorlopige box 3-berekening genormaliseerd naar de actuele officiële URL `/berekening-box-3-inkomen-2026`.
