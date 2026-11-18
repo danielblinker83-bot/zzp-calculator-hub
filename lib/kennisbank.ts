@@ -61,6 +61,27 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 
 export const ARTIKELEN: Artikel[] = [
   {
+    slug: "box-3-zzp-belastingreserve",
+    title: "Box 3 voor zzp'ers: telt je belastingreserve mee?",
+    description: "Je belastingreserve op een privérekening telt mee in box 3. Bekijk de voorlopige cijfers voor 2026, de uitzondering voor sommige belastingschulden en een controleerbaar voorbeeld.",
+    datum: "2026-11-18",
+    gecontroleerd: "2026-11-18",
+    redactie: true,
+    leestijd: 6,
+    afbeelding: "/kennisbank/box-3-zzp-belastingreserve.jpg",
+    afbeeldingAlt: "Daniel Blinker legt aan zijn bureau uit hoe een belastingreserve in box 3 meetelt",
+    afbeeldingBreedte: 1536,
+    afbeeldingHoogte: 864,
+    gerelateerdeTools: ["belasting-reserveren-zzp", "zzp-netto-inkomen-berekenen"],
+    bronnen: [
+      { label: "Belastingdienst — Berekening voorlopige aanslag 2026", url: "https://www.belastingdienst.nl/wps/wcm/connect/nl/box-3/content/hoe-is-het-box-3-inkomen-op-mijn-voorlopige-aanslag-2026-berekend" },
+      { label: "Belastingdienst — Belastingschulden in box 3", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/vermogen_en_aanmerkelijk_belang/vermogen/wat_zijn_uw_bezittingen_en_schulden/uw_schulden/belastingschulden" },
+      { label: "Belastingdienst — Werkelijk rendement", url: "https://www.belastingdienst.nl/wps/wcm/connect/nl/box-3/content/wat-is-mijn-werkelijk-rendement" },
+      { label: "Belastingdienst — Vermogen van uw onderneming", url: "https://www.belastingdienst.nl/wps/wcm/connect/nl/ondernemers/content/vermogen-van-uw-onderneming" },
+      { label: "Eerste Kamer — Wet werkelijk rendement box 3", url: "https://www.eerstekamer.nl/wetsvoorstel/36748_wet_werkelijk_rendement_box" },
+    ],
+  },
+  {
     slug: "uurtarief-indexeren",
     title: "Uurtarief indexeren als zzp’er met CBS-indexcijfers",
     description: "Bereken je nieuwe uurtarief met oude en nieuwe CBS-indexcijfers. Met een rekenvoorbeeld, je maandomzet en uitleg over de ingangsdatum.",

@@ -46,6 +46,7 @@ export default function Page() {
       <section id="aanslag" className="scroll-mt-20">
         <h2 className="text-xl font-bold text-ink">Wat betaal je via een voorlopige aanslag?</h2>
         <p className="mt-2">De Belastingdienst baseert een voorlopige aanslag op geschatte gegevens, zoals je verwachte jaarwinst. Een voorlopige aanslag inkomstenbelasting over het lopende jaar kun je onder voorwaarden in termijnen betalen. Controleer het bedrag en de betaaldata op je aanslag. Bij de definitieve aanslag verrekent de Belastingdienst de voorlopige aanslag over hetzelfde jaar.</p>
+        <p className="mt-2">Wil je weten of je persoonlijke belastingreserve op de peildatum meetelt? Lees de uitleg over <Link href="/kennisbank/box-3-zzp-belastingreserve" className={link}>box 3 voor zzp’ers</Link>.</p>
         <h3 className="mt-4 font-bold text-ink">Houd ook de bijdrage Zvw bij</h3>
         <p className="mt-2">Over winst uit onderneming kan de Belastingdienst een afzonderlijke aanslag voor de inkomensafhankelijke bijdrage Zorgverzekeringswet sturen. Houd ook voor die aanslag bij wat je verwacht, hebt betaald en nog moet betalen. Een overzicht van btw-betalingen houd je apart.</p>
       </section>

@@ -73,6 +73,9 @@ export default function Page() {
       uitleg={
         <div className="space-y-6 text-slate-600">
           <p>
+            Vraag je je af hoe geld dat je apart zet meetelt voor box 3? Lees het artikel over <Link href="/kennisbank/box-3-zzp-belastingreserve" className="font-medium text-petrol-700 underline">box 3 en je belastingreserve</Link>.
+          </p>
+          <p>
             Betaal je al een voorlopige aanslag? Lees hoe je{" "}
             <Link href="/kennisbank/voorlopige-aanslag-belastingreserve" className="font-medium text-petrol-700 underline">
               je extra belastingreserve naast de termijnen berekent

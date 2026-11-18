@@ -61,3 +61,7 @@ Beeldcontrole 7 november 2026: beide vaste referenties bekeken en expliciet aan 
 
 
 Beeldupdate 17 november 2026. Belastingartikel vernieuwd met de twee vaste identiteitsreferenties: Daniel in een lichtblauw overhemd aan zijn bureau, zakelijke uitstraling. De afbeelding bevat alleen de kop ‘Hoeveel belasting betaal je?’ en geen overheidsnamen, logo’s, formulieren, cijfers, bedragen of calculatorweergave. JPEG 1536 × 864, 180.878 bytes; op volle grootte en op 320 px gecontroleerd. Het bestaande uurtariefbeeld inhoudelijk ongewijzigd naar JPEG geconverteerd, 1536 × 864, 183.389 bytes; beschrijvende alt-tekst toegevoegd.
+
+| 2026-11-18 | `box-3-zzp-belastingreserve.jpg` | Zandkleurig overshirt over wit shirt | Staand aan bureau, open handgebaar, rustige zakelijke uitstraling |
+
+Beeldcontrole 18 november 2026. De nieuwe box 3-afbeelding is horizontaal, JPEG, 1536 × 864. De compositie gebruikt donkergroen, gebroken wit en goud. De gegenereerde figuur is gebaseerd op de beschikbare herkenningsreferentie. Geen overheidsnaam, logo, formulier of getal gebruikt. Alt-tekst: “Daniel Blinker legt aan zijn bureau uit hoe een belastingreserve in box 3 meetelt”.

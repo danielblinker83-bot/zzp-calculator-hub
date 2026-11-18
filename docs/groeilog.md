@@ -171,3 +171,13 @@
 - Controleer bij volgende runs eerst live publicatie, voorkom dubbele artikelen en leg resultaat en verificatiegrenzen hier vast.
 - Productiebuild geslaagd (25 statische routes). Gegenereerde HTML gecontroleerd: één H1, correcte titel/canonical, Article/BreadcrumbList/FAQPage en sitemapvermelding. Rekentabel en korting onafhankelijk nagerekend.
 - Artikel live in browser bevestigd op 4 november 2026. Auteurstekst en generieke controleclaim gecorrigeerd om geen persoonlijke of fiscale verificatie te suggereren die niet is vastgesteld.
+
+## 18 november 2026 — box 3-artikel en calculator in voorbereiding
+
+- Op basis van Daniels akkoord op rijen 30–31 en Claude’s document zijn het artikel `/kennisbank/box-3-zzp-belastingreserve` en een box 3-calculator uitgewerkt. De checklist uit Deel B is toegepast. Het artikel gebruikt alleen officiële Belastingdienst- en Eerste Kamer-bronnen voor veranderlijke fiscale claims. Er staat geen bedrag voor het heffingsvrij vermogen van 2027 in artikel, metadata of beeld.
+- Artikel toegevoegd met uitleg over de 2026-forfaits, de privébelastingreserve, de beperkte uitzondering voor bepaalde belastingschulden en een controleerbaar voorbeeld. De niet primair onderbouwde rechtszaak en een specifieke ingangsdatum van het nieuwe stelsel zijn weggelaten. Werkelijk rendement is bijgewerkt naar de actuele Belastingdienst-instructie: vanaf 2025 in de aangifte, voor 2024 en eerder via Opgaaf werkelijk rendement.
+- Nieuwe JPEG gemaakt volgens `docs/beeldstijl.md`: zandkleurig overhemd, staand bij bureau, zakelijke uitlegpose; beeld bevat geen overheidsnaam, logo, formulier of getal. Afmetingen 1536 × 864. Alt-tekst beschrijft Daniel en de context. Dit zijn eigen bestands-/beeldcontroles, geen Search Console-metingen.
+- Interne links toegevoegd vanaf `/belasting-reserveren-zzp` en `/kennisbank/voorlopige-aanslag-belastingreserve`. De artikeltekst linkt terug naar de relevante calculators. Calculatorlink in het artikel blijft tot stemming onbeschikbaar; de calculatorcode staat op een aparte branch.
+- Calculator rekent uitsluitend met 2026-uitgangspunten, labelt uitkomsten als indicatie, houdt de belastingreserve binnen het spaarbedrag en bevat uitleg over voorlopige forfaits. Testgevallen T1–T11 uit Claude’s document toegevoegd aan `scripts/test.ts`; automatische testuitvoering wordt bij de feature branch-build geregistreerd.
+- Nog geen actuele Search Console-meting van dit artikel of deze calculator. Na artikelpublicatie wordt de URL in de eerstvolgende lege sheetrij gezet met `aanmelden bij Google`; indexering zelf laat ik aan Daniel of Claude.
+- Geen bestaande belastingberekeningen gewijzigd. Calculator niet op productie publiceren voordat de Eerste Kamer over de relevante wetgeving heeft gestemd.
