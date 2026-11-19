@@ -4,150 +4,153 @@ import CalculatorLayout from "@/components/CalculatorLayout";
 import PrijsverhogingGenerator from "./PrijsverhogingGenerator";
 
 export const metadata: Metadata = {
-  title: "Prijsverhoging aankondigen: mail maken | Voorbeeld (2026)",
+  title: "Prijsverhoging aankondigen per mail | Voorbeeld en generator",
   description:
-    "Maak snel een professionele mail over je prijsverhoging. Vul je oude en nieuwe prijs en de ingangsdatum in, kies een toon en kopieer of download de mail.",
+    "Maak een prijsverhogingsmail met je oude tarief, nieuwe tarief en ingangsdatum. Met een voorbeeld voor zzp’ers en een controle voor lopende afspraken.",
   alternates: { canonical: "/prijsverhoging-mail-maken" },
   openGraph: {
-    title: "Prijsverhoging aankondigen: mail maken",
-    description: "Genereer een professionele mail over je nieuwe prijzen.",
+    title: "Prijsverhoging aankondigen per mail",
+    description: "Maak een mail met een duidelijke tariefwijziging en ingangsdatum. Bekijk het voorbeeld en controleer je lopende afspraken.",
     url: "/prijsverhoging-mail-maken",
   },
 };
 
 const faq = [
   {
-    vraag: "Hoe kondig ik een prijsverhoging aan bij mijn klanten?",
+    vraag: "Hoe schrijf ik een mail over een prijsverhoging?",
     antwoord:
-      "Kort en zelfverzekerd: noem het huidige tarief, het nieuwe tarief en de ingangsdatum, geef eventueel één zin uitleg en maak duidelijk wat er met lopende afspraken gebeurt. Verstuur de mail persoonlijk aan vaste klanten en ruim voor de ingangsdatum. De generator hierboven zet die elementen automatisch in een nette mail.",
+      "Noem het huidige en nieuwe tarief, de eenheid zoals per uur of per opdracht, en de ingangsdatum. Leg uit op welk werk het nieuwe tarief van toepassing is. Voeg eventueel een korte reden toe en geef de klant een manier om vragen te stellen.",
   },
   {
-    vraag: "Hoe ver van tevoren kondig ik een prijsverhoging aan?",
+    vraag: "Hoe lang van tevoren stuur ik de prijsverhogingsmail?",
     antwoord:
-      "Eén tot twee maanden is gebruikelijk. Zo kunnen klanten hun budget aanpassen en lopende trajecten afronden tegen het oude tarief. Staat er in je contract of algemene voorwaarden een termijn voor tariefwijzigingen, dan is die leidend.",
+      "Controleer eerst de termijn en procedure in je bestaande prijsafspraak. Kies de verzenddatum zo dat je aan die afspraak voldoet en je klant tijd heeft om vragen te stellen. KVK adviseert op tijd te communiceren. De termijn hangt af van je overeenkomst.",
   },
   {
-    vraag: "Moet ik een reden geven voor de prijsverhoging?",
+    vraag: "Wat schrijf ik over lopende opdrachten?",
     antwoord:
-      "Verplicht is het niet, maar één korte, eerlijke zin werkt goed: gestegen kosten, meer ervaring, uitgebreidere dienstverlening of een jaarlijkse indexatie. Vermijd lange rechtvaardigingen en bied vooral geen excuses aan; een prijsaanpassing is normaal ondernemerschap, geen gunst die je vraagt.",
+      "Schrijf concreet wat je met al bevestigde opdrachten doet. De generator gebruikt als voorbeeld dat eerdere afspraken tegen het oude tarief blijven lopen. Controleer of dat past bij de werkelijke afspraken met deze klant en pas de gekopieerde tekst aan vóór verzending.",
   },
   {
-    vraag: "Hoeveel procent prijsverhoging is redelijk?",
+    vraag: "Hoeveel procent gaat mijn prijs omhoog?",
     antwoord:
-      "Gebruik bij een afgesproken indexering de index en meetperiode uit je overeenkomst. Wil je een andere prijs afspreken, leg dan uit wat er veranderd is en reken vooraf door welk tarief past bij je kosten en je factureerbare uren.",
+      "Trek de oude prijs af van de nieuwe prijs, deel het verschil door de oude prijs en vermenigvuldig met 100. Van €75 naar €81 is €6 extra. €6 gedeeld door €75 is 0,08, dus de verhoging is 8%. Deze formule werkt bij een oude prijs groter dan nul.",
   },
   {
-    vraag: "Wat doe ik met lopende offertes en contracten?",
+    vraag: "Moet ik voor elke klant dezelfde mail gebruiken?",
     antwoord:
-      "Respecteer wat vastligt. De gebruikelijke lijn: alles wat vóór de ingangsdatum is bevestigd, valt onder het oude tarief; nieuwe opdrachten vanaf de ingangsdatum onder het nieuwe. Bij doorlopende contracten mag je alleen tussentijds verhogen als het contract of je voorwaarden daarin voorzien. Vermeld de lijn expliciet in je mail.",
+      "Controleer per klant de prijsafspraak, ingangsdatum en lopende opdrachten. Je kunt dezelfde opbouw gebruiken, maar pas de bedragen en de uitleg aan de ontvanger aan. KVK adviseert bij een kleine groep of belangrijke klanten een persoonlijke benadering.",
   },
   {
-    vraag: "Wat als een klant de prijsverhoging niet accepteert?",
+    vraag: "Verstuurt deze tool de mail naar mijn klant?",
     antwoord:
-      "Ga het gesprek aan: soms is een overgangsperiode of een aangepaste scope een oplossing. Blijft de klant weigeren, dan loopt bij een doorlopende overeenkomst de oude afspraak in principe door tot je die volgens de voorwaarden kunt aanpassen of opzeggen. Realiseer je ook: als élke klant zonder morren akkoord gaat, was je waarschijnlijk te goedkoop.",
-  },
-  {
-    vraag: "Wordt mijn invoer opgeslagen?",
-    antwoord:
-      "Nee. De mail wordt volledig in je browser samengesteld en nergens opgeslagen of verstuurd.",
+      "De tool maakt een tekst in je browser. Je kunt die kopiëren of als tekstbestand downloaden. Daarna controleer en verstuur je de mail zelf vanuit je eigen e-mailprogramma.",
   },
 ];
+
+const link = "font-medium text-petrol-700 underline";
 
 export default function Page() {
   return (
     <CalculatorLayout
       slug="prijsverhoging-mail-maken"
       h1="Prijsverhoging mail maken"
-      intro="Een prijsverhoging aankondigen voelt spannend, maar hoort bij ondernemen. Vul je huidige en nieuwe prijs, de ingangsdatum en eventueel een reden in. Je krijgt direct een nette mail die je kunt kopiëren of downloaden."
+      intro="Kondig je prijsverhoging aan met het oude tarief, het nieuwe tarief en de ingangsdatum. Vul hieronder je gegevens in en kies een toon. Controleer daarna de zin over lopende opdrachten, voeg zo nodig ‘per uur’ en de btw-basis toe, en kopieer de mail naar je eigen e-mailprogramma."
       tool={<PrijsverhogingGenerator />}
       uitleg={
         <div className="space-y-6 text-slate-600">
-          <p>
-            Wil je eerst je nieuwe bedrag uitrekenen aan de hand van een afgesproken index? Bekijk hoe je je{" "}
-            <Link href="/kennisbank/uurtarief-indexeren" className="font-medium text-petrol-700 underline">
-              uurtarief indexeert
-            </Link>.
-          </p>
           <section>
-            <h2 className="text-xl font-bold text-ink">De anatomie van een goede prijsverhogingsmail</h2>
+            <h2 className="text-xl font-bold text-ink">Voorbeeldmail voor een nieuw uurtarief</h2>
             <p className="mt-2">
-              Een goede aankondiging bevat vier elementen: het huidige tarief, het nieuwe tarief,
-              de ingangsdatum en de afspraak over lopend werk. Concreet: "Per 1 september 2026
-              wijzigt mijn uurtarief van €75 naar €85. Alles wat vóór die datum is bevestigd,
-              factureer ik nog tegen het huidige tarief." Meer is er in de kern niet nodig. Een
-              korte reden mag erbij, een lange rechtvaardiging werkt averechts: hoe meer je
-              uitlegt, hoe meer het klinkt alsof je zelf twijfelt.
+              Dit fictieve voorbeeld gaat over nieuwe zakelijke opdrachten. Studio Vermeer
+              rekent voortaan €81 per uur in plaats van €75. Eerder bevestigde opdrachten
+              worden in dit voorbeeld tegen €75 uitgevoerd. Pas de tekst aan als jouw
+              afspraken anders zijn.
             </p>
-            <p className="mt-2">
-              De toon bepaalt hoe de boodschap landt. Voor vaste klanten met wie je een warme
-              relatie hebt, past de vriendelijke variant met een bedankje voor de samenwerking.
-              Voor zakelijke opdrachtgevers is de professionele variant logischer. De korte
-              variant werkt voor grotere klantenbestanden waar een persoonlijke inleiding
-              gekunsteld zou aanvoelen. In alle gevallen geldt: geen excuses, geen
-              onderhandelingsopening in de mail zelf.
+            <blockquote className="mt-3 space-y-3 rounded-xl border-l-4 border-petrol-700 bg-mist p-4 text-sm leading-relaxed">
+              <p className="font-semibold">Onderwerp — Nieuw uurtarief voor opdrachten vanaf 1 januari 2027</p>
+              <p>Beste Robin,</p>
+              <p>
+                Voor nieuwe opdrachten die we vanaf 1 januari 2027 afspreken, wijzigt mijn
+                uurtarief van €75 naar €81 exclusief btw. Ik pas mijn tarief aan vanwege
+                gestegen bedrijfskosten.
+              </p>
+              <p>
+                De opdrachten die we al hebben bevestigd, voer ik uit tegen het afgesproken
+                tarief van €75 exclusief btw per uur.
+              </p>
+              <p>Heb je vragen over een nieuwe of lopende opdracht? Laat het weten, dan bespreken we die samen.</p>
+              <p>Met vriendelijke groet,<br />Studio Vermeer</p>
+            </blockquote>
+          </section>
+          <section>
+            <h2 className="text-xl font-bold text-ink">Wat vul je in de generator in?</h2>
+            <ol className="mt-2 list-decimal space-y-2 pl-5">
+              <li>Vul je bedrijfsnaam en eventueel de naam van je contactpersoon in.</li>
+              <li>Gebruik voor de oude en nieuwe prijs dezelfde eenheid en btw-basis. Vergelijk bijvoorbeeld twee uurprijzen exclusief btw.</li>
+              <li>Noem een exacte ingangsdatum. Controleer hoe die datum zich verhoudt tot het moment waarop een opdracht wordt bevestigd of uitgevoerd.</li>
+              <li>Voeg alleen een reden toe die klopt voor je bedrijf. Het redenveld is optioneel.</li>
+              <li>Kies een toon, maak de mail en controleer de uitkomst voordat je die kopieert of downloadt.</li>
+            </ol>
+            <p className="mt-3">
+              De generator kent je contracten niet. Voeg na het kopiëren toe of het bedrag
+              per uur, per bezoek of per opdracht geldt. Benoem ook of je bedragen inclusief
+              of exclusief btw vermeldt.
             </p>
           </section>
-
           <section>
-            <h2 className="text-xl font-bold text-ink">Waarom een verhoging in 2026 goed te onderbouwen is</h2>
+            <h2 className="text-xl font-bold text-ink">Controleer bestaande prijsafspraken</h2>
             <p className="mt-2">
-              Wie zijn tarief al een paar jaar niet heeft aangepast, is er reëel op achteruitgegaan.
-              Naast de gestegen kosten van levensonderhoud en zakelijke lasten is ook de
-              belastingdruk voor zzp'ers opgelopen: de zelfstandigenaftrek daalde van €2.470 in
-              2025 naar €1.200 in 2026 en zakt in 2027 verder naar €900. Bij dezelfde omzet houd
-              je dus minder over dan vorig jaar. Reken daarom eerst uit welk tarief je nodig hebt
-              en kondig daarna pas aan; zo voorkom je dat je binnen een jaar opnieuw moet
-              verhogen.
+              Kijk vóór verzending welke prijs je al hebt afgesproken, welke
+              aankondigingstermijn geldt en op welk werk een wijziging van toepassing is.
+              Een offerte, een doorlopende samenwerking en een nieuwe opdracht kunnen
+              verschillende afspraken bevatten. Beschrijf in de mail wat jullie voor die
+              situatie afspreken.
+            </p>
+            <h3 className="mt-4 font-bold text-ink">Stuur een persoonlijk bericht bij vragen over de overgang</h3>
+            <p className="mt-2">
+              Twijfel je hoe een lopende opdracht over de ingangsdatum heen wordt afgerekend?
+              Bespreek dat eerst met je opdrachtgever en bevestig de uitkomst. KVK adviseert
+              belangrijke klanten persoonlijk te informeren en op tijd te communiceren.
+              Dat geeft ruimte om vragen over de opdracht en planning te beantwoorden.
             </p>
           </section>
-
           <section>
-            <h2 className="text-xl font-bold text-ink">Timing en aanpak</h2>
+            <h2 className="text-xl font-bold text-ink">Reken het bedrag na voordat je de mail verstuurt</h2>
             <p className="mt-2">
-              Kies een logisch moment: 1 januari is het meest gangbaar, maar de start van een
-              nieuw kwartaal of de afronding van een project werkt ook. Stuur de mail één tot twee
-              maanden van tevoren en bel je belangrijkste klanten vooraf even persoonlijk; een
-              tariefsverhoging hoort niet als verrassing in de inbox van je beste opdrachtgever te
-              vallen. Controleer vóór verzending je contracten en algemene voorwaarden: bij
-              doorlopende overeenkomsten mag je vaak alleen verhogen op de momenten en volgens de
-              procedure die daar staan.
+              In het voorbeeld is €81 − €75 = €6. Deel €6 door €75 en vermenigvuldig met 100.
+              De verhoging is dus 8%. Dat percentage beschrijft dit rekenvoorbeeld.
+              Bereken voor je eigen bedrijf welk tarief past bij de kosten en de uren die
+              je verwacht te factureren met de{" "}
+              <Link href="/uurtarief-berekenen" className={link}>uurtariefcalculator</Link>.
+            </p>
+            <p className="mt-2">
+              Volg je een afgesproken CBS-index? Lees hoe je je{" "}
+              <Link href="/kennisbank/uurtarief-indexeren" className={link}>uurtarief indexeert</Link>{" "}
+              met twee indexcijfers. Verwerk het nieuwe bedrag vervolgens in een{" "}
+              <Link href="/offerte-calculator" className={link}>offerteberekening</Link>{" "}
+              voor de volgende opdracht.
             </p>
           </section>
-
           <section>
-            <h2 className="text-xl font-bold text-ink">Veelgemaakte fouten bij het aankondigen van een prijsverhoging</h2>
-            <ul className="mt-2 list-disc space-y-1 pl-5">
-              <li>Excuses aanbieden ("sorry dat ik het moet vragen"), waardoor de verhoging als onderhandelbaar overkomt.</li>
-              <li>De ingangsdatum of de afspraak over lopend werk vergeten, met discussies over al bevestigde opdrachten als gevolg.</li>
-              <li>Te lang wachten en dan één grote sprong moeten maken, in plaats van jaarlijks licht te indexeren.</li>
-              <li>De verhoging alleen in een nieuwsbrief of op de website melden en vaste klanten niet persoonlijk informeren.</li>
-              <li>Verhogen zonder eerst te berekenen of het nieuwe tarief je doelinkomen wel dekt.</li>
+            <h2 className="text-xl font-bold text-ink">Controle vóór verzending</h2>
+            <ul className="mt-2 list-disc space-y-2 pl-5">
+              <li>De klantnaam, beide tarieven, de eenheid en de ingangsdatum kloppen.</li>
+              <li>De zin over eerder bevestigde opdrachten past bij deze klant.</li>
+              <li>De reden is concreet en je contactgegevens zijn toegevoegd.</li>
+              <li>De onderwerpregel maakt duidelijk wanneer het nieuwe tarief ingaat.</li>
             </ul>
-          </section>
-
-          <section>
-            <p className="mt-2">
-              Bepaal vóór je aankondiging wat je eigenlijk moet vragen: de{" "}
-              <Link href="/uurtarief-berekenen" className="font-medium text-petrol-700 underline">
-                uurtarief calculator
-              </Link>{" "}
-              rekent met de belastingtarieven van 2026 uit welk tarief bij je doelinkomen hoort.
-              Check met de{" "}
-              <Link href="/zzp-netto-inkomen-berekenen" className="font-medium text-petrol-700 underline">
-                netto inkomen calculator
-              </Link>{" "}
-              wat de verhoging je netto per maand oplevert. En verwerk het nieuwe tarief daarna
-              direct in je prijsvoorstellen met de{" "}
-              <Link href="/offerte-calculator" className="font-medium text-petrol-700 underline">
-                offerte calculator
-              </Link>
-              .
+            <p className="mt-3 text-sm">
+              Bron voor de communicatieaanpak —{" "}
+              <a href="https://www.kvk.nl/geldzaken/uurtarief-verhogen/" className={link} target="_blank" rel="noopener noreferrer">
+                KVK over het verhogen van je uurtarief
+              </a>.
             </p>
           </section>
         </div>
       }
       faq={faq}
-      disclaimerTekst="Deze generator maakt een voorbeeldmail. Dit is geen juridisch advies. Controleer je contracten en voorwaarden voordat je prijzen wijzigt."
+      disclaimerTekst="Deze generator maakt een voorbeeldmail. Controleer de prijsafspraken en voorwaarden die voor jouw klant gelden. Vraag bij juridische twijfel advies voordat je de wijziging verstuurt."
     />
   );
 }

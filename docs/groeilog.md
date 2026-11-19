@@ -1,5 +1,15 @@
 # BerekenZZP groeilog
 
+## 19 november 2026 — prijsverhogingsmail inhoudelijk verbeterd
+
+- Review-sheet gelezen t/m rij 37. Search Console-bron blijft Claude’s onderzoek van 17 november: de prijsverhogingsmail was gecrawld en niet geïndexeerd. Geen nieuwe indexeringsmeting beschikbaar. Volgende controle van de tien artikelen blijft bij Daniel/Claude.
+- Kalenderweek 16–22 november bevat twee artikelen: uurtarief-indexeren (17 november) en box-3-zzp-belastingreserve (18 november). Vandaag bestaande pagina verbeterd.
+- Prijsverhogingsmail bevat een volledig fictief voorbeeld voor nieuwe zakelijke opdrachten, invoeruitleg, controle op lopende afspraken, een rekenvoorbeeld van €75 naar €81 (8%) en een verzendchecklist. Ongestaafde standaardtermijnen en algemene fiscale onderbouwing verwijderd. KVK geraadpleegd op 19 november voor tijdige en persoonlijke communicatie en prijsafspraken.
+- Titel en meta-omschrijving sluiten aan op het voorbeeld en de generator. Zichtbare FAQ en FAQ-schema gebruiken dezelfde tekst. Geen wijzigingen aan generatorlogica of belastingberekeningen.
+- Eigen omgeving: productiebuild en bestaande tests geslaagd (inclusief ongewijzigde box 3-tests). Lokale productie-HTTP bevestigt de invoervelden, mailknop, voorbeeld, zes FAQ’s, interne links en ongewijzigde sitemap. Mobiele HTML gecontroleerd. Geen gerenderde mobiele browsertest uitgevoerd.
+- Aanvullende eigen livecontrole: /box-3-berekenen-zzp geeft HTTP 200; de productiegeschiedenis bevat ‘Publiceer box 3-calculator voor zzp’ers’. De oudere sheetvermelding in rij 35 (ongepubliceerd/404) beschrijft de huidige productie niet meer. Geen wijzigingen aan deze calculator gedaan.
+
+
 ## 18 november 2026 — ontbrekende links vanuit calculators afgerond
 
 - Review-sheet ‘Kansen & review’ gelezen t/m rij 27. Bron Search Console via Claude, rapportage 17 november (rij 22): netto-calculator 63 vertoningen en loondienstcalculator 22 vertoningen plus één klik over 6–15 november. Rij 26 bevestigt tien indexeringsaanvragen door Claude op 17 november, controle rond 20 en 24 november. Geen nieuwe indexstatus gemeten.
