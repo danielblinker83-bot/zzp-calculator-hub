@@ -1,5 +1,16 @@
 # BerekenZZP groeilog
 
+## 20 november 2026 — vindbaarheid bestaande box 3-calculator hersteld
+
+- Review-sheet gelezen, laatste gevulde rij 38. Geen nieuwe Search Console-indexeringscontrole vastgelegd. De tien aanvragen van 17 november blijven volgens rij 26 bij Daniel/Claude in controle op 20 en 24 november.
+- Registry telt deze week twee artikelen (17 en 18 november). Vandaag geen nieuw artikel.
+- Eigen omgeving/live broncontrole: box 3-calculator is live sinds de eerdere publicatie, maar ontbrak in TOOLS, homepage en sitemap. Artikel meldde nog dat de calculator later online zou komen.
+- Calculator aan bestaande toolregistry toegevoegd. Daardoor verschijnen menu-, homepage- en sitemapverwijzingen via bestaande componenten. Artikel linkt naar calculator en calculator terug naar artikel. Verouderde aankondiging vervangen door de link.
+- Inhoudelijke wijzigingsdatum artikel is 20 november, publicatiedatum blijft 18 november en datum fiscale broncontrole blijft 18 november. Metadata en Article gebruiken eerst de inhoudelijke wijzigingsdatum. Bij artikelen met een wijzigingsdatum wordt die nu ook zichtbaar getoond.
+- Eigen omgeving: productiebuild en alle bestaande tests geslaagd, inclusief T1–T11. Lokale productie-HTTP-test bevestigt alle 34 sitemap-URL’s, hoofdmenu, homepagekaart, tweeweglinks, canonicals en consistente datums. Mobiele HTML gecontroleerd, geen gerenderde mobiele browsertest uitgevoerd.
+- Geen belastingberekeningen, parameters, calculatorlogica of goedgekeurde afbeeldingen aangepast. Geen indexeringsaanvraag gedaan.
+
+
 ## 19 november 2026 — prijsverhogingsmail inhoudelijk verbeterd
 
 - Review-sheet gelezen t/m rij 37. Search Console-bron blijft Claude’s onderzoek van 17 november: de prijsverhogingsmail was gecrawld en niet geïndexeerd. Geen nieuwe indexeringsmeting beschikbaar. Volgende controle van de tien artikelen blijft bij Daniel/Claude.

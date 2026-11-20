@@ -29,7 +29,7 @@ export default function ArtikelLayout({
   disclaimerTekst?: string;
 }) {
   const url = `${SITE.url}/kennisbank/${artikel.slug}`;
-  const dateModified = artikel.gecontroleerd ?? artikel.bijgewerkt ?? artikel.datum;
+  const dateModified = artikel.bijgewerkt ?? artikel.gecontroleerd ?? artikel.datum;
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -78,6 +78,7 @@ export default function ArtikelLayout({
         <h1 className="mt-6 text-3xl font-extrabold sm:text-4xl">{artikel.title}</h1>
         <p className="mt-3 text-sm text-slate-500">
           {artikel.redactie ? "Redactie BerekenZZP.nl" : "Door Daniel Blinker, zelf zzp’er"} · {datumNL(artikel.datum)} · {artikel.leestijd} min lezen
+          {artikel.bijgewerkt && <> · Bijgewerkt op {datumNL(artikel.bijgewerkt)}</>}
         </p>
         <p className="mt-4 text-lg text-slate-600">{intro}</p>
 

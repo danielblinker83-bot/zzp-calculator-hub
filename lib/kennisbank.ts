@@ -47,7 +47,7 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
       url: path,
       type: "article",
       publishedTime: a.datum,
-      modifiedTime: a.gecontroleerd ?? a.bijgewerkt ?? a.datum,
+      modifiedTime: a.bijgewerkt ?? a.gecontroleerd ?? a.datum,
       images,
     },
     twitter: {
@@ -65,6 +65,7 @@ export const ARTIKELEN: Artikel[] = [
     title: "Box 3 voor zzp'ers: telt je belastingreserve mee?",
     description: "Je belastingreserve op een privérekening telt mee in box 3. Bekijk de voorlopige cijfers voor 2026, de uitzondering voor sommige belastingschulden en een controleerbaar voorbeeld.",
     datum: "2026-11-18",
+    bijgewerkt: "2026-11-20",
     gecontroleerd: "2026-11-18",
     redactie: true,
     leestijd: 6,
@@ -72,7 +73,7 @@ export const ARTIKELEN: Artikel[] = [
     afbeeldingAlt: "Daniel Blinker met bril en sikje in een wit overhemd bij uitleg over box 3 en de belastingreserve",
     afbeeldingBreedte: 1536,
     afbeeldingHoogte: 864,
-    gerelateerdeTools: ["belasting-reserveren-zzp", "zzp-netto-inkomen-berekenen"],
+    gerelateerdeTools: ["box-3-berekenen-zzp", "belasting-reserveren-zzp", "zzp-netto-inkomen-berekenen"],
     bronnen: [
       { label: "Belastingdienst — Berekening voorlopige aanslag 2026", url: "https://www.belastingdienst.nl/wps/wcm/connect/nl/box-3/content/berekening-box-3-inkomen-2026" },
       { label: "Belastingdienst — Belastingschulden in box 3", url: "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/prive/vermogen_en_aanmerkelijk_belang/vermogen/wat_zijn_uw_bezittingen_en_schulden/uw_schulden/belastingschulden" },
