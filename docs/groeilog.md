@@ -1,5 +1,16 @@
 # BerekenZZP groeilog
 
+## 22 november 2026 — marge-uitkomst en rekentabel verduidelijkt
+
+- Review-sheet eerst gelezen t/m rij 40. Bron Search Console: export van 20 november, meetperiode 21 oktober–17 november, 8 klikken en 2.120 vertoningen. De laatste 14 dagen in die export tellen 1.460 vertoningen, de voorafgaande 14 dagen 660. Dit is historische Search Console-data uit de sheet, geen nieuwe meting vandaag en geen bewezen effect van deze wijziging. Een nieuwe indexeringscontrole van de tien artikelen van 17 november ontbreekt nog; die blijft bij Daniel/Claude.
+- Kalenderweek 16–22 november telt twee nieuwe artikelen (17 en 18 november). Vandaag geen nieuw artikel tijdens de indexeringscontrole. De bestaande margecalculator krijgt een inhoudelijke correctie; eerdere Search Console-export 2 augustus–1 november bevatte 2.184 vertoningen voor deze calculator, geen actuele zoekvraagmeting.
+- Intro, meta-omschrijving, Open Graph en uitleg verduidelijken dat de uitkomst alleen de ingevulde kosten aftrekt. Resultaatkaart en kopieertekst noemen de nog niet meegenomen bedrijfskosten. De FAQ verwart brutomarge niet langer met een bedrag en stelt niet meer dat eigen uren automatisch een bedrijfskostenpost zijn. Calculatorlogica en belastingberekeningen blijven ongewijzigd.
+- KVK geraadpleegd op 22 november: https://www.kvk.nl/geldzaken/exploitatiebegroting/, https://www.kvk.nl/geldzaken/waarom-een-winst-en-verliesrekening/ en https://www.kvk.nl/geldzaken/moeilijke-woorden-die-je-tegenkomt-bij-bedrijfsfinanciering/. OpenStax begrippenlijst financiële administratie geraadpleegd voor brutowinstmarge. KVK-bronlink toegevoegd aan de zichtbare uitleg. Geen nieuwe fiscale tarieven of claims toegevoegd.
+- Fictief voorbeeld: €100 verkoop min €60 inkoop min €5 extra kosten = €35; 35% marge en 53,8% opslag. Bij 100 verkopen en €1.200 overige bedrijfskosten resteert €2.300. Alle vier bestaande tabelrijen onafhankelijk nagerekend met de ongewijzigde margefunctie en terugrekenformule.
+- Tabel heeft nu een zichtbaar bijschrift, expliciete kolomkoppen, een benoemde focusbare scrollcontainer met focusmarkering en een mobiele schuifinstructie. De bestaande link naar break-even is verplaatst naar de uitleg over vaste kosten; alle zeven inhoudelijke interne linkdoelen blijven behouden.
+- Eigen omgeving: productiebuild/TypeScript geslaagd (39 statische routes); alle bestaande tests geslaagd inclusief box 3 T1–T11. Lokale productie-HTTP-controle bevestigt één H1, canonical, metadata, tien gelijke zichtbare/schema-FAQ-antwoorden, toegankelijke tabelmarkup, zeven inhoudelijke linkdoelen en homepage/kennisbank met HTTP 200. Sitemap behoudt exact dezelfde 34 URL’s. Mobiele HTML gecontroleerd; geen gerenderde mobiele browser- of toesteltest uitgevoerd.
+- Bestaande goedgekeurde afbeeldingen en artikelpublicatiedatums behouden. Geen indexeringsaanvraag gedaan. Productie-nacontrole en publicatiecommit worden na uitrol onderaan de review-sheet vastgelegd.
+
 ## 20 november 2026 — vindbaarheid bestaande box 3-calculator hersteld
 
 - Review-sheet gelezen, laatste gevulde rij 38. Geen nieuwe Search Console-indexeringscontrole vastgelegd. De tien aanvragen van 17 november blijven volgens rij 26 bij Daniel/Claude in controle op 20 en 24 november.

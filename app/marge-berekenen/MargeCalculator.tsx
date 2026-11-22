@@ -35,7 +35,7 @@ export default function MargeCalculator() {
   }
 
   const copyText = resultaat
-    ? `Winst: ${formatEUR(resultaat.winst)}\nMarge: ${resultaat.margePct !== null ? formatPct(resultaat.margePct) : "-"}\nOpslag: ${resultaat.opslagPct !== null ? formatPct(resultaat.opslagPct) : "-"}`
+    ? `Over na ingevulde kosten per verkoop: ${formatEUR(resultaat.winst)}\nVóór overige bedrijfskosten.\nMarge: ${resultaat.margePct !== null ? formatPct(resultaat.margePct) : "-"}\nOpslag: ${resultaat.opslagPct !== null ? formatPct(resultaat.opslagPct) : "-"}`
     : "";
 
   return (
@@ -55,7 +55,7 @@ export default function MargeCalculator() {
       {resultaat && (
         <div className="mt-6">
           <div className="grid gap-3 sm:grid-cols-3">
-            <ResultCard label="Winst per verkoop" value={formatEUR(resultaat.winst)} highlight />
+            <ResultCard label="Over na ingevulde kosten" value={formatEUR(resultaat.winst)} sub="Per verkoop, vóór overige bedrijfskosten" highlight />
             <ResultCard label="Marge" value={resultaat.margePct !== null ? formatPct(resultaat.margePct) : "n.v.t."} sub="Winst als percentage van de verkoopprijs" />
             <ResultCard label="Opslag (markup)" value={resultaat.opslagPct !== null ? formatPct(resultaat.opslagPct) : "n.v.t."} sub="Winst als percentage van je kosten" />
           </div>

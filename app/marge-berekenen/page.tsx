@@ -6,11 +6,11 @@ import MargeCalculator from "./MargeCalculator";
 export const metadata: Metadata = {
   title: "Marge berekenen | Winstmarge en opslag calculator (2026)",
   description:
-    "Bereken je winst, winstmarge en opslagpercentage per verkoop. Vul inkoop- en verkoopprijs in en zie direct wat je verdient en welk percentage dat is.",
+    "Bereken marge en opslag uit je verkoopprijs en kosten. Bekijk rekenvoorbeelden en zie welk bedrag per verkoop overblijft voor je overige bedrijfskosten.",
   alternates: { canonical: "/marge-berekenen" },
   openGraph: {
     title: "Marge berekenen | Winstmarge en opslag calculator",
-    description: "Bereken je winst, marge en opslag op inkoop en verkoop.",
+    description: "Bereken marge, opslag en het bedrag dat na je ingevulde kosten per verkoop overblijft. Met rekenvoorbeelden en uitleg over vaste kosten.",
     url: "/marge-berekenen",
   },
 };
@@ -59,7 +59,7 @@ const faq = [
   {
     vraag: "Wat is het verschil tussen brutomarge en nettomarge?",
     antwoord:
-      "Brutomarge is je verkoopprijs min de directe kosten van dat ene product of die opdracht (inkoop, materiaal, verzending). Nettomarge is wat er overblijft nadat ook je vaste lasten, je eigen uren en de belasting eraf zijn. Deze calculator rekent de brutomarge per verkoop; die moet hoog genoeg zijn om je nettomarge positief te houden.",
+      "De brutowinstmarge is de brutowinst (omzet min inkoopwaarde) als percentage van de omzet. Bij de nettowinstmarge zijn ook de overige bedrijfskosten van de winst afgetrokken. Deze calculator trekt alleen de ingevulde inkoopprijs en extra kosten af van de verkoopprijs. Het resultaat laat zien wat er per verkoop overblijft voor kosten die je nog niet hebt meegenomen.",
   },
   {
     vraag: "Hoe bereken ik de marge op een project of opdracht?",
@@ -73,7 +73,7 @@ export default function Page() {
     <CalculatorLayout
       slug="marge-berekenen"
       h1="Marge berekenen"
-      intro="Weet precies wat je verdient per verkoop. Vul je inkoopprijs, verkoopprijs en eventuele extra kosten in en zie direct je winst in euro's, je winstmarge en je opslagpercentage. Handig bij het bepalen van prijzen en het doorrekenen van kortingen."
+      intro="Je marge bereken je door de verkoopprijs min de kosten te delen door de verkoopprijs en te vermenigvuldigen met 100. Vul je inkoopprijs, verkoopprijs en extra kosten in. Je ziet de marge, de opslag en het bedrag dat per verkoop overblijft voor je overige bedrijfskosten."
       tool={<MargeCalculator />}
       uitleg={
         <div className="space-y-6 text-slate-600">
@@ -81,13 +81,6 @@ export default function Page() {
             Wil je een actieprijs bepalen? Bereken{" "}
             <Link href="/kennisbank/maximale-korting-berekenen" className="font-medium text-petrol-700 underline">
               hoeveel korting je kunt geven bij je gewenste marge
-            </Link>.
-          </p>
-          <p>
-            Wil je weten hoeveel verkopen je nodig hebt om je vaste kosten te dekken? Gebruik
-            het bedrag dat je per verkoop overhoudt om je{" "}
-            <Link href="/kennisbank/break-even-afzet-berekenen" className="font-medium text-petrol-700 underline">
-              break-even afzet te berekenen
             </Link>.
           </p>
           <section>
@@ -105,10 +98,11 @@ export default function Page() {
               </Link>.
             </p>
             <p className="mt-2">
-              Winst per verkoop is je verkoopprijs min al je directe kosten. Stel: je koopt een
+              Het bedrag per verkoop is je verkoopprijs min de ingevulde kosten. Stel: je koopt een
               product in voor €60, betaalt €5 aan verzending en verkoopt het voor €100 exclusief
-              btw. Je winst is dan €35. De marge zet die winst af tegen de verkoopprijs: 35 / 100
-              = 35%. Van elke euro omzet houd je dus 35 cent over. De opslag zet dezelfde winst af
+              btw. Er blijft dan €35 over voor je overige bedrijfskosten en winst. De marge zet
+              dat bedrag af tegen de verkoopprijs: 35 / 100 = 35%. Van elke euro omzet blijft
+              dus 35 cent over na de ingevulde kosten. De opslag zet hetzelfde bedrag af
               tegen je kosten: 35 / 65 = 53,8%. Dat is het percentage dat je bovenop je kostprijs
               rekent.
             </p>
@@ -121,6 +115,27 @@ export default function Page() {
           </section>
 
           <section>
+            <h2 className="text-xl font-bold text-ink">Wat blijft er over voor je vaste kosten?</h2>
+            <p className="mt-2">
+              Een positieve marge per verkoop betekent nog niet dat je hele bedrijf winst maakt.
+              Met €35 per verkoop en 100 verkopen blijft €3.500 over na de ingevulde kosten.
+              Zijn je overige bedrijfskosten in dezelfde periode €1.200, dan resteert €2.300.
+              Dit fictieve voorbeeld neemt aan dat alle kosten zijn meegenomen; trek dezelfde
+              kosten nooit twee keer af.
+            </p>
+            <p className="mt-2">
+              Zet omzet en kosten voor dezelfde periode bij elkaar, zoals in de{" "}
+              <a href="https://www.kvk.nl/geldzaken/exploitatiebegroting/" className="font-medium text-petrol-700 underline">
+                uitleg van KVK over een exploitatiebegroting
+              </a>. Wil je weten hoeveel verkopen je nodig hebt om de vaste kosten te dekken?
+              Bereken dan je{" "}
+              <Link href="/kennisbank/break-even-afzet-berekenen" className="font-medium text-petrol-700 underline">
+                break-even afzet met het bedrag per verkoop
+              </Link>.
+            </p>
+          </section>
+
+          <section>
             <h2 className="text-xl font-bold text-ink">Van gewenste marge naar verkoopprijs</h2>
             <p className="mt-2">
               De omgekeerde route gaat vaak mis. Wil je een marge van 40% op een kostprijs van
@@ -129,13 +144,15 @@ export default function Page() {
               hoger de gewenste marge, hoe groter het gat: bij 50% is het verschil tussen delen en
               vermenigvuldigen al €30 op diezelfde kostprijs van €60.
             </p>
-            <div className="mt-3 overflow-x-auto">
+            <p id="marge-tabel-hulp" className="mt-3 text-sm">Op een smal scherm kun je de tabel opzij schuiven.</p>
+            <div role="region" aria-label="Rekentabel marge en opslag" aria-describedby="marge-tabel-hulp" tabIndex={0} className="mt-2 overflow-x-auto rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-petrol-700">
               <table className="w-full min-w-[440px] border-collapse text-sm">
+                <caption className="pb-2 text-left text-sm text-slate-600">Verkoopprijs en opslag bij €60 totale kosten per verkoop</caption>
                 <thead>
                   <tr className="border-b border-slate-200 text-left">
-                    <th className="py-2 pr-4 font-semibold text-ink">Gewenste marge</th>
-                    <th className="py-2 pr-4 font-semibold text-ink">Verkoopprijs bij €60 kosten</th>
-                    <th className="py-2 font-semibold text-ink">Bijbehorende opslag</th>
+                    <th scope="col" className="py-2 pr-4 font-semibold text-ink">Gewenste marge</th>
+                    <th scope="col" className="py-2 pr-4 font-semibold text-ink">Verkoopprijs bij €60 kosten</th>
+                    <th scope="col" className="py-2 font-semibold text-ink">Bijbehorende opslag</th>
                   </tr>
                 </thead>
                 <tbody>
