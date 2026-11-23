@@ -48,8 +48,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
+        <a href="#hoofdinhoud" className="skip-link">Direct naar de inhoud</a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="hoofdinhoud" tabIndex={-1} className="flex-1 scroll-mt-20">{children}</main>
         <Footer />
       </body>
     </html>

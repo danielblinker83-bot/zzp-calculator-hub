@@ -1,5 +1,14 @@
 # BerekenZZP groeilog
 
+## 23 november 2026 — directe toetsenbordroute naar inhoud
+
+- Review-sheet eerst gelezen tot en met laatste gevulde rij 41. Bron Search Console blijft de export in rij 40 (21 oktober–17 november, 8 klikken en 2.120 vertoningen). Geen nieuwe indexeringscontrole of nieuwe Search Console-meting beschikbaar in de sheet; volgende controle tien artikelen van 17 november blijft bij Daniel/Claude op 24 november.
+- Kalenderweek 23–29 november telt vóór deze wijziging nul nieuwe artikelen. Vandaag geen nieuw artikel; bestaande toegankelijkheid verbeterd terwijl nieuwe indexeringsgegevens ontbreken. Geen belastingberekeningen, parameters, metadata, goedgekeurde beelden of artikelpublicatiedatums gewijzigd.
+- Eigen omgeving: live homepage vóór wijziging HTTP 200, maar geen directe inhoudlink. De root-layout had wel een main-landmark, zonder focusbaar ankerdoel. Eerste bedienbare element is nu ‘Direct naar de inhoud’, met een native anker naar de unieke main met tabindex -1. Werkt zonder extra JavaScript. De link wordt zichtbaar bij focus en verschijnt boven de vaste header; de inhoud heeft ruimte onder de header bij het springen.
+- Primaire bron geraadpleegd op 23 november: W3C/WAI, techniek G1, https://www.w3.org/WAI/WCAG22/Techniques/general/G1. Dit is een gerichte verbetering, geen claim dat de gehele site aan WCAG voldoet of dat rankings hierdoor stijgen.
+- Eigen omgeving: productiebuild/TypeScript geslaagd (39 statische routes); alle bestaande rekentests inclusief box 3 T1–T11 geslaagd. Lokale productie-HTTP-controle op alle 34 sitemap-pagina’s bevestigt de eerste inhoudlink, één uniek focusbaar main-doel, H1 in de hoofdinhoud, viewport en blijvende mobiele kennisbanklink. Gecompileerde CSS gecontroleerd op verbergen zonder focus, zichtbaar maken bij focus, z-index boven de header en scrollruimte. Sitemap behoudt dezelfde 34 URL’s en een onbekende URL blijft HTTP 404.
+- Geen echte toetsenbord-, schermlezer- of mobiele browsertest uitgevoerd; de controle omvat HTML, CSS en HTTP. Geen actuele bezoekers- of Core Web Vitals-veldmeting beschikbaar. Publicatie en live nacontrole worden onderaan de review-sheet vastgelegd.
+
 ## 22 november 2026 — marge-uitkomst en rekentabel verduidelijkt
 
 - Review-sheet eerst gelezen t/m rij 40. Bron Search Console: export van 20 november, meetperiode 21 oktober–17 november, 8 klikken en 2.120 vertoningen. De laatste 14 dagen in die export tellen 1.460 vertoningen, de voorafgaande 14 dagen 660. Dit is historische Search Console-data uit de sheet, geen nieuwe meting vandaag en geen bewezen effect van deze wijziging. Een nieuwe indexeringscontrole van de tien artikelen van 17 november ontbreekt nog; die blijft bij Daniel/Claude.
