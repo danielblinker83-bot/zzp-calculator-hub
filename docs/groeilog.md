@@ -1,5 +1,12 @@
 # BerekenZZP groeilog
 
+## 24 november 2026 — kennisbank op onderwerp doorzoekbaar via vier spronglinks
+
+- Laatste gevulde reviewrij bij start was 42. De tien URL’s van rij 26 zijn op 17 november aangemeld. De review-sheet bevatte vanochtend nog geen Search Console-uitkomst van de vervolginspectie. Laatste beschikbare Search Console-prestatieperiode in rij 40 eindigt op 17 november. Indexstatus per URL blijft open bij Daniel/Claude. Week 23–29 november telt nul nieuwe artikelen.
+- Eigen omgeving, live vóór wijziging: voor elk van de tien artikelen een succesvolle HTTP-opvraag, eigen canonical, geen noindex in robots-/googlebot-meta of X-Robots-Tag, vermelding in de sitemap en een directe link vanuit de kennisbank én ten minste één rekentool. Dit controleert technische bereikbaarheid. Alleen een Search Console-inspectie geeft de gevraagde indexstatus.
+- Kennisbank met zestien kaarten ingedeeld in vier onderwerpen. Een spronglink per onderwerp werkt vanuit de HTML. De centrale artikelregistry vereist een onderwerp voor elke nieuwe kaart. Binnen elk onderwerp staat het nieuwste artikel bovenaan.
+- Eigen omgeving: productiebuild, TypeScript en bestaande rekentests geslaagd. Lokale productiecontrole bevestigt alle vier ankerdoelen en alle zestien kaarten elk precies één keer. Alle 34 sitemap-pagina’s opgevraagd. Geen gerenderde telefoontest uitgevoerd. Live nacontrole wordt onderaan de review-sheet vastgelegd.
+
 ## 23 november 2026 — directe toetsenbordroute naar inhoud
 
 - Review-sheet eerst gelezen tot en met laatste gevulde rij 41. Bron Search Console blijft de export in rij 40 (21 oktober–17 november, 8 klikken en 2.120 vertoningen). Geen nieuwe indexeringscontrole of nieuwe Search Console-meting beschikbaar in de sheet; volgende controle tien artikelen van 17 november blijft bij Daniel/Claude op 24 november.

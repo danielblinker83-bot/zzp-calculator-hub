@@ -6,7 +6,15 @@ import type { Metadata } from "next";
 
 export type Bron = { label: string; url: string };
 
+export const ONDERWERPEN = {
+  belasting: "Belasting en administratie",
+  uurtarief: "Uurtarief en offertes",
+  marge: "Verkoopprijs en marge",
+  vervoer: "Kilometers en vervoer",
+} as const;
+
 export type Artikel = {
+  onderwerp: keyof typeof ONDERWERPEN;
   slug: string;
   title: string;
   description: string;
@@ -62,6 +70,7 @@ export function artikelMetadata(a: Artikel, overrides?: { title?: string; descri
 export const ARTIKELEN: Artikel[] = [
   {
     slug: "box-3-zzp-belastingreserve",
+    onderwerp: "belasting",
     title: "Box 3 voor zzp'ers: telt je belastingreserve mee?",
     description: "Je belastingreserve op een privérekening telt mee in box 3. Bekijk de voorlopige cijfers voor 2026, de uitzondering voor sommige belastingschulden en een controleerbaar voorbeeld.",
     datum: "2026-11-18",
@@ -84,6 +93,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "uurtarief-indexeren",
+    onderwerp: "uurtarief",
     title: "Uurtarief indexeren als zzp’er met CBS-indexcijfers",
     description: "Bereken je nieuwe uurtarief met oude en nieuwe CBS-indexcijfers. Met een rekenvoorbeeld, je maandomzet en uitleg over de ingangsdatum.",
     datum: "2026-11-17",
@@ -102,6 +112,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "vaste-projectprijs-berekenen",
+    onderwerp: "uurtarief",
     title: "Vaste projectprijs berekenen als zzp’er",
     description: "Bereken een vaste projectprijs met je uurtarief, projectkosten en extra tijd. Zie wat je per uur overhoudt als de opdracht uitloopt.",
     datum: "2026-11-15",
@@ -120,6 +131,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "autokosten-per-kilometer-berekenen",
+    onderwerp: "vervoer",
     title: "Wat kost je auto per kilometer?",
     description: "Bereken je werkelijke autokosten per kilometer met afschrijving, verzekering, onderhoud en brandstof. Zie wat een zakelijke rit je gemiddeld kost.",
     datum: "2026-11-14",
@@ -138,6 +150,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "maximale-korting-berekenen",
+    onderwerp: "marge",
     title: "Hoeveel korting kun je geven bij een minimale marge?",
     description: "Bereken hoeveel korting je kunt geven en houd je gewenste marge over. Met een minimumprijs, rekentabel en voorbeeld met verkoopcommissie.",
     datum: "2026-11-13",
@@ -155,6 +168,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "voorlopige-aanslag-belastingreserve",
+    onderwerp: "belasting",
     title: "Voorlopige aanslag en belastingreserve als zzp’er",
     description: "Bereken hoeveel je extra reserveert naast je voorlopige aanslag. Met een rekenvoorbeeld voor inkomstenbelasting, Zvw en openstaande termijnen.",
     datum: "2026-11-12",
@@ -174,6 +188,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "break-even-afzet-berekenen",
+    onderwerp: "marge",
     title: "Break-even afzet berekenen",
     description: "Bereken hoeveel verkopen je nodig hebt om je vaste kosten te dekken. Met de formule voor break-even afzet, een tabel en een scenario met winstdoel.",
     datum: "2026-11-11",
@@ -192,6 +207,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "omzet-winst-banksaldo",
+    onderwerp: "belasting",
     title: "Omzet, winst en banksaldo als zzp’er",
     description: "Bereken je winst uit omzet en kosten. Zie met een openstaande factuur waarom je banksaldo afwijkt en welke cijfers je invult bij de nettocalculator.",
     datum: "2026-11-10",
@@ -211,6 +227,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "zakelijke-ritten-bijhouden",
+    onderwerp: "vervoer",
     title: "Zakelijke ritten bijhouden met je privéauto",
     description: "Leg zakelijke kilometers vast als zzp’er. Bekijk een voorbeeld van een rittenoverzicht en hoe woon-werkverkeer meetelt voor inkomstenbelasting en btw.",
     datum: "2026-11-09",
@@ -230,6 +247,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "declarabele-uren-plannen",
+    onderwerp: "uurtarief",
     title: "Declarabele uren realistisch plannen als zzp’er",
     description: "Van werkweek naar declarabele uren per jaar en maand. Met rekenvoorbeelden, tarieftabel en uitleg om vrije weken één keer mee te nemen.",
     datum: "2026-11-08",
@@ -248,6 +266,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "btw-terugrekenen-gemengde-bon",
+    onderwerp: "belasting",
     title: "Btw terugrekenen op een gemengde bon",
     description: "Een bon met 21% en 9% btw narekenen? Splits per tarief en controleer de bedragen met voorbeelden, een tabel en uitleg over afronding.",
     datum: "2026-11-07",
@@ -267,6 +286,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "verkoopprijs-platformkosten",
+    onderwerp: "marge",
     title: "Verkoopprijs berekenen met platformkosten",
     description: "Bereken je verkoopprijs met een vaste vergoeding, platformcommissie en gewenste marge. Met rekenvoorbeelden en uitleg over de commissiegrondslag bij bol.",
     datum: "2026-11-06",
@@ -287,6 +307,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "kilometervergoeding-doorberekenen-klant",
+    onderwerp: "vervoer",
     title: "Kilometervergoeding doorberekenen aan je klant: tarief, btw en voorbeeld",
     description: "Reken je reiskosten door aan je klant? Bij een gewone dienst reken je dezelfde btw als over je werk. Met voorbeeldfactuur en het verschil met €0,25 aftrek.",
     datum: "2026-11-05",
@@ -305,6 +326,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "verschil-marge-en-opslag",
+    onderwerp: "marge",
     title: "Verschil tussen marge en opslag: zo voorkom je een te lage prijs",
     description: "30% opslag is geen 30% marge. Bekijk de formules, omrekentabel en voorbeelden voor je verkoopprijs, extra kosten en korting.",
     datum: "2026-11-04",
@@ -322,6 +344,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "wat-is-een-goed-uurtarief-als-zzper",
+    onderwerp: "uurtarief",
     title: "Wat is een goed uurtarief als zzp'er?",
     description:
       "Er bestaat geen vast bedrag, wel een manier om het te berekenen. Zo bepaal je een uurtarief dat je kosten, je belasting en je gewenste inkomen dekt, met voorbeelden voor 2026.",
@@ -340,6 +363,7 @@ export const ARTIKELEN: Artikel[] = [
   },
   {
     slug: "hoeveel-belasting-betaal-je-als-zzper-2026",
+    onderwerp: "belasting",
     title: "Hoeveel belasting betaal je als zzp'er in 2026?",
     description:
       "Een heldere uitleg van de inkomstenbelasting voor zzp'ers in 2026: de schijven, de zelfstandigenaftrek, de mkb-winstvrijstelling, de heffingskortingen en de Zvw-bijdrage, met rekenvoorbeelden per winstniveau.",
