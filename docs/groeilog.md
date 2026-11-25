@@ -1,5 +1,12 @@
 # BerekenZZP groeilog
 
+## 25 november 2026 — Nederlandstalige hulp bij een ontbrekende pagina
+
+- Bij start eindigde de review-sheet op rij 43. De actuele Search Console-inspectiestatus van de tien artikelen uit rij 26 stond daar nog open. De laatste vastgelegde prestatie-export loopt tot 17 november (rij 40). De registry telt nul nieuwe artikelen in kalenderweek 23–29 november.
+- Eigen meetomgeving. Een bewust gekozen ontbrekend kennisbankadres gaf HTTP 404 en de standaard Engelse fouttekst. Er is geen bezoekvolume voor ontbrekende adressen gemeten.
+- De gedeelde foutpagina verwijst bezoekers direct naar het calculatoroverzicht en de kennisbank. Het gevraagde adres levert HTTP 404 en bevat noindex. De tekst is Nederlands.
+- Eigen meetomgeving. Productiebuild, TypeScript en bestaande rekentests geslaagd. Lokale productiecontrole van twee ontbrekende adressen, drie bestaande pagina’s, het tools-anker en de zestien artikelkaarten geslaagd. De sitemap bevat 34 URL’s. De live nacontrole wordt in de review-sheet vastgelegd.
+
 ## 24 november 2026 — kennisbank op onderwerp doorzoekbaar via vier spronglinks
 
 - Laatste gevulde reviewrij bij start was 42. De tien URL’s van rij 26 zijn op 17 november aangemeld. De review-sheet bevatte vanochtend nog geen Search Console-uitkomst van de vervolginspectie. Laatste beschikbare Search Console-prestatieperiode in rij 40 eindigt op 17 november. Indexstatus per URL blijft open bij Daniel/Claude. Week 23–29 november telt nul nieuwe artikelen.
