@@ -1,5 +1,12 @@
 # BerekenZZP groeilog
 
+## 26 november 2026 — oude offertesamenvatting verdwijnt bij gewijzigde invoer
+
+- Review-sheet gelezen t/m rij 44. De vervolginspectie van de tien artikelen uit rij 26 ontbreekt nog in de sheet. Laatste vastgelegde Search Console-prestatieperiode eindigt op 17 november. Deze kalenderweek staan nul nieuwe artikelen in de registry.
+- Eigen omgeving. Offertecalculator live HTTP 200. In de component gebruikte de oude berekening het nieuwe btw-label zodra de bezoeker het percentage veranderde. Ook de te kopiëren tekst kon zo bedragen en percentages uit verschillende invoer combineren.
+- Bij een wijziging aan een van de zes velden vervallen de resultaatkaarten, tekst en kopieerknop. De bezoeker kan opnieuw berekenen met de knop of Enter. De kopieertekst noemt de uitkomst een prijsindicatie en legt geen ongevraagde geldigheid van 30 dagen meer vast.
+- Eigen omgeving. Productiebuild, TypeScript en bestaande rekentests geslaagd. Geïsoleerde componentcontrole op zes invoerwijzigingen, herberekening, foutieve invoer en kopieertekst geslaagd. Voor twee uur à €100 gaf de bestaande functie €242 bij 21% en €218 bij 9%. Lokale browserstart geblokkeerd doordat het Chromium-programmabestand ontbreekt. De productiecontrole wordt geregistreerd in de review-sheet.
+
 ## 25 november 2026 — Nederlandstalige hulp bij een ontbrekende pagina
 
 - Bij start eindigde de review-sheet op rij 43. De actuele Search Console-inspectiestatus van de tien artikelen uit rij 26 stond daar nog open. De laatste vastgelegde prestatie-export loopt tot 17 november (rij 40). De registry telt nul nieuwe artikelen in kalenderweek 23–29 november.

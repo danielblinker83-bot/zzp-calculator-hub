@@ -61,11 +61,17 @@ Subtotaal excl. btw: ${formatEUR(resultaat.subtotaalExcl)}
 Btw (${btwPct}%): ${formatEUR(resultaat.btwBedrag)}
 Totaal incl. btw: ${formatEUR(resultaat.totaalIncl)}
 
-Deze offerte is een indicatie en 30 dagen geldig, tenzij anders vermeld.`
+Deze berekening is een prijsindicatie.`
     : "";
 
   return (
-    <div>
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        bereken();
+      }}
+      onChange={() => setResultaat(null)}
+    >
       <div className="grid gap-4 sm:grid-cols-3">
         <InputField id="uren" label="Aantal uren" value={uren} onChange={setUren} placeholder="Bijv. 24" suffix="uur" error={errors.uren} />
         <InputField id="tarief" label="Uurtarief (excl. btw)" value={tarief} onChange={setTarief} placeholder="Bijv. 75" suffix="€" error={errors.tarief} />
@@ -76,7 +82,7 @@ Deze offerte is een indicatie en 30 dagen geldig, tenzij anders vermeld.`
       </div>
 
       <div className="mt-6 flex flex-wrap gap-3">
-        <button type="button" onClick={bereken} className="btn-primary">Bereken offerte</button>
+        <button type="submit" className="btn-primary">Bereken offerte</button>
         <button type="button" onClick={reset} className="btn-secondary">Opnieuw beginnen</button>
         {resultaat && <CopyButton text={samenvatting} label="Kopieer samenvatting" />}
       </div>
@@ -94,6 +100,6 @@ Deze offerte is een indicatie en 30 dagen geldig, tenzij anders vermeld.`
           </div>
         </div>
       )}
-    </div>
+    </form>
   );
 }
