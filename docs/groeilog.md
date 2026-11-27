@@ -1,5 +1,12 @@
 # BerekenZZP groeilog
 
+## 27 november 2026 — actuele uitkomst bij het vergelijken van marges
+
+- De review-sheet eindigde bij rij 45. Geen nieuwe Search Console-inspectie van de tien artikelen in rij 26 aangetroffen. In de registry staan nul nieuwe artikelen voor de week 23–29 november. Deze run richt zich op de bestaande margecalculator.
+- Eigen meetomgeving. De live margepagina gaf HTTP 200. In de bestaande code bleef de vorige uitkomst kopieerbaar na een wijziging in de inkoopprijs, verkoopprijs of extra kosten.
+- De formulierwijziging laat de vorige uitkomst en kopieerknop vervallen bij een wijziging en ondersteunt herberekenen met Enter. De rekenfunctie blijft gelijk. Testvoorbeeld: bij €4 kosten en €6 verkoop resteert €2; na verlaging naar €5,40 resteert €1,40.
+- Het lokale testproces kon geen IPC-socket openen. De uitvoeromgeving viel weg tijdens de nieuwe testpoging. De buildstatus en publicatiestatus worden in de review-sheet vastgelegd.
+
 ## 26 november 2026 — oude offertesamenvatting verdwijnt bij gewijzigde invoer
 
 - Review-sheet gelezen t/m rij 44. De vervolginspectie van de tien artikelen uit rij 26 ontbreekt nog in de sheet. Laatste vastgelegde Search Console-prestatieperiode eindigt op 17 november. Deze kalenderweek staan nul nieuwe artikelen in de registry.
