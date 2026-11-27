@@ -39,7 +39,13 @@ export default function MargeCalculator() {
     : "";
 
   return (
-    <div>
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        bereken();
+      }}
+      onChange={() => setResultaat(null)}
+    >
       <div className="grid gap-4 sm:grid-cols-3">
         <InputField id="inkoop" label="Inkoopprijs" value={inkoop} onChange={setInkoop} placeholder="Bijv. 60" suffix="€" error={errors.inkoop} />
         <InputField id="verkoop" label="Verkoopprijs" value={verkoop} onChange={setVerkoop} placeholder="Bijv. 100" suffix="€" error={errors.verkoop} />
@@ -47,7 +53,7 @@ export default function MargeCalculator() {
       </div>
 
       <div className="mt-6 flex flex-wrap gap-3">
-        <button type="button" onClick={bereken} className="btn-primary">Bereken marge</button>
+        <button type="submit" className="btn-primary">Bereken marge</button>
         <button type="button" onClick={reset} className="btn-secondary">Opnieuw beginnen</button>
         {resultaat && <CopyButton text={copyText} />}
       </div>
@@ -66,6 +72,6 @@ export default function MargeCalculator() {
           )}
         </div>
       )}
-    </div>
+    </form>
   );
 }
